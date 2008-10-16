@@ -1,0 +1,10 @@
+<object name="portal_css" meta_type="Stylesheets Registry">
+  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+	      enabled="1" expression="" id="contentlicensing.css" 
+	      media="screen" rel="stylesheet"
+	      rendering="import"/>
+  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+	      enabled="1" expression="" id="contentlicensingprint.css" 
+	      media="print" rel="stylesheet"
+	      rendering="import"/>
+</object>

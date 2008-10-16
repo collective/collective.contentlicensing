@@ -34,6 +34,24 @@ from string import split, find
 import urllib
 import datetime
 
+def unicode_sanitize(text):
+    """
+    Intended to be used to correct the inconsistency of plone when you call
+    methods such as Title or Publisher which should ALLWAYS return a unicode
+    object if the output is text.
+    """
+    if isinstance(text,list):
+        sanit_list = []
+        for item in text:
+            if isinstance(item, str):
+                sanit_list += item.decode('utf-8')
+            else:
+                sanit_list += item
+        text = sanit_list          
+    elif isinstance(text, str):
+        text = text.decode('utf-8')
+    return text
+
 
 class CopyrightBylineView(BrowserView):
     """ Render the copyright byline """
@@ -81,7 +99,6 @@ class CopyrightBylineView(BrowserView):
         names = [name.strip() for name in self.context.Creators()]
         
         for cr in names:
-            cr = cr.decode('utf-8')
             inits = ''
             crs = []
 
@@ -110,9 +127,9 @@ class CopyrightBylineView(BrowserView):
         date = datetime.date.today().strftime('%B %d, %Y')
         
         if creator:
-            prompt_text = "%s (%s). %s. Retrieved %s, from %s Web site: %s." %(creator,create_date,title,date,portal_name,url)
+            prompt_text = "%s (%s). %s. Retrieved %s, from %s Web site: %s." %(unicode_sanitize(creator),create_date,unicode_sanitize(title),date,unicode_sanitize(portal_name),url)
         else:
-            prompt_text = "%s. (%s). Retrieved %s, from %s Web site: %s." %(title,create_date,date,portal_name,url)
+            prompt_text = "%s. (%s). Retrieved %s, from %s Web site: %s." %(unicode_sanitize(title),create_date,date,unicode_sanitize(portal_name),url)
 
         return prompt_text.replace('\'','\\\'').replace('\"','\\\'')
 
@@ -312,36 +329,36 @@ class RDFMetadataView(BrowserView):
         if not lang:
             po = self.context.portal_url.getPortalObject()
             lang = po.portal_properties.site_properties.getProperty('default_language')
-        self._createNode(node, 'dc:language', lang.decode('utf-8') )
+        self._createNode(node, 'dc:language', lang )
 
         # Description
         desc = self.context.Description()
         if desc:
-            self._createNode(node, 'dc:description', self.context.Description().decode('utf-8') )
+            self._createNode(node, 'dc:description', self.context.Description() )
 
         # Subject
-        self._renderList(node, 'dc:subject', [sub.decode('utf-8') for sub in self.context.Subject() ] )
+        self._renderList(node, 'dc:subject', [sub for sub in self.context.Subject() ] )
 
         # Type
         self._createNode(node, 'dc:type', self.context.Type())
 
         # Creators
-        self._renderList(node, 'dc:creator', [creat.decode('utf-8') for creat in self.context.Creators() ] )
+        self._renderList(node, 'dc:creator', [creat for creat in self.context.Creators() ] )
 
         # Contributors
-        self._renderList(node, 'dc:contributor', [contrib.decode('utf-8') for contrib in self.context.Contributors() ] )
+        self._renderList(node, 'dc:contributor', [contrib for contrib in self.context.Contributors() ] )
 
         # Publisher
         self._createNode(node, 'dc:publisher', self.context.portal_url.getPortalObject().Publisher() )
 
         # Format
-        self._createNode(node, 'dc:format', self.context.Format().decode('utf-8') )
+        self._createNode(node, 'dc:format', self.context.Format())
 
         # Rights
         rights = self.context.Rights()
         if not rights:
-            rights = self.props.DefaultSiteCopyright.decode('utf-8')
-        self._createNode(node, 'dc:rights', rights.decode('utf-8'))
+            rights = self.props.DefaultSiteCopyright
+        self._createNode(node, 'dc:rights', rights)
 
     def _renderList(self, node, element, value):
         """ Render a list of items in RDF. """
@@ -360,7 +377,7 @@ class RDFMetadataView(BrowserView):
         newNode = self.document.createElement(ename)
         parent.appendChild(newNode)
         if value:
-            newNode.appendChild(self.document.createTextNode(value.encode('utf-8') ))
+            newNode.appendChild(self.document.createTextNode(unicode_sanitize(value) ) )
         if attrs:
             for x in attrs:
                 newNode.setAttribute(x[0], x[1] )
