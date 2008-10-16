@@ -1,0 +1,18 @@
+Browser Tests
+=============
+
+Test the default settings in a browser view.
+
+    >>> from Products.Five.testbrowser import Browser
+    >>> browser = Browser()
+    >>> browser.open(portal.absolute_url())
+
+    >>> 'Welcome to Plone' in browser.contents
+    True
+
+
+Now testing that the citation appears at the bottom of the page:
+
+    >>> '<!-- cite/attribute resource:' in browser.contents
+    True
+    

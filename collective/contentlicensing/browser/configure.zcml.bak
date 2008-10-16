@@ -1,0 +1,119 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+	   xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="ContentLicensing">
+
+  <browser:page
+      name="RSS"
+      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+      class=".RSSView"
+      template="rss.pt"
+      permission="zope2.View"
+      layer="..interfaces.IContentLicensingLayer"
+      />
+
+  <browser:page
+     name="rss_template"
+     for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+     template="rss_template.pt"
+     permission="zope2.View"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+  <browser:page
+      name="copyright_byline_view"
+      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+      class=".CopyrightBylineView"
+      template="copyright_byline.pt"
+      permission="zope2.View"
+      layer="..interfaces.IContentLicensingLayer"
+      />
+
+  <browser:page
+      name="metadata_view"
+      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+      class=".RDFMetadataView"
+      template="metadata_view.pt"
+      permission="zope2.View"
+      layer="..interfaces.IContentLicensingLayer"
+      />
+  
+  <browser:page
+      name="citation_view"
+      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+      class=".CopyrightBylineView"
+      template="citation_view.pt"
+      permission="zope2.View"
+      layer="..interfaces.IContentLicensingLayer"
+      />
+
+ <browser:page
+    name="dc_metadata"
+    for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+    class=".ExtendedCopyrightFieldForm"
+    template="dc_metadata.pt"
+    permission="zope2.View"
+    layer="..interfaces.IContentLicensingLayer"
+    />
+
+
+  <adapter factory=".contentlicensingprefs.ContentLicensingControlPanelAdapter" />
+
+  <browser:page
+     name="prefs_content_licensing"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     class=".contentlicensingprefs.ContentLicensingPrefsForm"
+     permission="cmf.ManagePortal"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+  <browser:page
+     name="rdf"
+     for="*"
+     class=".RDFMetadataView"
+     permission="zope2.View"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+
+  <browser:viewlet
+     name="plone.htmlhead.rdf"
+     manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+     template="RDFHeadViewlet.pt"
+     permission="zope2.View"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+  <utility
+     provides="zope.schema.interfaces.IVocabularyFactory"
+     component=".contentlicensingprefs.jurisdictionvocab"
+     name="contentlicensing.jurisdictionvocab"
+     />
+
+  <utility
+     provides="zope.schema.interfaces.IVocabularyFactory"
+     component=".contentlicensingprefs.supportedvocab"
+     name="contentlicensing.supportedvocab"
+     />
+
+  <utility
+     provides="zope.schema.interfaces.IVocabularyFactory"
+     component=".contentlicensingprefs.defaultlicensevocab"
+     name="contentlicensing.defaultlicensevocab"
+     />
+
+  <browser:page
+     name="cc_license_widget"
+     for="*"
+     template="ccwidget.pt"
+     class=".ccradio.CCWidgetView"
+     permission="cmf.ManagePortal"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+  <five:traversable class="OFS.Application.Application" /> 
+  
+  <five:traversable class="Products.CMFCore.PortalObject.PortalObjectBase" />
+
+</configure>

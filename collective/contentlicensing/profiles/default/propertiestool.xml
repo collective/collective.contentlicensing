@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool" xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="plone">
+  <object name="content_licensing_properties" meta_type="Plone Property Sheet">
+    <property name="title">Content Licensing properties</property>
+    <property name="DefaultSiteCopyright" type="string">Copyright 2008</property>
+    <property name="jurisdiction_options" type="lines">
+      <element value="Unported,unported" />
+      <element value="Argentina,ar" />
+      <element value="Australia,au" />
+      <element value="Austria,at" />
+      <element value="Belgium,be" />
+      <element value="Brazil,br" />
+      <element value="Bulgaria,bg" />
+      <element value="Canada,ca" />
+      <element value="Chile,cl" />
+      <element value="China,cn" />
+      <element value="Colombia,co" />
+      <element value="Croatia,hr" />
+      <element value="Denmark,dk" />
+      <element value="Finland,fi" />
+      <element value="France,fr" />
+      <element value="Germany,de" />
+      <element value="Hungary,hu" />
+      <element value="India,in" />
+      <element value="Israel,il" />
+      <element value="Italy,it" />
+      <element value="Japan,jp" />
+      <element value="Macedonia,mk" />
+      <element value="Malaysia,my" />
+      <element value="Malta,mt" />
+      <element value="Mexico,mx" />
+      <element value="Netherlands,nl" />
+      <element value="Peru,pe" />
+      <element value="Poland,pl" />
+      <element value="Portugal,pt" />
+      <element value="Slovenia,si" />
+      <element value="South Africa,za" />
+      <element value="South Korea,kr" />
+      <element value="Spain,es" />
+      <element value="Sweden,se" />
+      <element value="Switzerland,ch" />
+      <element value="Taiwan,tw" />
+      <element value="UK: Englands and Wales,uk" />
+      <element value="UK: Scotland,scotland" />
+      <element value="United States,us" />
+    </property>
+    <property name="Jurisdiction" type="selection" select_variable="jurisdiction_options">Unported,unported</property>
+    <property name="DefaultSiteCopyrightHolder" type="string" i18n:domain="plone" i18n:translate="">by the Contributing Authors</property>
+    <property name="DefaultSiteLicense" type="lines">
+      <element value="All Rights Reserved" />
+      <element value="All Rights Reserved" />
+      <element value="None" />
+      <element value="None" />
+    </property>
+    <property name="SupportedLicenses" type="lines">
+      <element value="license_allRights" />
+      <element value="license_gnuFree" />
+      <element value="license_cc" />
+    </property>
+    <property name="AvailableLicenses" type="lines">
+      <element value="license_allRights" />
+      <element value="license_gnuFree" />
+      <element value="license_cc" />
+    </property>
+    <property name="license_allRights" type="lines">
+      <element value="All Rights Reserved" />
+      <element value="All Rights Reserved" />
+      <element value="None" />
+      <element value="None" />
+    </property>
+    <property name="license_gnuFree" type="lines">
+      <element value="GNU Free Documentation License" />
+      <element value="GNU Free Documentation License" />
+      <element value="http://www.gnu.org/licenses/fdl.txt" />
+      <element value="http://www.gnu.org/graphics/gnubanner-2.png" />
+    </property>
+    <property name="license_cc" type="lines">
+      <element value="Creative Commons License" />
+      <element value="Attribution-Noncommercial-Share Alike 3.0" />
+      <element value="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+      <element value="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+    </property>
+    <property name="license_siteDefault" type="lines">
+      <element value="Site Default" />
+      <element value="None" />      
+      <element value="None" />      
+      <element value="None" />
+    </property>
+    <property name="license_other" type="lines">
+      <element value="Other" />
+      <element value="None" />      
+      <element value="None" />      
+      <element value="None" />
+    </property>
+  </object>
+</object>

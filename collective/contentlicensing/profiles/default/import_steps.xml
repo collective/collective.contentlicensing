@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="contentlicensing-final" version="20070514-01"
+	       handler="collective.contentlicensing.setupHandlers.importFinalSteps"
+	       title="Content Licensing Final Steps Setup">
+    <dependency step="plone-final"/>
+  </import-step>
+</import-steps>

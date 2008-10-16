@@ -1,0 +1,177 @@
+<div metal:define-macro="dc_metadata_fields" tal:omit-tag=""
+     tal:condition="python:here.portal_contentlicensing.isLicensable(here)">
+
+<div tal:omit-tag=""
+     tal:define="objstuff python:here.portal_contentlicensing.getLicenseAndHolderFromObject(here);
+                 objHolder python:objstuff[0];
+                 objLicense python:objstuff[1];
+                 objLicenseId python:objLicense[0];">
+
+  <div class="field"
+       tal:define="error errors/license_name| nothing;
+                   license_name request/license_name | nothing;"
+       tal:attributes="class python:test(error, 'field error', 'field')">
+
+    <label for="copyright_holder_name"
+           i18n:domain="ContentLicensing" 
+           i18n:translate="">Copyright Holder</label>
+
+    <div class="formHelp" id="copyright_holder_name_help"
+         i18n:domain="ContentLicensing"
+         i18n:translate="">
+      The name of the person or organization owning or managing rights 
+      over the resource.
+    </div>   
+         
+    <div tal:content="error">Validation error output</div>           
+            
+    <div>
+      <input type="text"
+             id="copyright_holder"
+             name="copyright_holder"
+             size="30"
+             tal:attributes="tabindex tabindex/next;
+                             value objHolder;"
+             />
+    </div>
+
+  </div>
+
+  <div class="field ArchetypesSelectionWidget"
+       tal:define="vocab here/portal_contentlicensing/getLicenses;
+                   fieldName string:license;">
+
+    <label for="contentLicense"
+           i18n:domain="ContentLicensing"
+           i18n:translate="">Copyright License</label>
+
+    <div class="formHelp" id="contentLicense_help"
+         i18n:domain="ContentLicensing"
+         i18n:translate="">The license on this item.</div>
+    
+    <tal:radios repeat="item vocab">
+
+      <div tal:omit-tag=""
+           tal:define="itemId python:item[0];
+                       itemLabel python:item[0];">
+
+        <input class="noborder"
+               tabindex=""
+               type="radio"
+               tal:define="tabindex tabindex/next"
+               tal:attributes="name string:${fieldName};
+                               id string:${fieldName}_${repeat/item/number};
+                               checked python:objLicenseId == itemId;
+                               value itemId;
+                               tabindex tabindex;"
+               />
+
+        <label tal:content="itemLabel"
+               i18n:translate=""
+               />
+
+        <tal:block tal:condition="python:'Site Default' == itemId"
+                   tal:define="default_license python:here.portal_contentlicensing.DefaultSiteLicense" >
+          (<span tal:content="python:test(default_license[0] == 'Creative Commons License',  '%s : %s' %(default_license[0], default_license[1]), default_license[0])" />)
+        </tal:block>
+
+        <tal:block tal:condition="python:'Creative Commons License' == itemId"
+                   tal:define="jsd python:here.portal_contentlicensing.getJurisdictionCode();">
+
+          <span class="link-external"
+                style="color: #436976;
+                       text-decoration: underline;"
+                tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${fieldName}_${repeat/item/number}%26license_id=${itemId}', 
+                                                           null, 
+                                                           'height=525, width=750, scrollbars=yes, resizeable=yes');">(Choose)</span>
+          <div style="margin: 5px 0 0 25px;"
+               tal:define="cc_license python:test(objLicenseId == 'Creative Commons License', objLicense, item);
+                           license_name python:cc_license[1];
+                           license_url python:cc_license[2];
+                           license_button python:cc_license[3];">
+            <img id="license_button1" tal:attributes="src license_button" />
+            <a id="license_name1"
+               target="_blank"
+               href="http://creativecommons.org"
+               tal:content="license_name"
+               tal:attributes="href license_url">Attribution 2.0</a>
+            <input type="hidden" id="license_name" name="license_cc_name" value=""
+                   tal:attributes="value license_name" />
+            <input type="hidden" id="license_url" name="license_cc_url"
+                   tal:attributes="value license_url" />
+            <input type="hidden" id="license_button" name="license_cc_button" value=""
+                   tal:attributes="value license_button" />
+          </div>
+
+        </tal:block>
+
+
+
+        <tal:block tal:condition="python:'Other' == itemId">
+          <span class="link-external"
+                style="color: #436976;
+                       text-decoration: underline;"
+                tal:attributes="onClick string:window.open('create_license?license_id=${itemId}&license_radio_id=${fieldName}_${repeat/item/number}', 
+                                                           null, 
+                                                           'height=350, width=400, scrollbars=yes, resizeable=yes');">(Choose)</span>
+
+
+          <div style="margin: 5px 0 0 25px;"
+               tal:define="other_name python:test('Other' == objLicenseId, objLicense[1], '');
+                           other_url python:test('Other' == objLicenseId, objLicense[2], '');
+                           license_other_button python:test('Other' == objLicenseId, objLicense[3], 'default_other.gif');">
+
+            <img id="license_other_button1" tal:attributes="src license_other_button" />
+
+            <a id="other_name1"
+               target="_blank"
+               href=""
+               tal:content="other_name"
+               tal:attributes="href other_url">License Title</a>
+
+            <input type="hidden"
+                   name="license_other_name"
+                   id="license_other_name"
+                   tal:attributes="value other_name|nothing"
+                   />
+   
+            <input type="hidden"
+                   name="license_other_url"
+                   id="license_other_url"
+                   tal:attributes="value other_url|nothing"
+                   />
+            <input type="hidden" id="license_other_button" name="license_other_button" value=""
+                   tal:attributes="value license_other_button" />
+
+          </div>
+
+        </tal:block>
+
+        <br />
+
+      </div>
+
+    </tal:radios>
+    
+         
+    
+    <tal:checkbox condition="python:here.isPrincipiaFolderish">
+ 
+        <input type="checkbox" id="recurse_folders" name="recurse_folders" />
+        
+        <label for="recurse_folders"
+               i18n:domain="ContentLicensing" 
+               i18n:translate="">Apply License To Contained Objects</label>
+    
+        <div class="formHelp" id="recurse_help"
+             i18n:domain="ContentLicensing"
+             i18n:translate="">
+           Check here to apply this license to all contained objects.
+        </div>
+
+    </tal:checkbox>
+    
+  </div>
+
+</div>
+</div>

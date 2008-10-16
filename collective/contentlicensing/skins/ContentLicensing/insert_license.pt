@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" 
+    metal:use-macro="here/popup_template/macros/master" i18n:domain="plone">
+  <body>
+    <div metal:fill-slot="main">
+    
+      <div tal:define="license_url request/license_url|nothing;
+                       license_name request/license_name|nothing;
+                       license_button request/license_button|nothing;
+                       license_radio_id request/license_radio_id|nothing;
+                       license_id request/license_id|nothing;">    
+ 
+
+      <tal:block tal:replace='structure string:<script language="javascript">'></tal:block>
+        function InsertContentIntoParent()
+        {
+              var license_url = "<span tal:replace='license_url'>license_url</span>";
+              var license_name = "<span tal:replace='license_name'>license_name</span>";
+              var license_button = '<span tal:replace="python:test(license_button != '', license_button, 'other_default.gif')">license_button</span>';
+              var license_radio_id = '<span tal:replace="license_radio_id">license_radio_id</span>';
+              var license_id = '<span tal:replace="license_id">license_id</span>';
+
+              <tal:condition tal:condition="python:license_id == 'Creative Commons License'">
+                var license_url_field = self.opener.document.getElementById('license_cc_url');              
+                var license_name_field = self.opener.document.getElementById('license_cc_name');
+                var license_name1_field = self.opener.document.getElementById('license_name1'); 
+                var license_button_field = self.opener.document.getElementById('license_cc_button');
+                var license_button1_field = self.opener.document.getElementById('license_button1');
+                
+                license_name1_field.innerHTML=license_name;
+                license_name1_field.setAttribute('href',license_url);
+                license_button_field.setAttribute('value',license_button);
+                license_button1_field.setAttribute('src',license_button);
+              </tal:condition>
+
+              <tal:condition tal:condition="python:license_id == 'Other'">
+                var license_other_url = "<span tal:replace='license_url'>license_url</span>";
+                var license_other_name = "<span tal:replace='license_name'>license_name</span>";
+                var license_other_button_field = self.opener.document.getElementById('license_other_button');
+                var license_other_button1_field = self.opener.document.getElementById('license_other_button1');
+                
+
+                var license_url_field = self.opener.document.getElementById('license_other_url');              
+                var license_name_field = self.opener.document.getElementById('license_other_name');
+                var other_name1_field = self.opener.document.getElementById('other_name1');
+                license_other_button_field.setAttribute('value',license_button);
+                license_other_button1_field.setAttribute('src',license_button);
+
+                other_name1_field.setAttribute('href', license_url);
+                other_name1_field.innerHTML=license_name;              
+
+              </tal:condition>
+
+ 
+
+              var radio_button  = self.opener.document.getElementById(license_radio_id); 
+
+              license_url_field.setAttribute('value',license_url);              
+              license_name_field.setAttribute('value',license_name);             
+              radio_button.checked = true;
+
+            window.close();
+        }
+
+        InsertContentIntoParent();
+      <tal:block tal:replace="structure string:</script>"></tal:block>
+      
+      </div>
+      
+    </div>
+  </body>
+</html>

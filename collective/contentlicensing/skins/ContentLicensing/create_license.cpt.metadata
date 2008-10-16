@@ -1,0 +1,6 @@
+[validators]
+validators=validate_license
+
+[actions]
+action.success=traverse_to:string:insert_license
+action.failure=traverse_to:string:create_license

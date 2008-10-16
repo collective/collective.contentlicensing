@@ -1,0 +1,71 @@
+<style>
+
+.documentByLine span {
+    padding-bottom: 3px;
+}
+
+</style>
+
+<div class="documentByLine"
+     style="text-align: right; margin-top: 2em; border-top: 1px solid #999;"
+     tal:define="bylineInfo view/getLicenseByline;
+                 copyright python:bylineInfo[0];
+                 alert_msg python:here.translate('The citation for this resource is presented in APA format. Copy the citation to your clipboard for reuse.');
+                 citation_info view/getCitationInfo;
+                 holder python:bylineInfo[1];
+                 license_name python:bylineInfo[2];
+                 license_url python:bylineInfo[3];
+                 license_button python:bylineInfo[4];"
+     i18n:domain="ContentLicensing">
+
+
+  <div tal:condition="copyright" tal:replace="string:${copyright}, " />
+  <div tal:condition="holder" tal:replace="string:${holder}. " />
+  <div tal:condition="license_name" tal:omit-tag="">
+    
+    <a style="cursor:pointer;text-decoration:underline" 
+       i18n:translate="" 
+       class="visualNoPrint"
+       tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}')">Cite/attribute Resource</a>.     
+    <style type="text/css">
+      @media print { #print_citation {display:block;} }
+      @media screen { #print_citation {display:None;} }
+    </style>
+    <span id="print_citation" tal:content="citation_info">Print Version Citation</span>
+    <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:translate="">
+      This work is licensed under a 
+    </div>
+
+    <a tal:condition="license_url"
+       class="link-plain"
+       rel="license"
+       tal:attributes="href license_url;
+                       title license_name;
+                       alt license_name"
+       tal:content="string:${license_name}.">Creative Commons License.</a>
+
+    <div tal:condition="python:not license_url and license_name"
+         tal:replace="string:${license_name}.">
+      All Rights Reserved.
+    </div>
+
+    <a tal:condition="python:license_url and license_button"
+       class="link-plain"
+       rel="license"
+       tal:attributes="href license_url;
+                       title license_name;
+                       alt license_name">
+    <img tal:condition="license_button"
+         style="vertical-align: text-top; margin-top: 3px; padding-left: 5px"
+         tal:attributes="src license_button;
+                         alt license_name;" /></a>
+    <img tal:condition="python:license_button and not license_url"
+         style="vertical-align: text-top; margin-top: 3px; padding-left: 5px"
+         tal:attributes="src license_button;
+                         alt license_name;" />
+
+
+  </div>
+
+
+</div>

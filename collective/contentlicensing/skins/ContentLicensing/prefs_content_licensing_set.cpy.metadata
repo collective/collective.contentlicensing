@@ -1,0 +1,6 @@
+[default]
+title=Content Licensing
+
+[actions]
+action.success=redirect_to:string:prefs_content_licensing
+action.failure=redirect_to:string:prefs_content_licensing
