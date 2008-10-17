@@ -3,6 +3,7 @@ import os
 
 version = '2.1.0'
 
+# Information regarding this package
 setup(name='collective.contentlicensing',
       version=version,
       description="This tool is used to manage copyright licenses within plone.",
