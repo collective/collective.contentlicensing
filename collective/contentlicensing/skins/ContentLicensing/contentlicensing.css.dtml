@@ -1,0 +1,14 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#copyrightDocumentByLine
+{
+text-align: right;
+margin-top: 2em;
+border-top: 1px solid #999;
+padding-bottom: 3px;
+}
+
+/* </dtml-with> */
+
+

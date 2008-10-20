@@ -1,0 +1,4 @@
+<layers>
+    <layer name="collective.contentlicensing"
+        interface="collective.contentlicensing.interfaces.IContentLicensingLayer" />
+</layers>

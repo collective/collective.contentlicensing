@@ -1,0 +1,75 @@
+===========
+Preferences
+===========
+
+Test the preferences adapter.
+
+Get some imports.
+
+    >>> from collective.contentlicensing.browser.contentlicensingprefs import IContentLicensingPrefsForm
+    >>> from Products.CMFPlone.interfaces import IPloneSiteRoot
+    >>> from Products.CMFCore.interfaces import IPropertiesTool, IMetadataTool
+    >>> from zope.component import getAdapter, getUtility
+
+Now lets get the adapter, and test some values:
+
+    >>> ad = getAdapter(self.portal, IContentLicensingPrefsForm)
+    >>> props = getUtility(IPropertiesTool)
+    >>> clprops = props.content_licensing_properties
+    >>> mdtool = getUtility(IMetadataTool)
+
+Check the default jurisdiction:
+
+    >>> ad.jurisdiction
+    'Unported,unported'
+
+Get and set the publisher field in the Metadata Utility:
+
+    >>> ad.publisher
+    ''
+    >>> ad.publisher = 'My Publisher'
+    >>> mdtool.Publisher()
+    'My Publisher'
+
+Try using the adapter to get and set the Default Copyright field:
+    
+    >>> assert(ad.default_copyright, clprops.DefaultSiteCopyright)
+    >>> ad.default_copyright = 'Copyright 1999'
+    >>> clprops.getProperty('DefaultSiteCopyright')
+    'Copyright 1999'
+
+Use the adapter to get and set the default copyright holder:
+
+    >>> ad.default_copyright_holder
+    'by the Contributing Authors'
+    >>> ad.default_copyright_holder = 'by Superman'
+    >>> clprops.getProperty('DefaultSiteCopyrightHolder')
+    'by Superman'
+
+Get and set the default license
+
+    >>> ad.default_license
+    'All Rights Reserved'
+    >>> ad.default_license = 'GNU Free Documentation License'
+    >>> clprops.DefaultSiteLicense[0]
+    'GNU Free Documentation License'
+    >>> clprops.DefaultSiteLicense[1]
+    'GNU Free Documentation License'
+    >>> clprops.DefaultSiteLicense[2]
+    'http://www.gnu.org/licenses/fdl.txt'
+    >>> clprops.DefaultSiteLicense[3]
+    'http://www.gnu.org/graphics/gnubanner-2.png'
+
+Get and set the supported licenses
+
+    >>> ad.supported_licenses[0]
+    'license_allRights'
+    >>> ad.supported_licenses[1]
+    'license_gnuFree'
+    >>> ad.supported_licenses[2]
+    'license_cc'
+    >>> ad.supported_licenses = ['license_blah']
+    >>> clprops.getProperty('SupportedLicenses')[0]
+    'license_blah'
+
+

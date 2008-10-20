@@ -1,0 +1,5 @@
+    <link rel="alternate"
+	  type="application/rdf+xml"
+	  tal:attributes="href string:${context/absolute_url}/rdf;"/>
+
+

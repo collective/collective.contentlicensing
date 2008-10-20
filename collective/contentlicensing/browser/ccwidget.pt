@@ -1,0 +1,58 @@
+<tal:block tal:define="jsd view/getJurisdiction;
+		       license_name python:request['name'];
+		       cc_license view/getCCLicenseInfo;
+		       license_cc_name python:cc_license[1];
+		       license_cc_url python:cc_license[2];
+		       license_cc_button python:cc_license[3];
+		       license_css python:request['cssClass'];
+		       license_index python:request['index'];
+		       license_checked view/isChecked;
+		       license_id view/getFormId;">
+<label>
+  <input tal:condition="not: license_checked"
+	 class="radioType"
+	 id=""
+	 name=""
+	 type="radio"
+	 value="Creative Commons License"
+	 tal:attributes="id license_id;
+			 name license_name;"
+	 />
+  <input tal:condition="license_checked"
+	 class="radioType"
+	 id=""
+	 name=""
+	 type="radio"
+	 value="Creative Commons License"
+	 checked="checked"
+	 tal:attributes="id license_id;
+			 name license_name;"
+	 />
+  &nbsp;Creative Commons License
+</label>
+
+<span class="link-external"
+      style="color: #436976;
+             text-decoration: underline;"
+      tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${here/portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${license_id}%26license_id=Creative Commons License',
+                      null, 
+                      'height=525, width=750, scrollbars=yes, resizeable=yes');">(Choose)</span>
+ 
+<div style="margin: 5px 0 0 25px;">  
+  <img id="license_button1" tal:attributes="src license_cc_button" />
+  <a id="license_name1"
+     target="_blank"
+     href="http://creativecommons.org"
+     tal:content="license_cc_name"
+     tal:attributes="href license_cc_url">Attribution 2.0</a>
+
+  <input type="hidden" id="license_cc_name" name="license_cc_name" value=""
+	 tal:attributes="value license_cc_name" />
+  <input type="hidden" id="license_cc_url" name="license_cc_url"
+	 tal:attributes="value license_cc_url" />
+  <input type="hidden" id="license_cc_button" name="license_cc_button" value=""
+	 tal:attributes="value license_cc_button" />
+
+</div>
+
+</tal:block>

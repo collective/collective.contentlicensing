@@ -1,0 +1,51 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="DublinCoreExtensions">
+
+  <include package="zope.annotation" />
+
+  <adapter
+      for=".interfaces.ILicensable"
+      provides=".interfaces.ILicense"
+      factory=".terms.License"
+      trusted="true"
+  />
+
+  <class class=".terms.License">
+    <require
+        permission="zope2.View"
+        interface=".interfaces.ILicense"
+        />
+  </class>
+
+  <class class="Products.ATContentTypes.content.document.ATDocument">
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
+                           zope.annotation.interfaces.IAttributeAnnotatable"
+      />
+  </class>
+
+  <class class="Products.ATContentTypes.content.file.ATFile">
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
+                           zope.annotation.interfaces.IAttributeAnnotatable"
+      />
+  </class>
+
+  <class class="Products.ATContentTypes.content.image.ATImage">
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
+                           zope.annotation.interfaces.IAttributeAnnotatable"
+      />
+  </class>
+
+  <class class="Products.ATContentTypes.content.folder.ATFolder">
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
+                           zope.annotation.interfaces.IAttributeAnnotatable"
+      />
+  </class>
+
+  <subscriber
+      for="Products.CMFCore.interfaces.IDynamicType
+           zope.app.event.interfaces.IObjectModifiedEvent"
+      handler=".UpdateLicenseMetadata.UpdateLicenseMetadataHandler"
+    />
+
+</configure>
