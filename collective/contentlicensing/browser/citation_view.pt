@@ -1,3 +1,0 @@
-<div tal:replace="structure string:<!-- cite/attribute resource:" />
-<div tal:replace="structure view/getCitationInfo" />
-<div tal:replace="structure string:-->" />

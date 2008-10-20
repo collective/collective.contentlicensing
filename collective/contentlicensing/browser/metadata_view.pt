@@ -1,3 +1,0 @@
-<div tal:replace="structure string:<!--" />
-<div tal:replace="structure view/writeRDF" />
-<div tal:replace="structure string:-->" />
