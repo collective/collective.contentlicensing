@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eduCommons\n"
-"POT-Creation-Date: 2008-10-31 21:35+0000\n"
+"POT-Creation-Date: 2008-10-31 22:15+0000\n"
 "PO-Revision-Date: 2007-03-20 10:02+0100\n"
 "Last-Translator: olivier Turlier <o.turlier@gmail.com>\n"
 "Language-Team: FRENCH <o.turlier@gmail.com>\n"
@@ -19,6 +19,11 @@ msgstr ""
 #. Default: "(Choose)"
 #: ./browser/dc_metadata.pt:71
 msgid "(Choose)"
+msgstr ""
+
+#. Default: "(No file has been uploaded yet)"
+#: ./skins/ContentLicensing/file_view.pt:52
+msgid "(No file has been uploaded yet)"
 msgstr ""
 
 #. Default: "(Required)"
@@ -230,9 +235,4 @@ msgstr "Le titre de la license qui aparaîtra sur l'objet portant une license."
 #: ./browser/copyright_byline.pt:35
 msgid "This work is licensed under a"
 msgstr "Ce travail est licensié sous un(e) "
-
-#. Default: "(No file has been uploaded yet)"
-#: ./skins/ContentLicensing/file_view.pt:52
-msgid "no_file_uploaded"
-msgstr ""
 

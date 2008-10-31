@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing\n"
-"POT-Creation-Date: 2008-10-31 21:35+0000\n"
+"POT-Creation-Date: 2008-10-31 22:15+0000\n"
 "PO-Revision-Date: 2007-09-03 21:48-0700\n"
 "Last-Translator: Chenyong(Jessie) Zhu <jessie0587@hotmail.com>\n"
 "Language-Team: PKUGSE <mark@163.net>\n"
@@ -17,6 +17,11 @@ msgstr ""
 #. Default: "(Choose)"
 #: ./browser/dc_metadata.pt:71
 msgid "(Choose)"
+msgstr ""
+
+#. Default: "(No file has been uploaded yet)"
+#: ./skins/ContentLicensing/file_view.pt:52
+msgid "(No file has been uploaded yet)"
 msgstr ""
 
 #. Default: "(Required)"
@@ -227,9 +232,4 @@ msgstr "将出现于协议对象上的协议标题"
 #: ./browser/copyright_byline.pt:35
 msgid "This work is licensed under a"
 msgstr "本项目所使用的协议是"
-
-#. Default: "(No file has been uploaded yet)"
-#: ./skins/ContentLicensing/file_view.pt:52
-msgid "no_file_uploaded"
-msgstr ""
 

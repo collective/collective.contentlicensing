@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-10-31 21:35+0000\n"
+"POT-Creation-Date: 2008-10-31 22:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,11 @@ msgstr ""
 #. Default: "(Choose)"
 #: ./browser/dc_metadata.pt:71
 msgid "(Choose)"
+msgstr ""
+
+#. Default: "(No file has been uploaded yet)"
+#: ./skins/ContentLicensing/file_view.pt:52
+msgid "(No file has been uploaded yet)"
 msgstr ""
 
 #. Default: "(Required)"
@@ -218,10 +223,5 @@ msgstr ""
 #. Default: "This work is licensed under a"
 #: ./browser/copyright_byline.pt:35
 msgid "This work is licensed under a"
-msgstr ""
-
-#. Default: "(No file has been uploaded yet)"
-#: ./skins/ContentLicensing/file_view.pt:52
-msgid "no_file_uploaded"
 msgstr ""
 
