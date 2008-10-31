@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing\n"
-"POT-Creation-Date: 2008-10-10 23:03+0000\n"
+"POT-Creation-Date: 2008-10-31 21:35+0000\n"
 "PO-Revision-Date: 2007-05-10 02:52+0900\n"
 "Last-Translator: Haruo Takemura <takemura@acm.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,223 +14,222 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: ContentLicensing\n"
 
+#. Default: "(Choose)"
+#: ./browser/dc_metadata.pt:71
+msgid "(Choose)"
+msgstr ""
+
 #. Default: "(Required)"
-#: ../skins/ContentLicensing/create_license.cpt:33
+#: ./skins/ContentLicensing/create_license.cpt:33
 msgid "(Required)"
 msgstr ""
 
 #. Default: "Apply License To Contained Objects"
-#: ../browser/dc_metadata.pt:154
+#: ./browser/dc_metadata.pt:152
 msgid "Apply License To Contained Objects"
 msgstr "含まれるオブジェクトにライセンスを適用"
 
 #. Default: "Cancel"
-#: ../skins/ContentLicensing/create_license.cpt:117
+#: ./skins/ContentLicensing/create_license.cpt:117
 msgid "Cancel"
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:278
-msgid "Changes saved."
-msgstr ""
-
 #. Default: "Check here to apply this license to all contained objects."
-#: ../browser/dc_metadata.pt:158
+#: ./browser/dc_metadata.pt:156
 msgid "Check here to apply this license to all contained objects."
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:100
+#: ./browser/contentlicensingprefs.py:103
 msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
 msgstr ""
 
 #. Default: "Cite/attribute Resource"
-#: ../browser/copyright_byline.pt:26
+#: ./browser/copyright_byline.pt:26
 msgid "Cite/attribute Resource"
 msgstr ""
 
+#. Default: "Click here to get the file"
+#: ./skins/ContentLicensing/file_view.pt:36
+msgid "Click here to get the file"
+msgstr ""
+
 #. Default: "Configure site wide settings for copyright licensing of content within this portal."
-#: ../browser/contentlicensingprefs.py:252
+#: ./browser/contentlicensingprefs.py:255
 msgid "Configure site wide settings for copyright licensing of content within this portal."
 msgstr "このポータル内のコンテンツの著作権許諾についてのサイト設定を行います。"
 
-#: ../browser/contentlicensingprefs.py:236
+#: ./browser/contentlicensingprefs.py:239
 msgid "Content License Settings"
 msgstr ""
 
 #. Default: "Content Licensing"
-#: ../profiles/default/actionicons.xml
+#: ./profiles/default/actionicons.xml
 msgid "Content Licensing"
 msgstr ""
 
 #. Default: "Content Licensing Settings"
-#: ../browser/contentlicensingprefs.py:251
+#: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
 msgstr "コンテンツライセンスの設定"
 
 #. Default: "Copyright Holder"
-#: ../browser/dc_metadata.pt:13
+#: ./browser/dc_metadata.pt:13
 msgid "Copyright Holder"
 msgstr "著作権保持者"
 
 #. Default: "Copyright License"
-#: ../browser/dc_metadata.pt:39
+#: ./browser/dc_metadata.pt:39
 msgid "Copyright License"
 msgstr "著作権ライセンス"
 
 #. Default: "Create License"
-#: ../skins/ContentLicensing/create_license.cpt:10
+#: ./skins/ContentLicensing/create_license.cpt:10
 msgid "Create License"
 msgstr "ライセンスを作成"
 
-#: ../browser/contentlicensingprefs.py:54
+#: ./browser/contentlicensingprefs.py:55
 msgid "Creative Commons License Picker"
 msgstr ""
 
 #. Default: "Default Copyright"
-#: ../browser/contentlicensingprefs.py:84
+#: ./browser/contentlicensingprefs.py:87
 msgid "Default Copyright"
 msgstr "デフォルトの著作権"
 
 #. Default: "Default Copyright Holder"
-#: ../browser/contentlicensingprefs.py:89
+#: ./browser/contentlicensingprefs.py:92
 msgid "Default Copyright Holder"
 msgstr "デフォルトの著作権者"
 
-#: ../browser/contentlicensingprefs.py:94
+#: ./browser/contentlicensingprefs.py:97
 msgid "Default License"
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:72
+#. Default: "File type"
+#: ./skins/ContentLicensing/file_view.pt:58
+msgid "File type"
+msgstr ""
+
+#: ./browser/contentlicensingprefs.py:75
 msgid "Jurisdiction"
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:119
+#: ./browser/contentlicensingprefs.py:122
 msgid "License Icon"
 msgstr ""
 
 #. Default: "License Image"
-#: ../skins/ContentLicensing/create_license.cpt:81
+#: ./skins/ContentLicensing/create_license.cpt:81
 msgid "License Image"
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:115
+#: ./browser/contentlicensingprefs.py:118
 msgid "License Location"
 msgstr ""
 
 #. Default: "License Name"
-#: ../skins/ContentLicensing/create_license.cpt:30
+#: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr "ライセンス名"
 
 #. Default: "License URL"
-#: ../skins/ContentLicensing/create_license.cpt:55
+#: ./skins/ContentLicensing/create_license.cpt:55
 msgid "License URL"
 msgstr "ライセンスのURL"
 
-#: ../browser/contentlicensingprefs.py:240
+#: ./browser/contentlicensingprefs.py:243
 msgid "New License"
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:282
-msgid "No changes made."
-msgstr ""
-
-#: ../skins/ContentLicensing/validate_license.vpy:22
-msgid "Please correct the indicated errors."
-msgstr "表示されているエラーを修正してください。"
-
 #. Default: "Publisher"
-#: ../browser/contentlicensingprefs.py:80
+#: ./browser/contentlicensingprefs.py:83
 msgid "Publisher"
 msgstr "出版(公開）者"
 
 #. Default: "RSS Feed"
-#: ../profiles/default/actions.xml
+#: ./profiles/default/actions.xml
 msgid "RSS Feed"
 msgstr ""
 
 #. Default: "Required"
-#: ../skins/ContentLicensing/create_license.cpt:33
+#: ./skins/ContentLicensing/create_license.cpt:33
 msgid "Required"
 msgstr ""
 
-#: ../browser/contentlicensingprefs.py:257
+#: ./browser/contentlicensingprefs.py:260
 msgid "Save"
 msgstr ""
 
 #. Default: "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
-#: ../browser/contentlicensingprefs.py:73
+#: ./browser/contentlicensingprefs.py:76
 msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 msgstr "コンテンツのライセンスが有効な法制度を指定してください。（法制度選択の変更は、新しいクリエイティブコモンズライセンスを選択する前に保存してください。）"
 
-#. Default: "Submit"
-#: ../skins/ContentLicensing/create_license.cpt:108
-msgid "Submit"
-msgstr ""
-
 #. Default: "Supported Licenses"
-#: ../browser/contentlicensingprefs.py:99
+#: ./browser/contentlicensingprefs.py:102
 msgid "Supported Licenses"
 msgstr "サポートされているライセンス"
 
 #. Default: "The URL pointer to an image associated with the license."
-#: ../browser/contentlicensingprefs.py:120
+#: ./browser/contentlicensingprefs.py:123
 msgid "The URL pointer to an image associated with the license."
 msgstr "ライセンスをあらわす画像へのURLポインタ"
 
-#: ../browser/contentlicensingprefs.py:116
+#: ./browser/contentlicensingprefs.py:119
 msgid "The URL pointer to information about the license."
 msgstr ""
 
 #. Default: "The default copyright owner for content in this portal."
-#: ../browser/contentlicensingprefs.py:90
+#: ./browser/contentlicensingprefs.py:93
 msgid "The default copyright owner for content in this portal."
 msgstr "このポータル内のコンテンツのデフォルトの著作権保持者"
 
 #. Default: "The default copyright to be used with content in this portal."
-#: ../browser/contentlicensingprefs.py:85
+#: ./browser/contentlicensingprefs.py:88
 msgid "The default copyright to be used with content in this portal."
 msgstr "このポータル内のコンテンツに利用されるデフォルトのライセンス"
 
 #. Default: "The external URL of the license, this usually contains the actual content of the license."
-#: ../skins/ContentLicensing/create_license.cpt:61
+#: ./skins/ContentLicensing/create_license.cpt:61
 msgid "The external URL of the license, this usually contains the actual content of the license."
 msgstr "ライセンスの外部URL、通常ライセンスの実際のコンテンツが含まれています。"
 
 #. Default: "The external URL to an image associated with the license."
-#: ../skins/ContentLicensing/create_license.cpt:84
+#: ./skins/ContentLicensing/create_license.cpt:84
 msgid "The external URL to an image associated with the license."
 msgstr ""
 
 #. Default: "The institution or individual responsible for publishing content in this portal."
-#: ../browser/contentlicensingprefs.py:81
+#: ./browser/contentlicensingprefs.py:84
 msgid "The institution or individual responsible for publishing content in this portal."
 msgstr "このポータルでコンテンツ公開の責任を負う機関または個人"
 
 #. Default: "The license on this item."
-#: ../browser/dc_metadata.pt:43
+#: ./browser/dc_metadata.pt:43
 msgid "The license on this item."
 msgstr "このアイテムに関するライセンス"
 
-#: ../browser/contentlicensingprefs.py:112
+#: ./browser/contentlicensingprefs.py:115
 msgid "The name of the license."
 msgstr ""
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
-#: ../browser/dc_metadata.pt:17
+#: ./browser/dc_metadata.pt:17
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "リソースに関する権利を所有しているか管理している個人または組織の名称"
 
 #. Default: "The title of the license that will appear on the licensed object."
-#: ../skins/ContentLicensing/create_license.cpt:36
+#: ./skins/ContentLicensing/create_license.cpt:36
 msgid "The title of the license that will appear on the licensed object."
 msgstr "ライセンスされたオブジェクトに表示されるライセンスの名前"
 
-#: ../skins/ContentLicensing/validate_license.vpy:14
-msgid "This field is required, please provide some information."
-msgstr "このフィールドは必須です。情報を入力してください。"
-
 #. Default: "This work is licensed under a"
-#: ../browser/copyright_byline.pt:35
+#: ./browser/copyright_byline.pt:35
 msgid "This work is licensed under a"
 msgstr "この作品は以下のライセンスによって許諾されます："
+
+#. Default: "(No file has been uploaded yet)"
+#: ./skins/ContentLicensing/file_view.pt:52
+msgid "no_file_uploaded"
+msgstr ""
 
