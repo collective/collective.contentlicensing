@@ -12,15 +12,15 @@
                  copyright python:bylineInfo[0];
                  alert_msg python:here.translate('The citation for this resource is presented in APA format. Copy the citation to your clipboard for reuse.');
                  citation_info view/getCitationInfo;
-                 holder python:bylineInfo[1];
+                 holder python:here.translate(bylineInfo[1]);
                  license_name python:bylineInfo[2];
                  license_url python:bylineInfo[3];
                  license_button python:bylineInfo[4];"
      i18n:domain="ContentLicensing">
 
 
-  <div tal:condition="copyright" tal:replace="string:${copyright}, " />
-  <div tal:condition="holder" tal:replace="string:${holder}. " />
+  <div tal:condition="copyright" tal:replace="python:here.translate(copyright) + ',' " />
+  <div tal:condition="holder" tal:replace="python:here.translate(holder) + '.' " />
   <div tal:condition="license_name" tal:omit-tag="">
     
     <a style="cursor:pointer;text-decoration:underline" 
@@ -32,7 +32,7 @@
       @media screen { #print_citation {display:None;} }
     </style>
     <span id="print_citation" tal:content="citation_info">Print Version Citation</span>
-    <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:translate="">
+    <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:domain="ContentLicensing" i18n:translate="">
       This work is licensed under a 
     </div>
 
@@ -40,12 +40,12 @@
        class="link-plain"
        rel="license"
        tal:attributes="href license_url;
-                       title license_name;
-                       alt license_name"
-       tal:content="string:${license_name}.">Creative Commons License.</a>
+                       title python:here.translate(license_name);
+                       alt python:here.translate(license_name)"
+       tal:content="python:here.translate(license_name)">Creative Commons License.</a>
 
     <div tal:condition="python:not license_url and license_name"
-         tal:replace="string:${license_name}.">
+         tal:replace="python:here.translate(license_name)">
       All Rights Reserved.
     </div>
 
@@ -53,16 +53,16 @@
        class="link-plain"
        rel="license"
        tal:attributes="href license_url;
-                       title license_name;
-                       alt license_name">
+                       title python:here.translate(license_name);
+                       alt python:here.translate(license_name)">
     <img tal:condition="license_button"
          style="vertical-align: text-top; margin-top: 3px; padding-left: 5px"
          tal:attributes="src license_button;
-                         alt license_name;" /></a>
+                         alt python:here.translate(license_name);" /></a>
     <img tal:condition="python:license_button and not license_url"
          style="vertical-align: text-top; margin-top: 3px; padding-left: 5px"
          tal:attributes="src license_button;
-                         alt license_name;" />
+                         alt python:here.translate(license_name);" />
 
 
   </div>

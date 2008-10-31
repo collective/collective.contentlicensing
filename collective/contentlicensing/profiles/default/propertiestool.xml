@@ -2,7 +2,7 @@
 <object name="portal_properties" meta_type="Plone Properties Tool" xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="plone">
   <object name="content_licensing_properties" meta_type="Plone Property Sheet">
     <property name="title">Content Licensing properties</property>
-    <property name="DefaultSiteCopyright" type="string">Copyright 2008</property>
+    <property name="DefaultSiteCopyright" type="string" translate="">Copyright 2008</property>
     <property name="jurisdiction_options" type="lines">
       <element value="Unported,unported" />
       <element value="Argentina,ar" />
@@ -45,7 +45,7 @@
       <element value="United States,us" />
     </property>
     <property name="Jurisdiction" type="selection" select_variable="jurisdiction_options">Unported,unported</property>
-    <property name="DefaultSiteCopyrightHolder" type="string" i18n:domain="plone" i18n:translate="">by the Contributing Authors</property>
+    <property name="DefaultSiteCopyrightHolder" type="string" i18n:translate="">by the Contributing Authors</property>
     <property name="DefaultSiteLicense" type="lines">
       <element value="All Rights Reserved" />
       <element value="All Rights Reserved" />
@@ -63,31 +63,31 @@
       <element value="license_cc" />
     </property>
     <property name="license_allRights" type="lines">
-      <element value="All Rights Reserved" />
+      <element value="All Rights Reserved" i18n:attributes="value" />
       <element value="All Rights Reserved" />
       <element value="None" />
       <element value="None" />
     </property>
     <property name="license_gnuFree" type="lines">
-      <element value="GNU Free Documentation License" />
+      <element value="GNU Free Documentation License" i18n:attributes="value" />
       <element value="GNU Free Documentation License" />
       <element value="http://www.gnu.org/licenses/fdl.txt" />
       <element value="http://www.gnu.org/graphics/gnubanner-2.png" />
     </property>
     <property name="license_cc" type="lines">
-      <element value="Creative Commons License" />
+      <element value="Creative Commons License" i18n:attributes="value" />
       <element value="Attribution-Noncommercial-Share Alike 3.0" />
       <element value="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
       <element value="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
     </property>
     <property name="license_siteDefault" type="lines">
-      <element value="Site Default" />
+      <element value="Site Default" i18n:attributes="value" />
       <element value="None" />      
       <element value="None" />      
       <element value="None" />
     </property>
     <property name="license_other" type="lines">
-      <element value="Other" />
+      <element value="Other" i18n:attributes="value" />
       <element value="None" />      
       <element value="None" />      
       <element value="None" />

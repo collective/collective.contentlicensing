@@ -47,11 +47,13 @@ def jurisdictionvocab(context):
 def supportedvocab(context):
     props = getToolByName(context, 'portal_properties')
     supp = props.content_licensing_properties.AvailableLicenses
+    ts = getToolByName(context.context,'translation_service')
     licenses = []
     for x in supp:
         value = getattr(props.content_licensing_properties, x)[0], x
         if 'Creative Commons License' == value[0]:
             value = (_(u'Creative Commons License Picker'), x)
+	value = ts.translate(value[0]), value[1]
         licenses.append(value)
     return SimpleVocabulary.fromItems(licenses)
 
@@ -59,10 +61,11 @@ def supportedvocab(context):
 def defaultlicensevocab(context):
     props = getToolByName(context, 'portal_properties')
     supp = props.content_licensing_properties.SupportedLicenses
+    ts = getToolByName(context.context,'translation_service')
     licenses = []
     for x in supp:
         value = getattr(props.content_licensing_properties, x)[0]
-        licenses.append((value, value))
+        licenses.append((ts.translate(value), value))
     return SimpleVocabulary.fromItems(licenses)
 
         

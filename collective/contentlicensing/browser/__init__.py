@@ -84,7 +84,9 @@ class CopyrightBylineView(BrowserView):
         license_button = license[3]
         if not license_button or 'None' == license_button:
             license_button = ''
-        return copyright, holder, license_name, license_url, license_button
+        from Products.CMFCore.utils import getToolByName
+        ts = getToolByName(self.context, 'translation_service')
+        return copyright, ts.translate(holder), license_name, license_url, license_button
 
     def getCitationInfo(self):
         """ Gets the citation information """
@@ -212,11 +214,12 @@ class ExtendedCopyrightFieldForm(BrowserView):
 
     def getLicenseTitle(self, request):
         """ Returns the license name. For creative commons licenses, it explicitly appends the CC license type  """
+	ts = getToolByName(self.context,'translation_service')
         license = self.clutil.getDefaultSiteLicense(request)
         if license[0] == 'Creative Commons License':
-            return license[0] + ' :: ' + license[1]
+            return ts.translate(license[0]) + ' :: ' + license[1]
         else:
-            return license[0]
+            return ts.translate(license[0])
 
 class FrontpageCopyrightBylineView(BrowserView):
     """ Render the default site copyright byline """
