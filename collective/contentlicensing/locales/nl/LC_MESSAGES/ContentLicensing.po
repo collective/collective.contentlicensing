@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
-"POT-Creation-Date: 2008-10-31 22:15+0000\n"
+"POT-Creation-Date: 2008-11-01 20:17+0000\n"
 "PO-Revision-Date: 2007-04-06 18:50+0100\n"
 "Last-Translator: Robert Schuwer <robert.schuwer@ou.nl>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
-"POT-Creation-Date: 2008-10-31 22:15+0000\n"
+"POT-Creation-Date: 2008-11-01 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,11 @@ msgstr ""
 #: ./profiles/default/propertiestool.xml
 msgid "All Rights Reserved"
 msgstr ""
+
+#. Default: "Content Licensing"
+#: ./profiles/default/controlpanel.xml
+msgid "Content Licensing"
+msgstr "İçerik Lisanslama"
 
 #. Default: "Creative Commons License"
 #: ./profiles/default/propertiestool.xml
