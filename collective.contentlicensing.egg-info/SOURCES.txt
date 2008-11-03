@@ -38,7 +38,6 @@ collective/contentlicensing/browser/ccradio.py
 collective/contentlicensing/browser/ccwidget.pt
 collective/contentlicensing/browser/citation_view.pt
 collective/contentlicensing/browser/configure.zcml
-collective/contentlicensing/browser/configure.zcml.bak
 collective/contentlicensing/browser/contentlicensingprefs.py
 collective/contentlicensing/browser/copyright_byline.pt
 collective/contentlicensing/browser/dc_metadata.pt
