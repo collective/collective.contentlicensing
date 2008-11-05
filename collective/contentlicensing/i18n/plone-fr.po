@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eduCommons\n"
-"POT-Creation-Date: 2008-11-01 20:17+0000\n"
+"POT-Creation-Date: 2008-11-04 23:43+0000\n"
 "PO-Revision-Date: 2007-03-20 10:02+0100\n"
 "Last-Translator: olivier Turlier <o.turlier@gmail.com>\n"
 "Language-Team: FRENCH <o.turlier@gmail.com>\n"
