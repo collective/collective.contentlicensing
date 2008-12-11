@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing\n"
-"POT-Creation-Date: 2008-11-04 23:43+0000\n"
+"POT-Creation-Date: 2008-11-17 23:40+0000\n"
 "PO-Revision-Date: 2007-09-03 21:48-0700\n"
 "Last-Translator: Chenyong(Jessie) Zhu <jessie0587@hotmail.com>\n"
 "Language-Team: PKUGSE <mark@163.net>\n"

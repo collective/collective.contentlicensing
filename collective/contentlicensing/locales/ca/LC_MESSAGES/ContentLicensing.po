@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ContentLicensing\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2008-11-17 23:40+0000\n"
-"PO-Revision-Date: 2007-09-03 21:48-0700\n"
-"Last-Translator: Chenyong(Jessie) Zhu <jessie0587@hotmail.com>\n"
-"Language-Team: PKUGSE <mark@163.net>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: zh-cn\n"
-"Language-Name: Simplified Chinese\n"
-"Preferred-Encodings: utf-8\n"
+"Language-Code: ca\n"
+"Language-Name: Catalan\n"
+"Preferred-Encodings: utf-8 latin1\n"
 "Domain: ContentLicensing\n"
 
 #. Default: "(Choose)"
@@ -32,7 +32,7 @@ msgstr ""
 #. Default: "Apply License To Contained Objects"
 #: ./browser/dc_metadata.pt:152
 msgid "Apply License To Contained Objects"
-msgstr "此许可应用于包含的对象"
+msgstr ""
 
 #. Default: "Cancel"
 #: ./skins/ContentLicensing/create_license.cpt:117
@@ -58,10 +58,9 @@ msgstr ""
 msgid "Click here to get the file"
 msgstr ""
 
-#. Default: "Configure site wide settings for copyright licensing of content within this portal."
 #: ./browser/contentlicensingprefs.py:255
 msgid "Configure site wide settings for copyright licensing of content within this portal."
-msgstr "设置站点内容的版权协议 "
+msgstr ""
 
 #: ./browser/contentlicensingprefs.py:239
 msgid "Content License Settings"
@@ -72,39 +71,36 @@ msgstr ""
 msgid "Content Licensing"
 msgstr ""
 
-#. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
-msgstr "内容协议设置"
+msgstr ""
 
 #. Default: "Copyright Holder"
 #: ./browser/dc_metadata.pt:13
 msgid "Copyright Holder"
-msgstr "版权持有者"
+msgstr ""
 
 #. Default: "Copyright License"
 #: ./browser/dc_metadata.pt:39
 msgid "Copyright License"
-msgstr "版权协议"
+msgstr ""
 
 #. Default: "Create License"
 #: ./skins/ContentLicensing/create_license.cpt:10
 msgid "Create License"
-msgstr "创建协议"
+msgstr ""
 
 #: ./browser/contentlicensingprefs.py:55
 msgid "Creative Commons License Picker"
 msgstr ""
 
-#. Default: "Default Copyright"
 #: ./browser/contentlicensingprefs.py:87
 msgid "Default Copyright"
-msgstr "缺省的版权"
+msgstr ""
 
-#. Default: "Default Copyright Holder"
 #: ./browser/contentlicensingprefs.py:92
 msgid "Default Copyright Holder"
-msgstr "缺省的版权所有者"
+msgstr ""
 
 #: ./browser/contentlicensingprefs.py:97
 msgid "Default License"
@@ -135,21 +131,20 @@ msgstr ""
 #. Default: "License Name"
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
-msgstr "协议标题"
+msgstr ""
 
 #. Default: "License URL"
 #: ./skins/ContentLicensing/create_license.cpt:55
 msgid "License URL"
-msgstr "协议URL"
+msgstr ""
 
 #: ./browser/contentlicensingprefs.py:243
 msgid "New License"
 msgstr ""
 
-#. Default: "Publisher"
 #: ./browser/contentlicensingprefs.py:83
 msgid "Publisher"
-msgstr "发布者"
+msgstr ""
 
 #. Default: "RSS Feed"
 #: ./profiles/default/actions.xml
@@ -165,54 +160,48 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#. Default: "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 #: ./browser/contentlicensingprefs.py:76
 msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
-msgstr "指定有效内容许可的权限（仅适用于Creative Commons协议）"
+msgstr ""
 
-#. Default: "Supported Licenses"
 #: ./browser/contentlicensingprefs.py:102
 msgid "Supported Licenses"
-msgstr "所支持的协议"
+msgstr ""
 
-#. Default: "The URL pointer to an image associated with the license."
 #: ./browser/contentlicensingprefs.py:123
 msgid "The URL pointer to an image associated with the license."
-msgstr "指向协议图片的URL"
+msgstr ""
 
 #: ./browser/contentlicensingprefs.py:119
 msgid "The URL pointer to information about the license."
 msgstr ""
 
-#. Default: "The default copyright owner for content in this portal."
 #: ./browser/contentlicensingprefs.py:93
 msgid "The default copyright owner for content in this portal."
-msgstr "在此入口中内容的缺省拥有者"
+msgstr ""
 
-#. Default: "The default copyright to be used with content in this portal."
 #: ./browser/contentlicensingprefs.py:88
 msgid "The default copyright to be used with content in this portal."
-msgstr "在此入口中内容所使用的缺省版权"
+msgstr ""
 
 #. Default: "The external URL of the license, this usually contains the actual content of the license."
 #: ./skins/ContentLicensing/create_license.cpt:61
 msgid "The external URL of the license, this usually contains the actual content of the license."
-msgstr "协议的外部URL，它通常包括协议的实际内容"
+msgstr ""
 
 #. Default: "The external URL to an image associated with the license."
 #: ./skins/ContentLicensing/create_license.cpt:84
 msgid "The external URL to an image associated with the license."
 msgstr ""
 
-#. Default: "The institution or individual responsible for publishing content in this portal."
 #: ./browser/contentlicensingprefs.py:84
 msgid "The institution or individual responsible for publishing content in this portal."
-msgstr "在此入口中发布内容的机构或个人"
+msgstr ""
 
 #. Default: "The license on this item."
 #: ./browser/dc_metadata.pt:43
 msgid "The license on this item."
-msgstr "此内容的协议"
+msgstr ""
 
 #: ./browser/contentlicensingprefs.py:115
 msgid "The name of the license."
@@ -221,15 +210,15 @@ msgstr ""
 #. Default: "The name of the person or organization owning or managing rights over the resource."
 #: ./browser/dc_metadata.pt:17
 msgid "The name of the person or organization owning or managing rights over the resource."
-msgstr "拥有或管理此资源的个人或机构名称"
+msgstr ""
 
 #. Default: "The title of the license that will appear on the licensed object."
 #: ./skins/ContentLicensing/create_license.cpt:36
 msgid "The title of the license that will appear on the licensed object."
-msgstr "将出现于协议对象上的协议标题"
+msgstr ""
 
 #. Default: "This work is licensed under a"
 #: ./browser/copyright_byline.pt:35
 msgid "This work is licensed under a"
-msgstr "本项目所使用的协议是"
+msgstr ""
 
