@@ -15,8 +15,6 @@ class TestContentLicensing(ContentLicensingTestCase):
         self.props = self.portal.portal_properties.content_licensing_properties
 
     def testContentLicensingInstall(self):
-        # Test that the product is installed correctly
-        assert PloneTestCase.hasProduct('ContentLicensing'), "ContentLicensing failed to install"
         # Test that there are 5 default licenses
         self.assertEqual(len(self.clutil.getLicenses(self.portal)), 5)
 
@@ -36,6 +34,9 @@ class TestContentLicensing(ContentLicensingTestCase):
     
     def testGettingAndSettingLicenses(self):
         # Create a default document object
+        self.setRoles(['Manager'])
+        self.portal.invokeFactory('Folder','test-folder')
+        self.folder = getattr(self.portal,'test-folder')
         self.folder.invokeFactory('Document', 'testDoc')
         test_doc = self.folder.testDoc
 

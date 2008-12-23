@@ -8,6 +8,8 @@
   <include package=".utilities"/>
   <include package=".DublinCoreExtensions" />
 
+  <five:registerPackage package="." />
+
   <genericsetup:registerProfile
      name="default"
      title="ContentLicensing"

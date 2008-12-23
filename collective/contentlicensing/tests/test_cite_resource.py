@@ -8,9 +8,6 @@ from base import ContentLicensingTestCase
 
 class testContentLicensing(ContentLicensingTestCase):
     
-    def testContentLicensingInstall(self):
-        assert PloneTestCase.hasProduct('ContentLicensing'), "ContentLicensing failed to install"
-
     def testThreeAuthorCitation(self):
         from collective.contentlicensing.browser import CopyrightBylineView
         self.setRoles(['Manager'])
