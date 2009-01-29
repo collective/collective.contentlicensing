@@ -36,10 +36,4 @@
       />
   </class>
 
-  <subscriber
-      for="Products.CMFCore.interfaces.IDynamicType
-           zope.app.event.interfaces.IObjectModifiedEvent"
-      handler=".UpdateLicenseMetadata.UpdateLicenseMetadataHandler"
-    />
-
 </configure>

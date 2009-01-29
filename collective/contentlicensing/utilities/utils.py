@@ -162,30 +162,6 @@ class ContentLicensingUtility(SimpleItem):
             return None
 
 
-    def setLicense(self, obj, license):
-        """ Set a license using the Dublin Core Annotations interface. """
-        props = obj.portal_url.portal_properties.content_licensing_properties
-        if getattr(obj.REQUEST, 'copyright_holder', None):
-            license.setRightsHolder(obj.REQUEST['copyright_holder'])
-        if getattr(obj.REQUEST, 'license', None):
-            newLicense = obj.REQUEST['license']
-            if 'Creative Commons License' == newLicense:
-                license.setRightsLicense(['Creative Commons License',
-                                          obj.REQUEST['license_cc_name'],
-                                          obj.REQUEST['license_cc_url'],
-                                          obj.REQUEST['license_cc_button']])
-            elif 'Other' == newLicense:
-                license.setRightsLicense(['Other',
-                                          obj.REQUEST['license_other_name'],
-                                          obj.REQUEST['license_other_url'],
-                                          'None'])
-            elif 'Site Default' == newLicense:
-                license.setRightsLicense(props.license_siteDefault)
-            else:
-                nl = self.getLicenseByTitle(obj, newLicense)
-                license.setRightsLicense(nl)
-
-
     def getDefaultSiteLicense(self, request):
         """ Get the default site license """
         props = request.portal_url.portal_properties.content_licensing_properties
@@ -255,8 +231,7 @@ class ContentLicensingUtility(SimpleItem):
         """ Return the CC license info for a CC license. """
         return cc_license_rdf[licenseId]
 
-    def setObjLicense(self, obj):
+    def setObjLicense(self, obj, newLicense):
         """ Set a license using the object """
         license = ILicense(obj)
-        self.setLicense(obj, license)
-        
+        license.setRightsLicense(newLicense)

@@ -45,8 +45,8 @@
     name="dc_metadata"
     for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
     class=".ExtendedCopyrightFieldForm"
-    template="dc_metadata.pt"
     permission="zope2.View"
+    allowed_attributes="getLicenseAndHolderFromObject getLicenseTitle getDefaultCCLicense getDefaultOtherLicenseName getDefaultOtherLicenseUrl getDefaultOtherLicenseButton"
     layer="..interfaces.IContentLicensingLayer"
     />
 

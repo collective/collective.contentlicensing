@@ -1,12 +1,6 @@
-from Products.CMFPlone.tests import PloneTestCase
 from unittest import TestSuite, makeSuite
-from Testing import ZopeTestCase
-from Testing.ZopeTestCase import user_name
-from AccessControl import Unauthorized
 from base import ContentLicensingTestCase
 from zope.component import getUtility
-from zope.event import notify
-from zope.lifecycleevent import ObjectModifiedEvent
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
 
 
@@ -43,7 +37,6 @@ class TestContentLicensing(ContentLicensingTestCase):
 
         
     def testNonLicensableRecurse(self):
-        from collective.contentlicensing.browser import CopyrightBylineViewlet
         self.setRoles(['Manager'])
 
         self.portal.invokeFactory('Folder','folder1')
@@ -62,12 +55,12 @@ class TestContentLicensing(ContentLicensingTestCase):
         sf1.setDescription('This is a test Smart Folder')
 
         gnu_license = self.props.getProperty('license_gnuFree')
-        folder1.REQUEST['license'] = gnu_license[0]
-        folder1.REQUEST['license_cc_name'] = gnu_license[1]
-        folder1.REQUEST['recurse_cc_url'] = gnu_license[2]
-        folder1.REQUEST['recurse_cc_button'] = gnu_license[3]
-        folder1.REQUEST['recurse_folders'] = True
-        notify(ObjectModifiedEvent(folder1))
+        folder1.REQUEST.form['license'] = gnu_license[0]
+        folder1.REQUEST.form['license_cc_name'] = gnu_license[1]
+        folder1.REQUEST.form['recurse_cc_url'] = gnu_license[2]
+        folder1.REQUEST.form['recurse_cc_button'] = gnu_license[3]
+        folder1.REQUEST.form['recurse_folders'] = True
+        folder1.processForm()
 
         self.assertEqual(self.clutil.getLicenseAndHolderFromObject(doc1)[1][0],
                          'GNU Free Documentation License')

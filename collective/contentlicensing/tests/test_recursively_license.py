@@ -1,12 +1,6 @@
-from Products.CMFPlone.tests import PloneTestCase
 from unittest import TestSuite, makeSuite
-from Testing import ZopeTestCase
-from Testing.ZopeTestCase import user_name
-from AccessControl import Unauthorized
 from base import ContentLicensingTestCase
 from zope.component import getUtility
-from zope.event import notify
-from zope.lifecycleevent import ObjectModifiedEvent
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
 
 
@@ -34,13 +28,13 @@ class TestContentLicensing(ContentLicensingTestCase):
         img1.setTitle('Test Image 01')
         # Get GNU License and stuff it in the Request object
         gnu_license = self.props.getProperty('license_gnuFree')
-        folder1.REQUEST['license'] = gnu_license[0]
-        folder1.REQUEST['license_cc_name'] = gnu_license[1]
-        folder1.REQUEST['recurse_cc_url'] = gnu_license[2]
-        folder1.REQUEST['recurse_cc_button'] = gnu_license[3]
-        folder1.REQUEST['recurse_folders'] = True
+        folder1.REQUEST.form['license'] = gnu_license[0]
+        folder1.REQUEST.form['license_cc_name'] = gnu_license[1]
+        folder1.REQUEST.form['recurse_cc_url'] = gnu_license[2]
+        folder1.REQUEST.form['recurse_cc_button'] = gnu_license[3]
+        folder1.REQUEST.form['recurse_folders'] = True
         # Fire off the request
-        notify(ObjectModifiedEvent(folder1))
+        folder1.processForm()
         # Check that it worked
         self.assertEqual(self.clutil.getLicenseAndHolderFromObject(folder1)[1][0],
                          'GNU Free Documentation License')
@@ -51,13 +45,13 @@ class TestContentLicensing(ContentLicensingTestCase):
         # Get all rights reserved license and stuff it in the request
         ar_license = self.props.getProperty('license_allRights')
         req = {}
-        for x in folder1.REQUEST.keys():
+        for x in folder1.REQUEST.form.keys():
             if x != 'recurse_folders':
-                req[x] = folder1.REQUEST[x]
-        folder1.REQUEST = req
-        folder1.REQUEST['crazy_parameter'] = True
+                req[x] = folder1.REQUEST.form[x]
+        folder1.REQUEST.form = req
+        folder1.REQUEST.form['crazy_parameter'] = True
         # Fire off the request without the recurse option set
-        notify(ObjectModifiedEvent(folder1))
+        folder1.processForm()
         # Check that the doc and image have not changed
         self.assertEqual(self.clutil.getLicenseAndHolderFromObject(doc1)[1][0],
                          'GNU Free Documentation License')

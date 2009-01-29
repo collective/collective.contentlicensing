@@ -45,9 +45,6 @@ class IContentLicensingUtility(Interface):
     def getLicenseAndHolderFromObject(obj):
         """ Get the copyright holder and license from an object. """
 
-    def setLicense(obj, license):
-        """ Set a license using the Dublin Core Annotations interface. """
-
     def getDefaultSiteLicense(self, request):
         """ Get the default site license """
 

@@ -4,6 +4,11 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
+* Provide the extra fields on the edit form via a schema extender and custom
+  Archetypes fields and widget, rather than by overriding edit_macros and
+  using Zope 3 events.
+  [davisagli]
+
 * No longer patch Archetypes to fire an object modified event, because it does
   this fine on its own.
   [davisagli]
