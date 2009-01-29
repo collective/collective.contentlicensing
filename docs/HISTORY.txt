@@ -4,6 +4,10 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
+* Removed dc_metadata.pt from skin layer, because a browser view is used now
+  instead.
+  [davisagli]
+
 * Removed code for handling recursive license changes from the properties tab,
   which is no longer used in Plone 3.
   [davisagli]
@@ -13,5 +17,9 @@ Changelog
 
 * Use viewlets for the byline and citation info rather than overriding templates
   [davisagli]
+
+
+Previously
+-----------
 
 * Initial release
