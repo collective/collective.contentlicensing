@@ -4,5 +4,7 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
-* Initial release
+* Use viewlets for the byline and citation info rather than overriding templates
+  [davisagli]
 
+* Initial release
