@@ -4,6 +4,9 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
+* Don't mark things as annotatable, because now we can assume they are.
+  [davisagli]
+
 * Removed dc_metadata.pt from skin layer, because a browser view is used now
   instead.
   [davisagli]

@@ -19,26 +19,22 @@
   </class>
 
   <class class="Products.ATContentTypes.content.document.ATDocument">
-    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
-                           zope.annotation.interfaces.IAttributeAnnotatable"
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       />
   </class>
 
   <class class="Products.ATContentTypes.content.file.ATFile">
-    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
-                           zope.annotation.interfaces.IAttributeAnnotatable"
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       />
   </class>
 
   <class class="Products.ATContentTypes.content.image.ATImage">
-    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
-                           zope.annotation.interfaces.IAttributeAnnotatable"
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       />
   </class>
 
   <class class="Products.ATContentTypes.content.folder.ATFolder">
-    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
-                           zope.annotation.interfaces.IAttributeAnnotatable"
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       />
   </class>
 
