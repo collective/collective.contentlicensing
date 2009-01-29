@@ -5,7 +5,6 @@
            i18n_domain="ContentLicensing">
 
   <include package=".browser" />
-  <include package=".utilities"/>
   <include package=".DublinCoreExtensions" />
 
   <five:registerPackage package="." />
