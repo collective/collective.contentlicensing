@@ -4,6 +4,10 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
+* No longer patch Archetypes to fire an object modified event, because it does
+  this fine on its own.
+  [davisagli]
+
 * Don't mark things as annotatable, because now we can assume they are.
   [davisagli]
 
