@@ -4,6 +4,10 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
+* Removed code for handling recursive license changes from the properties tab,
+  which is no longer used in Plone 3.
+  [davisagli]
+
 * Removed unused metadata_view
   [davisagli]
 

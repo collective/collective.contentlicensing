@@ -1,6 +1,0 @@
-[default]
-title = Properties
-
-[actions]
-action.success = traverse_to:string:content_edit
-action.failure = traverse_to_action:string:metadata
