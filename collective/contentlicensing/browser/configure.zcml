@@ -21,10 +21,11 @@
      layer="..interfaces.IContentLicensingLayer"
      />
 
-  <browser:page
-      name="copyright_byline_view"
+  <browser:viewlet
+      name="collective.contentlicensing.copyright_byline_view"
       for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-      class=".CopyrightBylineView"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".CopyrightBylineViewlet"
       template="copyright_byline.pt"
       permission="zope2.View"
       layer="..interfaces.IContentLicensingLayer"
@@ -39,10 +40,11 @@
       layer="..interfaces.IContentLicensingLayer"
       />
   
-  <browser:page
-      name="citation_view"
+  <browser:viewlet
+      name="collective.contentlicensing.citation_view"
       for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-      class=".CopyrightBylineView"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".CopyrightBylineViewlet"
       template="citation_view.pt"
       permission="zope2.View"
       layer="..interfaces.IContentLicensingLayer"

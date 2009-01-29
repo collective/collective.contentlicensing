@@ -17,7 +17,7 @@ class TestContentLicensing(ContentLicensingTestCase):
         self.clutil = getUtility(IContentLicensingUtility)
     
     def testNonLicensableTopic(self):
-        from collective.contentlicensing.browser import CopyrightBylineView
+        from collective.contentlicensing.browser import CopyrightBylineViewlet
         self.setRoles(['Manager'])
         
         self.portal.invokeFactory('Folder','folder1')
@@ -35,15 +35,15 @@ class TestContentLicensing(ContentLicensingTestCase):
         sf1.setTitle('Test Smart Folder 01')
         sf1.setDescription('This is a test Smart Folder')
 
-        view = CopyrightBylineView(doc1, self.app.REQUEST)
+        view = CopyrightBylineViewlet(doc1, self.app.REQUEST)
         assert(view.getLicenseByline())
 
-        view = CopyrightBylineView(doc1, self.app.REQUEST)
+        view = CopyrightBylineViewlet(doc1, self.app.REQUEST)
         self.assertRaises(TypeError, view.getLicenseByline())
 
         
     def testNonLicensableRecurse(self):
-        from collective.contentlicensing.browser import CopyrightBylineView
+        from collective.contentlicensing.browser import CopyrightBylineViewlet
         self.setRoles(['Manager'])
 
         self.portal.invokeFactory('Folder','folder1')

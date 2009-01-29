@@ -23,6 +23,7 @@ __docformat__ = 'plaintext'
 __version__   = '$ Revision 0.0 $'[11:-2]
 
 from Products.Five.browser import BrowserView
+from plone.app.layout.viewlets.common import ViewletBase
 from zope.component import getUtility
 from zope.interface import implements
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
@@ -53,10 +54,10 @@ def unicode_sanitize(text):
     return text
 
 
-class CopyrightBylineView(BrowserView):
+class CopyrightBylineViewlet(ViewletBase):
     """ Render the copyright byline """
 
-    def __init__(self, context, request):
+    def __init__(self, context, request, view=None, manager=None):
         self.context = context
         self.request = request
         self.props = self.context.portal_url.portal_properties.content_licensing_properties
