@@ -4,6 +4,9 @@ Changelog
 2.1.0 - Unreleased
 ----------------
 
+* Removed unused metadata_view
+  [davisagli]
+
 * Use viewlets for the byline and citation info rather than overriding templates
   [davisagli]
 
