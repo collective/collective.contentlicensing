@@ -45,8 +45,12 @@ class LicenseWidget(TypesWidget):
                      emptyReturnsMarker=False, validating=True):
         """ Provide custom logic for determing the license based on several form fields """
 
-        value, kw = TypesWidget.process_form(self, instance, field, form,
+        result = TypesWidget.process_form(self, instance, field, form,
             empty_marker, emptyReturnsMarker, validating)
+        if result is empty_marker:
+            return empty_marker
+        value = result[0]
+        kw = result[1]
         
         if 'Creative Commons License' == value:
             newLicense = ['Creative Commons License',
