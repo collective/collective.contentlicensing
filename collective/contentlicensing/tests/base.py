@@ -9,10 +9,6 @@ from Products.Five import zcml
 from Testing import ZopeTestCase as ztc
 from Products.PloneTestCase.layer import onsetup
 
-
-packages=find_packages('src')
-package_dir={'':'src'},
-
 @onsetup
 def setup_contentlicensing_project():
     """
