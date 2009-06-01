@@ -35,7 +35,10 @@
   <cc:license tal:condition="cclicense"
               rdf:resource="http://creativecommons.org/"
               tal:attributes="rdf:resource python:cclicense[0]"/>
-  
+  <dc:date tal:content="context/portal_syndication/getUpdateBase">Feed Update Date</dc:date>        
+  <dc:publisher tal:condition="context/portal_metadata/Publisher" tal:content="context/portal_metadata/Publisher">Publisher</dc:publisher>        
+  <dc:language tal:content="context/Language" />
+  <dc:rights tal:content="python: '%s, %s' % (view.getRightsAndHolder(context)[0], view.getRightsAndHolder(context)[1])">Rights</dc:rights>  
   <tal:comment replace="nothing">
     The syndication tool is pretty brain dead and won't let you access the variables
     you need for this from something like search_rss, unless you've enable site syndication
@@ -65,7 +68,9 @@
                     objcclicense python:view.getCCLicense(obj_item);
                     objcreators obj_item/Creators;
                     objcontributors obj_item/Contributors;
-                    objsubjects obj_item/Subject">        
+                    objsubjects obj_item/Subject;
+										objrights python:view.getRightsAndHolder(obj_item)[0];
+										objrightsholder python:view.getRightsAndHolder(obj_item)[1]">
     <title tal:content="obj_item/pretty_title_or_id">Title</title>        
     <link tal:content="obj_item/Identifier">Identifier</link>        
     <description tal:content="obj_item/Description">Description</description>        
@@ -83,7 +88,8 @@
     <tal:block tal:condition="python: 1 == len(objcreators)">
       <dc:creator tal:content="python: objcreators[0]"/>
     </tal:block>
-    <dc:rights tal:condition="obj_item/Rights" tal:content="obj_item/Rights">Rights</dc:rights>        
+    <dc:rights tal:content="python: '%s, %s' % (objrights, objrightsholder)">Rights</dc:rights>        
+    <dc:language tal:content="obj_item/Language" />
     <tal:block tal:condition="python: len(objsubjects) > 1">
       <dc:subject>
         <rdf:bag>

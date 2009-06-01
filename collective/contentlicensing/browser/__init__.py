@@ -64,7 +64,6 @@ class CopyrightBylineView(BrowserView):
 
     def getLicenseByline(self):
         """ Get the license byline fields for an object. """
-
         copyright = self.context.Rights()
         if not copyright:
             copyright = self.props.DefaultSiteCopyright
@@ -327,13 +326,6 @@ class RDFMetadataView(BrowserView):
         # Title
         self._createNode(node, 'dc:title', self.context.title )
 
-        # Language
-        lang = self.context.Language()
-        if not lang:
-            po = self.context.portal_url.getPortalObject()
-            lang = po.portal_properties.site_properties.getProperty('default_language')
-        self._createNode(node, 'dc:language', lang )
-
         # Description
         desc = self.context.Description()
         if desc:
@@ -342,26 +334,40 @@ class RDFMetadataView(BrowserView):
         # Subject
         self._renderList(node, 'dc:subject', [sub for sub in self.context.Subject() ] )
 
-        # Type
-        self._createNode(node, 'dc:type', self.context.Type())
-
+        # Publisher
+        self._createNode(node, 'dc:publisher', self.context.portal_url.getPortalObject().Publisher() )
+        
         # Creators
         self._renderList(node, 'dc:creator', [creat for creat in self.context.Creators() ] )
 
         # Contributors
         self._renderList(node, 'dc:contributor', [contrib for contrib in self.context.Contributors() ] )
 
-        # Publisher
-        self._createNode(node, 'dc:publisher', self.context.portal_url.getPortalObject().Publisher() )
-
-        # Format
-        self._createNode(node, 'dc:format', self.context.Format())
-
         # Rights
         rights = self.context.Rights()
         if not rights:
             rights = self.props.DefaultSiteCopyright
-        self._createNode(node, 'dc:rights', rights)
+        holder = self.props.DefaultSiteCopyrightHolder
+        if self.context != self.context.portal_url.getPortalObject():
+            result = self.clutil.getLicenseAndHolderFromObject(self.context)
+            if result:
+                if result[0] != '(site default)':
+                    holder = license[0]            
+        self._createNode(node, 'dc:rights', '%s, %s' % (rights, holder))
+
+        # Language
+        lang = self.context.Language()
+        if not lang:
+            po = self.context.portal_url.getPortalObject()
+            lang = po.portal_properties.site_properties.getProperty('default_language')
+        self._createNode(node, 'dc:language', lang )
+
+        # Type
+        self._createNode(node, 'dc:type', self.context.Type())
+
+        # Format
+        self._createNode(node, 'dc:format', self.context.Format())
+
 
     def _renderList(self, node, element, value):
         """ Render a list of items in RDF. """
@@ -430,6 +436,19 @@ class RSSView:
             if license.has_key(tag):
                 return license[tag]
         return []
+        
+    def getRightsAndHolder(self, obj):
+        """ Get the rights and rights holder for the object. """
+        copyright = obj.Rights()
+        if not copyright:
+            copyright = self.props.DefaultSiteCopyright
+        holder = self.props.DefaultSiteCopyrightHolder
+        if obj != self.context.portal_url.getPortalObject():
+            result = self.clutil.getLicenseAndHolderFromObject(obj)
+            if result:
+                if result[0] != '(site default)':
+                    holder = license[0]
+        return copyright, holder
     
 class PrefsView:
     """ prefs view """
