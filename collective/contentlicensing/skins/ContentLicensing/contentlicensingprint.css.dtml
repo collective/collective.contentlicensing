@@ -3,7 +3,8 @@
 
 #print_citation
 {
-display:block;
+  padding-bottom: 3px;
+  display:block;
 }
 
 

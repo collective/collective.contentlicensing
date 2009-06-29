@@ -1,10 +1,3 @@
-<style>
-
-.documentByLine span {
-    padding-bottom: 3px;
-}
-
-</style>
 
 <div class="documentByLine"
      style="text-align: right; margin-top: 2em; border-top: 1px solid #999;"
@@ -27,10 +20,6 @@
        i18n:translate="" 
        class="visualNoPrint"
        tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}')">Cite/attribute Resource</a>.     
-    <style type="text/css">
-      @media print { #print_citation {display:block;} }
-      @media screen { #print_citation {display:None;} }
-    </style>
     <span id="print_citation" tal:content="citation_info">Print Version Citation</span>
     <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:domain="ContentLicensing" i18n:translate="">
       This work is licensed under a 

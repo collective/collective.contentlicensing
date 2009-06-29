@@ -9,6 +9,13 @@ border-top: 1px solid #999;
 padding-bottom: 3px;
 }
 
+
+#print_citation
+{
+  padding-bottom: 3px;
+  display:None;
+}
+
 /* </dtml-with> */
 
 
