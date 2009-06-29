@@ -29,8 +29,7 @@
        class="link-plain"
        rel="license"
        tal:attributes="href license_url;
-                       title python:here.translate(license_name);
-                       alt python:here.translate(license_name)"
+                       title python:here.translate(license_name);"
        tal:content="python:here.translate(license_name)">Creative Commons License.</a>
 
     <div tal:condition="python:not license_url and license_name"
@@ -42,8 +41,7 @@
        class="link-plain"
        rel="license"
        tal:attributes="href license_url;
-                       title python:here.translate(license_name);
-                       alt python:here.translate(license_name)">
+                       title python:here.translate(license_name);">
     <img tal:condition="license_button"
          style="vertical-align: text-top; margin-top: 3px; padding-left: 5px"
          tal:attributes="src license_button;
