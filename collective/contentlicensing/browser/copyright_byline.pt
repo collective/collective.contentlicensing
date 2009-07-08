@@ -19,6 +19,7 @@
     <a style="cursor:pointer;text-decoration:underline" 
        i18n:translate="" 
        class="visualNoPrint"
+			 id="click_citation"
        tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}')">Cite/attribute Resource</a>.     
     <span id="print_citation" tal:content="citation_info">Print Version Citation</span>
     <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:domain="ContentLicensing" i18n:translate="">
