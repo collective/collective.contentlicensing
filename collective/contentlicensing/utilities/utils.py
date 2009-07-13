@@ -1,5 +1,6 @@
 ##################################################################################
-#    Copyright (C) 2006-2007 Utah State University, All rights reserved.          
+#    Copyright (c) 2004-2009 Utah State University, All rights reserved.
+#    Portions copyright 2009 Massachusetts Institute of Technology, All rights reserved.
 #                                                                                 
 #    This program is free software; you can redistribute it and/or modify         
 #    it under the terms of the GNU General Public License as published by         
