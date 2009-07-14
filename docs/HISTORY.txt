@@ -2,13 +2,14 @@ Changelog
 =========
 
 2.2.0 - Final
+----------------
 
-* express additional metadata fields in rss views
-* fix invalid CSS issues
+  * express additional metadata fields in rss views
+  * fix invalid CSS issues
 
 
 2.1.0 - Unreleased
 ----------------
 
-* Initial release
+  * Initial release
 
