@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
-"POT-Creation-Date: 2008-11-17 23:40+0000\n"
+"POT-Creation-Date: 2009-07-21 18:17+0000\n"
 "PO-Revision-Date: 2007-04-06 18:50+0100\n"
 "Last-Translator: Robert Schuwer <robert.schuwer@ou.nl>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -47,12 +47,12 @@ msgstr ""
 msgid "Check here to apply this license to all contained objects."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:103
+#: ./browser/contentlicensingprefs.py:104
 msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
 msgstr ""
 
 #. Default: "Cite/attribute Resource"
-#: ./browser/copyright_byline.pt:26
+#: ./browser/copyright_byline.pt:19
 msgid "Cite/attribute Resource"
 msgstr ""
 
@@ -62,11 +62,11 @@ msgid "Click here to get the file"
 msgstr ""
 
 #. Default: "Configure site wide settings for copyright licensing of content within this portal."
-#: ./browser/contentlicensingprefs.py:255
+#: ./browser/contentlicensingprefs.py:256
 msgid "Configure site wide settings for copyright licensing of content within this portal."
 msgstr "Site-brede instellingen voor copyright-licenties van content in deze portal."
 
-#: ./browser/contentlicensingprefs.py:239
+#: ./browser/contentlicensingprefs.py:240
 msgid "Content License Settings"
 msgstr ""
 
@@ -76,7 +76,7 @@ msgid "Content Licensing"
 msgstr ""
 
 #. Default: "Content Licensing Settings"
-#: ./browser/contentlicensingprefs.py:254
+#: ./browser/contentlicensingprefs.py:255
 msgid "Content Licensing Settings"
 msgstr "Instellingen van inhoud licenties"
 
@@ -95,21 +95,21 @@ msgstr "Copyright licentie"
 msgid "Create License"
 msgstr "Cre&euml;er licentie"
 
-#: ./browser/contentlicensingprefs.py:55
+#: ./browser/contentlicensingprefs.py:56
 msgid "Creative Commons License Picker"
 msgstr ""
 
 #. Default: "Default Copyright"
-#: ./browser/contentlicensingprefs.py:87
+#: ./browser/contentlicensingprefs.py:88
 msgid "Default Copyright"
 msgstr "Default copyright"
 
 #. Default: "Default Copyright Holder"
-#: ./browser/contentlicensingprefs.py:92
+#: ./browser/contentlicensingprefs.py:93
 msgid "Default Copyright Holder"
 msgstr "Default copyright eigenaar"
 
-#: ./browser/contentlicensingprefs.py:97
+#: ./browser/contentlicensingprefs.py:98
 msgid "Default License"
 msgstr ""
 
@@ -118,11 +118,11 @@ msgstr ""
 msgid "File type"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:75
+#: ./browser/contentlicensingprefs.py:76
 msgid "Jurisdiction"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:122
+#: ./browser/contentlicensingprefs.py:123
 msgid "License Icon"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 msgid "License Image"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:118
+#: ./browser/contentlicensingprefs.py:119
 msgid "License Location"
 msgstr ""
 
@@ -145,12 +145,12 @@ msgstr "Naam licentie"
 msgid "License URL"
 msgstr "URL licentie"
 
-#: ./browser/contentlicensingprefs.py:243
+#: ./browser/contentlicensingprefs.py:244
 msgid "New License"
 msgstr ""
 
 #. Default: "Publisher"
-#: ./browser/contentlicensingprefs.py:83
+#: ./browser/contentlicensingprefs.py:84
 msgid "Publisher"
 msgstr "Uitgever"
 
@@ -164,37 +164,37 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:260
+#: ./browser/contentlicensingprefs.py:261
 msgid "Save"
 msgstr ""
 
 #. Default: "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
-#: ./browser/contentlicensingprefs.py:76
+#: ./browser/contentlicensingprefs.py:77
 #, fuzzy
 msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 msgstr "Specificeer de jurisdictie waarvoor de inhoudslicentie valide is (alleen toepasbaar voor Creative Commons licenties)"
 
 #. Default: "Supported Licenses"
-#: ./browser/contentlicensingprefs.py:102
+#: ./browser/contentlicensingprefs.py:103
 msgid "Supported Licenses"
 msgstr "Ondersteunde licenties"
 
 #. Default: "The URL pointer to an image associated with the license."
-#: ./browser/contentlicensingprefs.py:123
+#: ./browser/contentlicensingprefs.py:124
 msgid "The URL pointer to an image associated with the license."
 msgstr "De URL naar een afbeelding, geassocieerd met de licentie"
 
-#: ./browser/contentlicensingprefs.py:119
+#: ./browser/contentlicensingprefs.py:120
 msgid "The URL pointer to information about the license."
 msgstr ""
 
 #. Default: "The default copyright owner for content in this portal."
-#: ./browser/contentlicensingprefs.py:93
+#: ./browser/contentlicensingprefs.py:94
 msgid "The default copyright owner for content in this portal."
 msgstr "De default copyright eigenaar voor inhoud op dit portal"
 
 #. Default: "The default copyright to be used with content in this portal."
-#: ./browser/contentlicensingprefs.py:88
+#: ./browser/contentlicensingprefs.py:89
 msgid "The default copyright to be used with content in this portal."
 msgstr "De default copyright voor inhoud op dit portal"
 
@@ -209,7 +209,7 @@ msgid "The external URL to an image associated with the license."
 msgstr ""
 
 #. Default: "The institution or individual responsible for publishing content in this portal."
-#: ./browser/contentlicensingprefs.py:84
+#: ./browser/contentlicensingprefs.py:85
 msgid "The institution or individual responsible for publishing content in this portal."
 msgstr "Het instituut of individu verantwoordelijk voor publiceren van content op deze portal."
 
@@ -218,7 +218,7 @@ msgstr "Het instituut of individu verantwoordelijk voor publiceren van content o
 msgid "The license on this item."
 msgstr "De licentie op dit item"
 
-#: ./browser/contentlicensingprefs.py:115
+#: ./browser/contentlicensingprefs.py:116
 msgid "The name of the license."
 msgstr ""
 
@@ -233,7 +233,7 @@ msgid "The title of the license that will appear on the licensed object."
 msgstr "De titel van de licentie die wordt afgebeeld op het gelicenseerde object"
 
 #. Default: "This work is licensed under a"
-#: ./browser/copyright_byline.pt:35
+#: ./browser/copyright_byline.pt:25
 msgid "This work is licensed under a"
 msgstr "Dit werk is gelicenseerd onder een"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0.1\n"
-"POT-Creation-Date: 2008-11-17 23:40+0000\n"
+"POT-Creation-Date: 2009-07-21 18:18+0000\n"
 "PO-Revision-Date: 2007-09-15 01:45-0700\n"
 "Last-Translator: Chenyong(Jessie) Zhu <jessie0587@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,6 @@ msgstr ""
 #. Default: "All Rights Reserved"
 #: ./profiles/default/propertiestool.xml
 msgid "All Rights Reserved"
-msgstr ""
-
-#. Default: "Content Licensing"
-#: ./profiles/default/controlpanel.xml
-msgid "Content Licensing"
 msgstr ""
 
 #. Default: "Creative Commons License"
