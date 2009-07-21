@@ -23,7 +23,7 @@
 
 <channel rdf:about="" tal:attributes="rdf:about request/URL" >
   <title tal:content="context/pretty_title_or_id">The title</title>
-  <!-- link tal:content="context/portal_url">http://url.to.portal</link -->
+  <link tal:content="context/portal_url">http://url.to.portal</link>
   <description>
     <metal:block define-slot="description">
        <tal:block content="context/Description">
@@ -72,7 +72,7 @@
 										objrights python:view.getRightsAndHolder(obj_item)[0];
 										objrightsholder python:view.getRightsAndHolder(obj_item)[1]">
     <title tal:content="obj_item/pretty_title_or_id">Title</title>        
-    <!-- link tal:content="obj_item/Identifier">Identifier</link -->        
+    <link tal:content="obj_item/Identifier">Identifier</link>        
     <description tal:content="obj_item/Description">Description</description>        
     <cc:license tal:condition="objcclicense" tal:attributes="rdf:resource python:objcclicense[0]"/>
     <tal:publisher tal:condition="context/portal_metadata/Publisher">
