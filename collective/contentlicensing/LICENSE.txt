@@ -1,5 +1,5 @@
-  This software is Copyright (C) 2006 Utah State University. All rights
-  reserved. 
+  enpraxis.leftskin is Copyright (c) 2004-2009 Utah State University, All rights reserved. 
+  Portions copyright 2009 Massachusetts Institute of Technology, All rights reserved.
 
   The Content Licensing Tool is an extention to the Plone content management 
   system (www.plone.org) and is developed by the COSL group 
