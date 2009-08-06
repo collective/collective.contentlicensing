@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
 "POT-Creation-Date: 2009-07-21 18:17+0000\n"
-"PO-Revision-Date: 2007-05-18 00:00 +0000\n"
-"Last-Translator: Arturo Formariz <arturo.formariz@upm.es>\n"
+"PO-Revision-Date: 2009-08-04 19:02+0100\n"
+"Last-Translator: Guillermo de la Torre <guillermo.delatorre@upm.es>\n"
 "Language-Team: Oficina OCW-UPM <ocw-upm@upm.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -17,46 +17,46 @@ msgstr ""
 #. Default: "(Choose)"
 #: ./browser/dc_metadata.pt:71
 msgid "(Choose)"
-msgstr ""
+msgstr "(Seleccione)"
 
 #. Default: "(No file has been uploaded yet)"
 #: ./skins/ContentLicensing/file_view.pt:52
 msgid "(No file has been uploaded yet)"
-msgstr ""
+msgstr "(No se ha cargado ningún archivo)"
 
 #. Default: "(Required)"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "(Required)"
-msgstr ""
+msgstr "(Obligatorio)"
 
 #. Default: "Apply License To Contained Objects"
 #: ./browser/dc_metadata.pt:152
 msgid "Apply License To Contained Objects"
-msgstr "Aplicar licencia a los objetos contenidos"
+msgstr "Aplicar licencia a los objetos que contenga"
 
 #. Default: "Cancel"
 #: ./skins/ContentLicensing/create_license.cpt:117
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #. Default: "Check here to apply this license to all contained objects."
 #: ./browser/dc_metadata.pt:156
 msgid "Check here to apply this license to all contained objects."
-msgstr ""
+msgstr "Seleccione para aplicar esta licencia a todos los objetos que contenga."
 
 #: ./browser/contentlicensingprefs.py:104
 msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
-msgstr ""
+msgstr "Elija las licencias que podrán ser seleccionadas para cada objeto. El selector de licencias Creative Commons consiste en un formulario en que seleccionar la licencia Creative Commons más apropiada. "
 
 #. Default: "Cite/attribute Resource"
 #: ./browser/copyright_byline.pt:19
 msgid "Cite/attribute Resource"
-msgstr ""
+msgstr "Reconocer autoría/Citar obra"
 
 #. Default: "Click here to get the file"
 #: ./skins/ContentLicensing/file_view.pt:36
 msgid "Click here to get the file"
-msgstr ""
+msgstr "Haga clic aquí para ver el archivo"
 
 #. Default: "Configure site wide settings for copyright licensing of content within this portal."
 #: ./browser/contentlicensingprefs.py:256
@@ -65,17 +65,17 @@ msgstr "Configure las preferencias generales del sitio para el tratamiento de li
 
 #: ./browser/contentlicensingprefs.py:240
 msgid "Content License Settings"
-msgstr ""
+msgstr "Configuración de licencias"
 
 #. Default: "Content Licensing"
 #: ./profiles/default/actionicons.xml
 msgid "Content Licensing"
-msgstr ""
+msgstr "Licencias para contenidos"
 
 #. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:255
 msgid "Content Licensing Settings"
-msgstr "Ajustes de licencia"
+msgstr "Ajustes sobre las licencias"
 
 #. Default: "Copyright Holder"
 #: ./browser/dc_metadata.pt:13
@@ -94,7 +94,7 @@ msgstr "Crear licencia"
 
 #: ./browser/contentlicensingprefs.py:56
 msgid "Creative Commons License Picker"
-msgstr ""
+msgstr "Selector de licencia Creative Commons"
 
 #. Default: "Default Copyright"
 #: ./browser/contentlicensingprefs.py:88
@@ -104,33 +104,33 @@ msgstr "Copyright por defecto"
 #. Default: "Default Copyright Holder"
 #: ./browser/contentlicensingprefs.py:93
 msgid "Default Copyright Holder"
-msgstr "Titular del copyright por defecto"
+msgstr "Titular por defecto del copyright"
 
 #: ./browser/contentlicensingprefs.py:98
 msgid "Default License"
-msgstr ""
+msgstr "Licencia por defecto"
 
 #. Default: "File type"
 #: ./skins/ContentLicensing/file_view.pt:58
 msgid "File type"
-msgstr ""
+msgstr "Tipo de archivo"
 
 #: ./browser/contentlicensingprefs.py:76
 msgid "Jurisdiction"
-msgstr ""
+msgstr "Jurisdicción"
 
 #: ./browser/contentlicensingprefs.py:123
 msgid "License Icon"
-msgstr ""
+msgstr "Icono de la licencia"
 
 #. Default: "License Image"
 #: ./skins/ContentLicensing/create_license.cpt:81
 msgid "License Image"
-msgstr ""
+msgstr "Imagen de la licencia"
 
 #: ./browser/contentlicensingprefs.py:119
 msgid "License Location"
-msgstr ""
+msgstr "Ubicación de la licencia"
 
 #. Default: "License Name"
 #: ./skins/ContentLicensing/create_license.cpt:30
@@ -144,7 +144,7 @@ msgstr "URL de la licencia"
 
 #: ./browser/contentlicensingprefs.py:244
 msgid "New License"
-msgstr ""
+msgstr "Nueva licencia"
 
 #. Default: "Publisher"
 #: ./browser/contentlicensingprefs.py:84
@@ -154,16 +154,16 @@ msgstr "Editor"
 #. Default: "RSS Feed"
 #: ./profiles/default/actions.xml
 msgid "RSS Feed"
-msgstr ""
+msgstr "Fuente RSS"
 
 #. Default: "Required"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "Required"
-msgstr ""
+msgstr "Obligatorio"
 
 #: ./browser/contentlicensingprefs.py:261
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #. Default: "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 #: ./browser/contentlicensingprefs.py:77
@@ -182,32 +182,32 @@ msgstr "Enlace a la imagen asociada a la licencia."
 
 #: ./browser/contentlicensingprefs.py:120
 msgid "The URL pointer to information about the license."
-msgstr ""
+msgstr "Enlace a la página con información sobre la licencia."
 
 #. Default: "The default copyright owner for content in this portal."
 #: ./browser/contentlicensingprefs.py:94
 msgid "The default copyright owner for content in this portal."
-msgstr "El titular del copyright por defecto para el contenido de este portal."
+msgstr "El titular por defecto del copyright para el contenido de este portal."
 
 #. Default: "The default copyright to be used with content in this portal."
 #: ./browser/contentlicensingprefs.py:89
 msgid "The default copyright to be used with content in this portal."
-msgstr "El copyright por defecto usado para el contenido de este portal."
+msgstr "El copyright por defecto para el contenido de este portal."
 
 #. Default: "The external URL of the license, this usually contains the actual content of the license."
 #: ./skins/ContentLicensing/create_license.cpt:61
 msgid "The external URL of the license, this usually contains the actual content of the license."
-msgstr "Enlace externo a la licencia, éste generalmente tiene los contenidos de la licencia."
+msgstr "Enlace externo a la licencia, generalmente incluye los términos actuales de la licencia."
 
 #. Default: "The external URL to an image associated with the license."
 #: ./skins/ContentLicensing/create_license.cpt:84
 msgid "The external URL to an image associated with the license."
-msgstr ""
+msgstr "El enlace externo a una imagen asociada a la licencia."
 
 #. Default: "The institution or individual responsible for publishing content in this portal."
 #: ./browser/contentlicensingprefs.py:85
 msgid "The institution or individual responsible for publishing content in this portal."
-msgstr "La institución o individuo responsable de la publicación del contenido en el portal."
+msgstr "La institución o la persona responsable de la publicación del contenido en el portal."
 
 #. Default: "The license on this item."
 #: ./browser/dc_metadata.pt:43
@@ -216,7 +216,7 @@ msgstr "La licencia de este elemento."
 
 #: ./browser/contentlicensingprefs.py:116
 msgid "The name of the license."
-msgstr ""
+msgstr "La denominación de la licencia."
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
 #: ./browser/dc_metadata.pt:17
@@ -226,10 +226,10 @@ msgstr "El nombre de la persona u organización poseedora o gestora de los derec
 #. Default: "The title of the license that will appear on the licensed object."
 #: ./skins/ContentLicensing/create_license.cpt:36
 msgid "The title of the license that will appear on the licensed object."
-msgstr "El título de la licencia que aparecerá en el objeto al que se le asigna licencia."
+msgstr "El título de la licencia que aparecerá en el objeto al que se le aplica."
 
 #. Default: "This work is licensed under a"
 #: ./browser/copyright_byline.pt:25
 msgid "This work is licensed under a"
-msgstr "Esta obra se publica bajo una licencia"
+msgstr "Esta obra se publica bajo una licencia "
 

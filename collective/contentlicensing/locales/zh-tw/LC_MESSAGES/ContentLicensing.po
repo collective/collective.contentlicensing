@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0.1\n"
 "POT-Creation-Date: 2009-07-21 18:17+0000\n"
-"PO-Revision-Date: 2007-09-15 01:45-0700\n"
-"Last-Translator: Chenyong(Jessie) Zhu <jessie0587@hotmail.com>\n"
+"PO-Revision-Date: 2009-08-02 10:03+0800\n"
+"Last-Translator: Haishuo Lee <haishuolee@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -17,134 +17,134 @@ msgstr ""
 #. Default: "(Choose)"
 #: ./browser/dc_metadata.pt:71
 msgid "(Choose)"
-msgstr ""
+msgstr "(選取）"
 
 #. Default: "(No file has been uploaded yet)"
 #: ./skins/ContentLicensing/file_view.pt:52
 msgid "(No file has been uploaded yet)"
-msgstr ""
+msgstr "（尚未有任何檔案上傳）"
 
 #. Default: "(Required)"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "(Required)"
-msgstr ""
+msgstr "（必填）"
 
 #. Default: "Apply License To Contained Objects"
 #: ./browser/dc_metadata.pt:152
 msgid "Apply License To Contained Objects"
-msgstr "此許可應用於包含的對象"
+msgstr "應用此授權至內含的物件中"
 
 #. Default: "Cancel"
 #: ./skins/ContentLicensing/create_license.cpt:117
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #. Default: "Check here to apply this license to all contained objects."
 #: ./browser/dc_metadata.pt:156
 msgid "Check here to apply this license to all contained objects."
-msgstr ""
+msgstr "勾選後應用此授權條款到所有內含的物件中"
 
 #: ./browser/contentlicensingprefs.py:104
 msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
-msgstr ""
+msgstr "選取可應用於個別物件的授權條款。CC創用授權選取器提供您選取最適宜創用授權的互動式表單。"
 
 #. Default: "Cite/attribute Resource"
 #: ./browser/copyright_byline.pt:19
 msgid "Cite/attribute Resource"
-msgstr ""
+msgstr "引用/追溯資源"
 
 #. Default: "Click here to get the file"
 #: ./skins/ContentLicensing/file_view.pt:36
 msgid "Click here to get the file"
-msgstr ""
+msgstr "點擊此處以取得檔案"
 
 #. Default: "Configure site wide settings for copyright licensing of content within this portal."
 #: ./browser/contentlicensingprefs.py:256
 msgid "Configure site wide settings for copyright licensing of content within this portal."
-msgstr "設置站點內容的版權協議"
+msgstr "設置站點內容的版權授權方式"
 
 #: ./browser/contentlicensingprefs.py:240
 msgid "Content License Settings"
-msgstr ""
+msgstr "內容授權設定"
 
 #. Default: "Content Licensing"
 #: ./profiles/default/actionicons.xml
 msgid "Content Licensing"
-msgstr ""
+msgstr "內容授權"
 
 #. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:255
 msgid "Content Licensing Settings"
-msgstr "內容協議設置"
+msgstr "內容授權設置"
 
 #. Default: "Copyright Holder"
 #: ./browser/dc_metadata.pt:13
 msgid "Copyright Holder"
-msgstr "版權持有者"
+msgstr "版權人"
 
 #. Default: "Copyright License"
 #: ./browser/dc_metadata.pt:39
 msgid "Copyright License"
-msgstr "版權協議"
+msgstr "版權授權"
 
 #. Default: "Create License"
 #: ./skins/ContentLicensing/create_license.cpt:10
 msgid "Create License"
-msgstr "創建協議"
+msgstr "創建授權"
 
 #: ./browser/contentlicensingprefs.py:56
 msgid "Creative Commons License Picker"
-msgstr ""
+msgstr "CC創用授權選取器"
 
 #. Default: "Default Copyright"
 #: ./browser/contentlicensingprefs.py:88
 msgid "Default Copyright"
-msgstr "缺省的版權"
+msgstr "版權原始設定"
 
 #. Default: "Default Copyright Holder"
 #: ./browser/contentlicensingprefs.py:93
 msgid "Default Copyright Holder"
-msgstr "缺省的版權所有者"
+msgstr "版權人原始設定"
 
 #: ./browser/contentlicensingprefs.py:98
 msgid "Default License"
-msgstr ""
+msgstr "原始設定授權"
 
 #. Default: "File type"
 #: ./skins/ContentLicensing/file_view.pt:58
 msgid "File type"
-msgstr ""
+msgstr "檔案類型"
 
 #: ./browser/contentlicensingprefs.py:76
 msgid "Jurisdiction"
-msgstr ""
+msgstr "管轄權"
 
 #: ./browser/contentlicensingprefs.py:123
 msgid "License Icon"
-msgstr ""
+msgstr "授權圖示"
 
 #. Default: "License Image"
 #: ./skins/ContentLicensing/create_license.cpt:81
 msgid "License Image"
-msgstr ""
+msgstr "授權圖像"
 
 #: ./browser/contentlicensingprefs.py:119
 msgid "License Location"
-msgstr ""
+msgstr "授權地點"
 
 #. Default: "License Name"
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
-msgstr "協議標題"
+msgstr "授權名稱"
 
 #. Default: "License URL"
 #: ./skins/ContentLicensing/create_license.cpt:55
 msgid "License URL"
-msgstr "協議URL"
+msgstr "授權URL"
 
 #: ./browser/contentlicensingprefs.py:244
 msgid "New License"
-msgstr ""
+msgstr "新授權"
 
 #. Default: "Publisher"
 #: ./browser/contentlicensingprefs.py:84
@@ -154,69 +154,69 @@ msgstr "發布者"
 #. Default: "RSS Feed"
 #: ./profiles/default/actions.xml
 msgid "RSS Feed"
-msgstr ""
+msgstr "RSS摘要"
 
 #. Default: "Required"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "Required"
-msgstr ""
+msgstr "必填"
 
 #: ./browser/contentlicensingprefs.py:261
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #. Default: "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 #: ./browser/contentlicensingprefs.py:77
 msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
-msgstr "指定有效內容許可的權限（僅適用於Creative Commons協議）"
+msgstr "指明內容授權有效的管轄區域。（在進行CC創用授權變更前，需先儲存管轄區的變動）"
 
 #. Default: "Supported Licenses"
 #: ./browser/contentlicensingprefs.py:103
 msgid "Supported Licenses"
-msgstr "所支持的協議"
+msgstr "支持授權方式"
 
 #. Default: "The URL pointer to an image associated with the license."
 #: ./browser/contentlicensingprefs.py:124
 msgid "The URL pointer to an image associated with the license."
-msgstr "指向協議圖片的URL"
+msgstr "指向授權圖像的URL"
 
 #: ./browser/contentlicensingprefs.py:120
 msgid "The URL pointer to information about the license."
-msgstr ""
+msgstr "URL指向此授權資訊"
 
 #. Default: "The default copyright owner for content in this portal."
 #: ./browser/contentlicensingprefs.py:94
 msgid "The default copyright owner for content in this portal."
-msgstr "在此入口中內容的缺省擁有者"
+msgstr "此站內容的原始版權人設定"
 
 #. Default: "The default copyright to be used with content in this portal."
 #: ./browser/contentlicensingprefs.py:89
 msgid "The default copyright to be used with content in this portal."
-msgstr "在此入口中內容所使用的缺省版權"
+msgstr "在此站內容所使用的原始版權設定"
 
 #. Default: "The external URL of the license, this usually contains the actual content of the license."
 #: ./skins/ContentLicensing/create_license.cpt:61
 msgid "The external URL of the license, this usually contains the actual content of the license."
-msgstr "協議的外部URL，它通常包括協議的實際內容"
+msgstr "授權方式的外部URL，通常包含授權的實際內容"
 
 #. Default: "The external URL to an image associated with the license."
 #: ./skins/ContentLicensing/create_license.cpt:84
 msgid "The external URL to an image associated with the license."
-msgstr ""
+msgstr "此外部URL連結至此授權之圖像"
 
 #. Default: "The institution or individual responsible for publishing content in this portal."
 #: ./browser/contentlicensingprefs.py:85
 msgid "The institution or individual responsible for publishing content in this portal."
-msgstr "在此入口中發布內容的機構或個人"
+msgstr "在此站中負責發布內容的機構或個人"
 
 #. Default: "The license on this item."
 #: ./browser/dc_metadata.pt:43
 msgid "The license on this item."
-msgstr "此內容的協議"
+msgstr "此物件的授權方式"
 
 #: ./browser/contentlicensingprefs.py:116
 msgid "The name of the license."
-msgstr ""
+msgstr "授權名稱"
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
 #: ./browser/dc_metadata.pt:17
@@ -226,10 +226,10 @@ msgstr "擁有或管理此資源的個人或機構名稱"
 #. Default: "The title of the license that will appear on the licensed object."
 #: ./skins/ContentLicensing/create_license.cpt:36
 msgid "The title of the license that will appear on the licensed object."
-msgstr "將出現於協議對象上的協議標題"
+msgstr "將出現於授權物件上的授權名稱"
 
 #. Default: "This work is licensed under a"
 #: ./browser/copyright_byline.pt:25
 msgid "This work is licensed under a"
-msgstr "本項目所使用的協議是"
+msgstr "本作品所使用的授權方式為"
 

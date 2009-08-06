@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2009-07-21 18:18+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2009-07-30 15:14+0100\n"
+"Last-Translator: Antonio Fini <antonio.fini@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,34 +13,37 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. Default: "All Rights Reserved"
 #: ./profiles/default/propertiestool.xml
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Tutti i diritti riservati"
 
 #. Default: "Creative Commons License"
 #: ./profiles/default/propertiestool.xml
 msgid "Creative Commons License"
-msgstr ""
+msgstr "Licenza Creative Commons"
 
 #. Default: "GNU Free Documentation License"
 #: ./profiles/default/propertiestool.xml
 msgid "GNU Free Documentation License"
-msgstr ""
+msgstr "Licenza GNU Free Documentation"
 
 #. Default: "Other"
 #: ./profiles/default/propertiestool.xml
 msgid "Other"
-msgstr ""
+msgstr "Altro"
 
 #. Default: "Site Default"
 #: ./profiles/default/propertiestool.xml
 msgid "Site Default"
-msgstr ""
+msgstr "Default del sito"
 
 #. Default: "by the Contributing Authors"
 #: ./profiles/default/propertiestool.xml
 msgid "by the Contributing Authors"
-msgstr ""
+msgstr "degli Autori"
 
