@@ -1,11 +1,9 @@
-# Master Translation Template for ContentLicensing
-# David Ray <davidray@gmail.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: ContentLicensing 1.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2009-07-21 18:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2009-08-04 10:00+0200\n"
+"Last-Translator: Nergis <nergis@metu.edu.tr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,64 +17,60 @@ msgstr ""
 #. Default: "(Choose)"
 #: ./browser/dc_metadata.pt:71
 msgid "(Choose)"
-msgstr ""
+msgstr "(Seç)"
 
 #. Default: "(No file has been uploaded yet)"
 #: ./skins/ContentLicensing/file_view.pt:52
 msgid "(No file has been uploaded yet)"
-msgstr ""
+msgstr "(Henüz herhangi bir dosya yüklenmedi)"
 
 #. Default: "(Required)"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "(Required)"
-msgstr ""
+msgstr "(Gerekli)"
 
 #. Default: "Apply License To Contained Objects"
 #: ./browser/dc_metadata.pt:152
 msgid "Apply License To Contained Objects"
-msgstr "Nesnelere Lisansı Uygula"
+msgstr "Kapsanan nesnelere lisans uygula."
 
 #. Default: "Cancel"
 #: ./skins/ContentLicensing/create_license.cpt:117
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #. Default: "Check here to apply this license to all contained objects."
 #: ./browser/dc_metadata.pt:156
-#, fuzzy
 msgid "Check here to apply this license to all contained objects."
-msgstr "Bu lisansı tüm seçili öğelere uygulamak için burayı tıklayın."
+msgstr "Kapsanan bütün nesnelere bu lisansı uygulamak için burayı kontrol edin."
 
 #: ./browser/contentlicensingprefs.py:104
 msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
-msgstr "Bireysel nesneler için seçilebilir olan lisansı seçin.Creative Commons License Picker, Creative Commons lisansı seçebilmek için interaktif bir form sağlar."
+msgstr "Her bir seçili nesne için uygulanabilecek lisansları seçin. Creative Commons Lisans Seçici, uygun bir Creative Commons lisansı seçmek için etkileşimli bir form sağlar."
 
 #. Default: "Cite/attribute Resource"
 #: ./browser/copyright_byline.pt:19
 msgid "Cite/attribute Resource"
-msgstr "Site Kaynağı"
+msgstr "Alıntı/atıf Kaynağı"
 
 #. Default: "Click here to get the file"
 #: ./skins/ContentLicensing/file_view.pt:36
 msgid "Click here to get the file"
-msgstr ""
+msgstr "Dosyayı almak için buraya tıkla"
 
-#. Default: "Configure site wide settings for copyright licensing of content within this portal."
 #: ./browser/contentlicensingprefs.py:256
-#, fuzzy
 msgid "Configure site wide settings for copyright licensing of content within this portal."
-msgstr " Bu portldaki telif hakkı içeriklerinin lisansı için site ayarlarını yapılandırınız."
+msgstr "Bu portaldaki içeriğin telif hakkı lisanslaması için kapsamlı site ayarlarını yapılandırın."
 
 #: ./browser/contentlicensingprefs.py:240
 msgid "Content License Settings"
-msgstr "İçerik Lisans Ayarları"
+msgstr "İçerik Lisansı Ayarları"
 
 #. Default: "Content Licensing"
 #: ./profiles/default/actionicons.xml
 msgid "Content Licensing"
 msgstr "İçerik Lisanslama"
 
-#. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:255
 msgid "Content Licensing Settings"
 msgstr "İçerik Lisanslama Ayarları"
@@ -84,57 +78,55 @@ msgstr "İçerik Lisanslama Ayarları"
 #. Default: "Copyright Holder"
 #: ./browser/dc_metadata.pt:13
 msgid "Copyright Holder"
-msgstr "Telif hakkı sahibi"
+msgstr "Telif Hakkı Sahibi"
 
 #. Default: "Copyright License"
 #: ./browser/dc_metadata.pt:39
 msgid "Copyright License"
-msgstr "Telif Hakkı Lisansı"
+msgstr "Telif Hakkı"
 
 #. Default: "Create License"
 #: ./skins/ContentLicensing/create_license.cpt:10
 msgid "Create License"
-msgstr "Lisans Yarat"
+msgstr "Lisans Oluştur"
 
 #: ./browser/contentlicensingprefs.py:56
 msgid "Creative Commons License Picker"
-msgstr "Creative Commons License Picker"
+msgstr "Creative Commons Lisans Seçici"
 
-#. Default: "Default Copyright"
 #: ./browser/contentlicensingprefs.py:88
 msgid "Default Copyright"
-msgstr "Geçerli Telif HakkÄ±"
+msgstr "Varsayılan Telif Hakkı"
 
-#. Default: "Default Copyright Holder"
 #: ./browser/contentlicensingprefs.py:93
 msgid "Default Copyright Holder"
-msgstr "Geçerli Telif Hakkı Sahibi"
+msgstr "Varsayılan Telif Hakkı Sahibi"
 
 #: ./browser/contentlicensingprefs.py:98
 msgid "Default License"
-msgstr "Geçerli Lisans"
+msgstr "Varsayılan Lisans"
 
 #. Default: "File type"
 #: ./skins/ContentLicensing/file_view.pt:58
 msgid "File type"
-msgstr ""
+msgstr "Dosya Tipi"
 
 #: ./browser/contentlicensingprefs.py:76
 msgid "Jurisdiction"
-msgstr "Yargılama Yetkisi"
+msgstr "Yetki Alanı"
 
 #: ./browser/contentlicensingprefs.py:123
 msgid "License Icon"
-msgstr "Lisans İkonu"
+msgstr "Lisans Simgesi"
 
 #. Default: "License Image"
 #: ./skins/ContentLicensing/create_license.cpt:81
 msgid "License Image"
-msgstr "Lisans İmajı"
+msgstr "Lisans Resmi"
 
 #: ./browser/contentlicensingprefs.py:119
 msgid "License Location"
-msgstr "Lisans Yeri"
+msgstr "Lisans Konumu"
 
 #. Default: "License Name"
 #: ./skins/ContentLicensing/create_license.cpt:30
@@ -150,7 +142,6 @@ msgstr "Lisans URL'si"
 msgid "New License"
 msgstr "Yeni Lisans"
 
-#. Default: "Publisher"
 #: ./browser/contentlicensingprefs.py:84
 msgid "Publisher"
 msgstr "Yayıncı"
@@ -158,80 +149,76 @@ msgstr "Yayıncı"
 #. Default: "RSS Feed"
 #: ./profiles/default/actions.xml
 msgid "RSS Feed"
-msgstr "RSS Feed"
+msgstr "RSS Besleme"
 
 #. Default: "Required"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "Required"
-msgstr ""
+msgstr "Gerekli"
 
-#. Default: "Save"
 #: ./browser/contentlicensingprefs.py:261
 msgid "Save"
 msgstr "Kaydet"
 
-#. Default: "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 #: ./browser/contentlicensingprefs.py:77
 msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
-msgstr "İçerik lisansına ilişkin yetkinizi belirtin. (Her yetki değişikliği Creative Commons lisansı seçilmeden önce kaydedilmelidir.)"
+msgstr "İçerik lisansının geçerli olduğu yetki alanını belirleyin. (Herhangi bir yetki alanı değişikliği, yeni Creative COmmons lisansı seçilmeden önce kaydedilmelidir.)"
 
 #: ./browser/contentlicensingprefs.py:103
 msgid "Supported Licenses"
-msgstr "Desteklenen Lisanslar"
+msgstr "Desteklenmiş Lisanslar"
 
-#. Default: "The URL pointer to an image associated with the license."
 #: ./browser/contentlicensingprefs.py:124
 msgid "The URL pointer to an image associated with the license."
-msgstr "URL imleci lisansla ilişkilendirilmiştir."
+msgstr "Lisans ile ilgili resim için URL işaretleyici."
 
 #: ./browser/contentlicensingprefs.py:120
 msgid "The URL pointer to information about the license."
-msgstr "Lisans hakkında bilgi sağlayan URL imleci"
+msgstr "Lisans ile ilgili bilgi için URL işaretleyici."
 
 #: ./browser/contentlicensingprefs.py:94
 msgid "The default copyright owner for content in this portal."
-msgstr "Bu portaldaki içerik için geçerli telif hakkı sahibi"
+msgstr "Bu portaldaki içerik için varsayılan telif hakkı sahibi."
 
 #: ./browser/contentlicensingprefs.py:89
 msgid "The default copyright to be used with content in this portal."
-msgstr "Bu portaldaki içerikle birlikte kullanılan geçerli telif hakkı."
+msgstr "Bu portaldaki içerik için kullanılacak varsayılan telif hakkı."
 
 #. Default: "The external URL of the license, this usually contains the actual content of the license."
 #: ./skins/ContentLicensing/create_license.cpt:61
 msgid "The external URL of the license, this usually contains the actual content of the license."
-msgstr "Lisansa ait harici URL, genellikle mevcut içerik lisansını içermektedir."
+msgstr "Lisansın harici URL'si, bu genellikle lisansın gerçek içeriğini kapsar."
 
 #. Default: "The external URL to an image associated with the license."
 #: ./skins/ContentLicensing/create_license.cpt:84
 msgid "The external URL to an image associated with the license."
-msgstr "İmaja ait harici URL lisansla ilişkilendirilmiştir."
+msgstr "Lisans ile ilgili resim için harici URL."
 
-#. Default: "The institution or individual responsible for publishing content in this portal."
 #: ./browser/contentlicensingprefs.py:85
 msgid "The institution or individual responsible for publishing content in this portal."
-msgstr "Bu portalda içerik yayınlamaktan bireyler ya da kurumlar sorumludur."
+msgstr "Bu portalda içerik yayınlanmasından sorumlu kurum veya kişi."
 
 #. Default: "The license on this item."
 #: ./browser/dc_metadata.pt:43
 msgid "The license on this item."
-msgstr "Bu öğenin lisansı"
+msgstr "Bu maddenin lisansı."
 
 #: ./browser/contentlicensingprefs.py:116
 msgid "The name of the license."
-msgstr "Lisans Adı"
+msgstr "Lisans adı."
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
 #: ./browser/dc_metadata.pt:17
 msgid "The name of the person or organization owning or managing rights over the resource."
-msgstr "Kayndak üzerinde haklara sahip ya da yöneten kişi veya kuruluşların adı"
+msgstr "Kaynaklara sahip olan veya kaynakları yönetme hakkına sahip olan kişi veya kuruluşun adı."
 
 #. Default: "The title of the license that will appear on the licensed object."
 #: ./skins/ContentLicensing/create_license.cpt:36
 msgid "The title of the license that will appear on the licensed object."
-msgstr "Lisans başlığı lisanslanmmış nesnenin üzerinde görünecek."
+msgstr "Lisanslı nesne üzerinde görülecek lisans başlığı."
 
 #. Default: "This work is licensed under a"
 #: ./browser/copyright_byline.pt:25
 msgid "This work is licensed under a"
-msgstr "Bu çalışma .... altında lisanslanmıştır."
+msgstr "Bu ürün ...... ile lisanslanmıştır."
 

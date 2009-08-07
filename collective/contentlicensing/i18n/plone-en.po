@@ -12,7 +12,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: ContentLicensing\n"
 
 #. Default: "All Rights Reserved"
 #: ./profiles/default/propertiestool.xml
