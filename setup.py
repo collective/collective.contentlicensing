@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.2.0-rc2'
+version = '2.2.0-final'
 
 setup(name='collective.contentlicensing',
       version=version,
