@@ -4,7 +4,7 @@ Changelog
 2.2.1 - Unreleased
 ------------------
 
-  * Review french translation [toutpt]
+  * Review french translation [toutpt, kiorky]
 
 2.2.0 - Final
 -------------

@@ -3,7 +3,7 @@
      style="text-align: right; margin-top: 2em; border-top: 1px solid #999;"
      tal:define="bylineInfo view/getLicenseByline;
                  copyright python:bylineInfo[0];
-                 alert_msg python:here.translate('The citation for this resource is presented in APA format. Copy the citation to your clipboard for reuse.');
+                 alert_msg view/getAlertMsg;
                  citation_info view/getCitationInfo;
                  holder python:here.translate(bylineInfo[1]);
                  license_name python:bylineInfo[2];

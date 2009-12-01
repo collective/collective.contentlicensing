@@ -33,6 +33,8 @@ from string import split, find
 import urllib
 import datetime
 
+from collective.contentlicensing import ContentLicensingMessageFactory as _
+
 def unicode_sanitize(text):
     """
     Intended to be used to correct the inconsistency of plone when you call
@@ -82,9 +84,19 @@ class CopyrightBylineView(BrowserView):
         license_button = license[3]
         if not license_button or 'None' == license_button:
             license_button = ''
-        from Products.CMFCore.utils import getToolByName
         ts = getToolByName(self.context, 'translation_service')
         return copyright, ts.translate(holder), license_name, license_url, license_button
+
+
+
+    def getAlertMsg(self):
+        """Use this domain for translation"""
+        ts = getToolByName(self.context, 'translation_service') 
+        msg = _(
+            u'The citation for this resource is presented in APA format. '
+            'Copy the citation to your clipboard for reuse.'
+        )
+        return ts.translate(msg)
 
     def getCitationInfo(self):
         """ Gets the citation information """
@@ -126,10 +138,23 @@ class CopyrightBylineView(BrowserView):
         url = self.context.absolute_url()
         date = datetime.date.today().strftime('%B %d, %Y')
         
+        ts = getToolByName(self.context, 'translation_service') 
         if creator:
-            prompt_text = "%s (%s). %s. Retrieved %s, from %s Web site: %s." %(unicode_sanitize(creator),create_date,unicode_sanitize(title),date,unicode_sanitize(portal_name),url)
+            prompt_text = ts.translate(
+                _(u"%s (%s). %s. Retrieved %s, from %s Web site: %s.")
+            ) % (
+                unicode_sanitize(creator),
+                create_date,unicode_sanitize(title),
+                date,unicode_sanitize(portal_name),url
+            )
         else:
-            prompt_text = "%s. (%s). Retrieved %s, from %s Web site: %s." %(unicode_sanitize(title),create_date,date,unicode_sanitize(portal_name),url)
+            prompt_text = ts.translate(
+                _(u"%s. (%s). Retrieved %s, from %s Web site: %s.")
+            ) % (
+                unicode_sanitize(title),
+                create_date,date,unicode_sanitize(portal_name),
+                url
+            )
 
         return prompt_text.replace('\'','\\\'').replace('\"','\\\'')
 
