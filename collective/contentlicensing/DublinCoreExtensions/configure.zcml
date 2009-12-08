@@ -1,5 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:i18n="http://namespaces.zope.org/i18n"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
            i18n_domain="DublinCoreExtensions">
 
   <include package="zope.annotation" />
@@ -42,7 +43,14 @@
       />
   </class>
 
-  <subscriber
+  <class zcml:condition="installed plone.app.blob" 
+         class="plone.app.blob.content.ATBlob">
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
+                           zope.annotation.interfaces.IAttributeAnnotatable"
+      />
+  </class>
+
+ <subscriber
       for="Products.CMFCore.interfaces.IDynamicType
            zope.app.event.interfaces.IObjectModifiedEvent"
       handler=".UpdateLicenseMetadata.UpdateLicenseMetadataHandler"
