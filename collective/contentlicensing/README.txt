@@ -29,8 +29,6 @@ Features
 
   * Support for jurisdiction setting, making it possible to choose a correct Creative Commons license based on your geographical location.
 
-  * Support for the latest Zope and Plone (Zope-2.9.6/Plone-2.5.2).
-
   * DublinCoreExtensions addon is now incorporated into the Content Licensing Product. 
 
   * Site wide defaults for Copyright, Copyright Holder, and Copyright License.
