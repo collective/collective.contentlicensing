@@ -25,6 +25,7 @@ from Products.Five import fiveconfigure
 from Products.Five import zcml
 from Testing import ZopeTestCase as ztc
 from Products.PloneTestCase.layer import onsetup
+from plone.app.blob.tests.layer import BlobReplacementLayer
 
 @onsetup
 def setup_contentlicensing_project():
@@ -56,6 +57,10 @@ class ContentLicensingTestCase(PloneTestCase):
     def _setupHomeFolder(self):
 	""" Ugly hack to keep the underlying testing framework from trying to create a user folder."""
 	pass
+
+class BlobContentLicensingTestCase(PloneTestCase):
+    """ Test Class with blob support """
+    layer = BlobReplacementLayer
 
 
 class ContentLicensingFunctionalTestCase(FunctionalTestCase):

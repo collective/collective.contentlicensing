@@ -28,11 +28,11 @@ def test_suite():
                                        package=prod,
                                        test_class=ContentLicensingFunctionalTestCase,
                                        optionflags=oflags)
-    prefstest = FunctionalDocFileSuite('tests/browse.txt',
+    browsetest = FunctionalDocFileSuite('tests/browse.txt',
                                        package=prod,
                                        test_class=ContentLicensingFunctionalTestCase,
                                        optionflags=oflags)
-                                                         
-    suite.addTests((prefstest,))
+                                                        
+    suite.addTests((prefstest, browsetest))
 
     return suite

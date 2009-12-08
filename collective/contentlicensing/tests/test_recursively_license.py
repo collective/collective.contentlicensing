@@ -21,7 +21,7 @@ from unittest import TestSuite, makeSuite
 from Testing import ZopeTestCase
 from Testing.ZopeTestCase import user_name
 from AccessControl import Unauthorized
-from base import ContentLicensingTestCase
+from base import ContentLicensingTestCase, BlobContentLicensingTestCase
 from zope.component import getUtility
 from zope.event import notify
 from zope.lifecycleevent import ObjectModifiedEvent
@@ -82,9 +82,12 @@ class TestContentLicensing(ContentLicensingTestCase):
         self.assertEqual(self.clutil.getLicenseAndHolderFromObject(img1)[1][0],
                          'GNU Free Documentation License')
 
+class BlobTestContentLicensing(BlobContentLicensingTestCase, TestContentLicensing):
+    pass
 
 def test_suite():
     suite = TestSuite()
     suite.addTest(makeSuite(TestContentLicensing))
+    suite.addTest(makeSuite(BlobTestContentLicensing))
     return suite
 
