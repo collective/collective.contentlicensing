@@ -69,14 +69,14 @@
      layer="..interfaces.IContentLicensingLayer"
      />
 
-
-  <browser:viewlet
+  <!-- Commented out because it's buggy -->
+  <!-- <browser:viewlet
      name="plone.htmlhead.rdf"
      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
      template="RDFHeadViewlet.pt"
      permission="zope2.View"
      layer="..interfaces.IContentLicensingLayer"
-     />
+     /> -->
 
   <utility
      provides="zope.schema.interfaces.IVocabularyFactory"
