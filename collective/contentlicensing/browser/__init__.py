@@ -471,7 +471,7 @@ class RSSView:
             result = self.clutil.getLicenseAndHolderFromObject(obj)
             if result:
                 if result[0] != '(site default)':
-                    holder = license[0]
+                    holder = result[0]
         return copyright, holder
     
 class PrefsView:
