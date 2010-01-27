@@ -6,6 +6,7 @@ Changelog
 
   * Review french translation [toutpt, kiorky]
   * Added blob support [do3cc]
+  * Remove five:traversable already deprecated with Zope2.10 [toutpt]
 
 2.2.0 - Final
 -------------

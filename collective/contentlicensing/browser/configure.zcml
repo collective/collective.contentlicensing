@@ -112,8 +112,4 @@
      layer="..interfaces.IContentLicensingLayer"
      />
 
-  <five:traversable class="OFS.Application.Application" /> 
-  
-  <five:traversable class="Products.CMFCore.PortalObject.PortalObjectBase" />
-
 </configure>

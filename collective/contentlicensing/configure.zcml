@@ -40,8 +40,4 @@
       interface="collective.contentlicensing.interfaces.IPortalObject"
       />
 
-  <five:traversable class="OFS.Application.Application" /> 
-  
-  <five:traversable class="Products.CMFCore.PortalObject.PortalObjectBase" />
-
 </configure>
