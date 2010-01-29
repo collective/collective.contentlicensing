@@ -24,13 +24,13 @@
 
   <subscriber
       for="Products.ATContentTypes.content.folder.ATFolder
-           zope.app.event.interfaces.IObjectModifiedEvent"
+           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
       handler=".events.recursive_license"
     />
 
   <subscriber
       for=".interfaces.IATTopic
-           zope.app.event.interfaces.IObjectModifiedEvent"
+           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
       handler=".events.recursive_license"
     />
 

@@ -52,7 +52,7 @@
 
  <subscriber
       for="Products.CMFCore.interfaces.IDynamicType
-           zope.app.event.interfaces.IObjectModifiedEvent"
+           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
       handler=".UpdateLicenseMetadata.UpdateLicenseMetadataHandler"
     />
 
