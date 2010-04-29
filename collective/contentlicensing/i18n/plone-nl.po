@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
 "POT-Creation-Date: 2009-07-21 18:18+0000\n"
-"PO-Revision-Date: 2007-04-06 18:50+0100\n"
+"PO-Revision-Date: 2009-08-12 15:40+0100\n"
 "Last-Translator: Robert Schuwer <robert.schuwer@ou.nl>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -20,30 +20,30 @@ msgstr ""
 #. Default: "All Rights Reserved"
 #: ./profiles/default/propertiestool.xml
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Alle rechten voorbehouden"
 
 #. Default: "Creative Commons License"
 #: ./profiles/default/propertiestool.xml
 msgid "Creative Commons License"
-msgstr ""
+msgstr "Creative Commons Licentie"
 
 #. Default: "GNU Free Documentation License"
 #: ./profiles/default/propertiestool.xml
 msgid "GNU Free Documentation License"
-msgstr ""
+msgstr "GNU Free Documentation Licentie"
 
 #. Default: "Other"
 #: ./profiles/default/propertiestool.xml
 msgid "Other"
-msgstr ""
+msgstr "Ander"
 
 #. Default: "Site Default"
 #: ./profiles/default/propertiestool.xml
 msgid "Site Default"
-msgstr ""
+msgstr "Site Default"
 
 #. Default: "by the Contributing Authors"
 #: ./profiles/default/propertiestool.xml
 msgid "by the Contributing Authors"
-msgstr ""
+msgstr "door de auteurs die bijdragen"
 
