@@ -1,2 +1,2 @@
-recursive-include collective *
-global-exclude *.pyc
+recursive-include collective *.css *.js *.pdf *.png *.po *.pot *.pt *.txt *.xml *.zcml
+global-exclude *.pyc *~ *.mo
