@@ -14,6 +14,7 @@
   <genericsetup:importStep
       name="contentlicensing-final"
       title="Content Licensing Final Steps Setup"
+      description="Content Licensing Final Steps Setup"
       handler="collective.contentlicensing.setupHandlers.importFinalSteps">
     <depends name="plone-final" />
   </genericsetup:importStep>
