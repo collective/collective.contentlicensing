@@ -8,11 +8,7 @@ Content Licensing Tool
 
   * "PLIP #136":http://plone.org/products/plone/roadmap/136
 
- What's New
-
- Installation
-
- Features
+Features
 
   * Configlet for setting default sitewide settings.
 
@@ -38,10 +34,42 @@ Content Licensing Tool
 
   * Built using Zope annotations, with Zope 3 style configuration and views.
 
+What's New
+
+ * 
+
+Installation
+
  Requires
 
   * Plone 3.0.0 and greater
 
   * Zope 2.10.4 and greater
+
+ Buildout installation
+
+  Using zc.buildout and the plone.recipe.zope2instance recipe to manage your project, you can do this:
+
+  * Add ``collective.contentlicensing`` to the list of eggs to install, e.g.::
+ 
+    [buildout]
+    ...
+    eggs =
+        ...
+        collective.contentlicensing
+        
+  * Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
+  
+    [instance]
+    recipe = plone.recipe.zope2instance
+    ...
+    zcml =
+        collective.contentlicensing
+        
+  * Re-run buildout, e.g. with::
+  
+    $ ./bin/buildout
+        
+ You can skip the ZCML slug if you are going to explicitly include the package from another package's configure.zcml file.
 
 
