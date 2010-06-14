@@ -1,25 +1,18 @@
 Content Licensing Tool
-----------------------
 
-by the `Center for Open Sustainable Learning`_ at Utah State University.
+ by the `Center for Open Sustainable Learning`_ at Utah State University.
 
-.. _`Center for Open Sustainable Learning`: http://cosl.usu.edu
+  * "Center for Open Sustainable Learning":http://cosl.usu.edu
 
-This tool is used to manage copyright licenses within plone. It is a product built in response to `PLIP #136`_.
+ This tool is used to manage copyright licenses within plone. It is a product built in response to `PLIP #136`_.
 
-.. _PLIP #136: http://plone.org/products/plone/roadmap/136
+  * "PLIP #136":http://plone.org/products/plone/roadmap/136
 
-What's New
-----------
+ What's New
 
+ Installation
 
-
-Installation
-------------
-
-
-Features
---------
+ Features
 
   * Configlet for setting default sitewide settings.
 
@@ -45,8 +38,7 @@ Features
 
   * Built using Zope annotations, with Zope 3 style configuration and views.
 
-Requires
---------
+ Requires
 
   * Plone 3.0.0 and greater
 
