@@ -22,12 +22,12 @@
 <metal:block tal:define="dummy python:request.RESPONSE.setHeader('Content-Type', 'text/xml;;charset='+context.plone_utils.getSiteEncoding())" />
 
 <channel rdf:about="" tal:attributes="rdf:about request/URL" >
-  <title tal:content="context/pretty_title_or_id">The title</title>
-  <link tal:content="context/portal_url">http://url.to.portal</link>
+  <title tal:content="context/pretty_title_or_id"><tal:comment replace="nothing">The title</tal:comment></title>
+  <link tal:attributes="href context/portal_url" /><tal:comment replace="nothing">http://url.to.portal</tal:comment>
   <description>
     <metal:block define-slot="description">
        <tal:block content="context/Description">
-        Default rss description goes here
+        <tal:comment replace="nothing">Default rss description goes here</tal:comment>
         </tal:block>
        </metal:block>
   </description>
@@ -35,10 +35,10 @@
   <cc:license tal:condition="cclicense"
               rdf:resource="http://creativecommons.org/"
               tal:attributes="rdf:resource python:cclicense[0]"/>
-  <dc:date tal:content="context/portal_syndication/getUpdateBase">Feed Update Date</dc:date>        
-  <dc:publisher tal:condition="context/portal_metadata/Publisher" tal:content="context/portal_metadata/Publisher">Publisher</dc:publisher>        
+  <dc:date tal:content="context/portal_syndication/getUpdateBase"><tal:comment replace="nothing">Feed Update Date</tal:comment></dc:date>        
+  <dc:publisher tal:condition="context/portal_metadata/Publisher" tal:content="context/portal_metadata/Publisher"><tal:comment replace="nothing">Publisher</tal:comment></dc:publisher>        
   <dc:language tal:content="context/Language" />
-  <dc:rights tal:content="python: '%s, %s' % (view.getRightsAndHolder(context)[0], view.getRightsAndHolder(context)[1])">Rights</dc:rights>  
+  <dc:rights tal:content="python: '%s, %s' % (view.getRightsAndHolder(context)[0], view.getRightsAndHolder(context)[1])"><tal:comment replace="nothing">Rights</tal:comment></dc:rights>  
   <tal:comment replace="nothing">
     The syndication tool is pretty brain dead and won't let you access the variables
     you need for this from something like search_rss, unless you've enable site syndication
@@ -71,12 +71,12 @@
                     objsubjects obj_item/Subject;
 										objrights python:view.getRightsAndHolder(obj_item)[0];
 										objrightsholder python:view.getRightsAndHolder(obj_item)[1]">
-    <title tal:content="obj_item/pretty_title_or_id">Title</title>        
-    <link tal:content="obj_item/Identifier">Identifier</link>        
-    <description tal:content="obj_item/Description">Description</description>        
+    <title tal:content="obj_item/pretty_title_or_id"><tal:comment replace="nothing">Title</tal:comment></title>        
+    <link tal:attributes="href obj_item/Identifier" /><tal:comment replace="nothing">http://url.to.portal</tal:comment>
+    <description tal:content="obj_item/Description"><tal:comment replace="nothing">Description</tal:comment></description>        
     <cc:license tal:condition="objcclicense" tal:attributes="rdf:resource python:objcclicense[0]"/>
     <tal:publisher tal:condition="context/portal_metadata/Publisher">
-      <dc:publisher tal:content="context/portal_metadata/Publisher">Publisher</dc:publisher>        
+      <dc:publisher tal:content="context/portal_metadata/Publisher"><tal:comment replace="nothing">Publisher</tal:comment></dc:publisher>        
     </tal:publisher>
     <tal:block tal:condition="python: len(objcreators) > 1">
       <dc:creator>
@@ -88,7 +88,7 @@
     <tal:block tal:condition="python: 1 == len(objcreators)">
       <dc:creator tal:content="python: objcreators[0]"/>
     </tal:block>
-    <dc:rights tal:content="python: '%s, %s' % (objrights, objrightsholder)">Rights</dc:rights>        
+    <dc:rights tal:content="python: '%s, %s' % (objrights, objrightsholder)"><tal:comment replace="nothing">Rights</tal:comment></dc:rights>        
     <dc:language tal:content="obj_item/Language" />
     <tal:block tal:condition="python: len(objsubjects) > 1">
       <dc:subject>
@@ -110,9 +110,9 @@
     <tal:block tal:condition="python: 1==len(objcontributors)">
       <dc:contributor tal:content="python: objcontributors[0]"/>
     </tal:block>
-    <dc:date tal:content="python: obj_item.modified().HTML4()">Modification date</dc:date>        
-    <dc:type tal:content="obj_item/Type">Type</dc:type>
-    <dc:format tal:content="obj_item/Format">Format</dc:format>    
+    <dc:date tal:content="python: obj_item.modified().HTML4()"><tal:comment replace="nothing">Modification date</tal:comment></dc:date>        
+    <dc:type tal:content="obj_item/Type"><tal:comment replace="nothing">Type</tal:comment></dc:type>
+    <dc:format tal:content="obj_item/Format"><tal:comment replace="nothing">Format</tal:comment></dc:format>    
   </item>
 </tal:block>
 

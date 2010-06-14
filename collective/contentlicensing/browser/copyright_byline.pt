@@ -21,7 +21,7 @@
        class="visualNoPrint"
 			 id="click_citation"
        tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}')">Cite/attribute Resource</a>.     
-    <span id="print_citation" tal:content="citation_info">Print Version Citation</span>
+    <span id="print_citation" tal:content="citation_info"><tal:comment replace="nothing">Print Version Citation</tal:comment></span>
     <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:domain="ContentLicensing" i18n:translate="">
       This work is licensed under a 
     </div>

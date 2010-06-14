@@ -17,9 +17,9 @@
         objectList view/getRSSObjects">
     <metal:block use-macro="context/@@rss_template/macros/master">
         <metal:block fill-slot="syndication">
-            <syn:updatePeriod tal:content="python:syn.getUpdatePeriod(context) or default">hourly</syn:updatePeriod>
+            <syn:updatePeriod tal:content="python:syn.getUpdatePeriod(context) or default"><tal:comment replace="nothing">hourly</tal:comment></syn:updatePeriod>
             <syn:updateFrequency tal:content="python:syn.getUpdateFrequency(context) or default">2</syn:updateFrequency>
-            <syn:updateBase tal:content="python:syn.getHTML4UpdateBase(context) or default">2000-01-01T12:00+00:00</syn:updateBase>
+            <syn:updateBase tal:content="python:syn.getHTML4UpdateBase(context) or default"><tal:comment replace="nothing">2000-01-01T12:00+00:00</tal:comment></syn:updateBase>
         </metal:block>
     </metal:block>
 </tal:block>

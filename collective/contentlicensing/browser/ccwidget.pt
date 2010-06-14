@@ -15,6 +15,7 @@
 	 name=""
 	 type="radio"
 	 value="Creative Commons License"
+	 i18n:attributes="value input_license_name;"
 	 tal:attributes="id license_id;
 			 name license_name;"
 	 />
@@ -24,11 +25,12 @@
 	 name=""
 	 type="radio"
 	 value="Creative Commons License"
+	 i18n:attributes="value input_license_name;"
 	 checked="checked"
 	 tal:attributes="id license_id;
 			 name license_name;"
 	 />
-  &nbsp;Creative Commons License
+  <tal:comment replace="nothing">&nbsp;Creative Commons License</tal:comment>
 </label>
 
 <span class="link-external"
@@ -36,7 +38,8 @@
              text-decoration: underline;"
       tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${here/portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${license_id}%26license_id=Creative Commons License',
                       null, 
-                      'height=525, width=750, scrollbars=yes, resizeable=yes');">(Choose)</span>
+                      'height=525, width=750, scrollbars=yes, resizeable=yes');"
+      i18n:domain="ContentLicensing" i18n:translate="">(Choose)</span>
  
 <div style="margin: 5px 0 0 25px;">  
   <img id="license_button1" tal:attributes="src license_cc_button" />

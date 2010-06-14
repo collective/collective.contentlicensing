@@ -93,8 +93,8 @@ class CopyrightBylineView(BrowserView):
         """Use this domain for translation"""
         ts = getToolByName(self.context, 'translation_service') 
         msg = _(
-            u'The citation for this resource is presented in APA format. '
-            'Copy the citation to your clipboard for reuse.'
+            _(u'The citation for this resource is presented in APA format. '
+            'Copy the citation to your clipboard for reuse.')
         )
         return ts.translate(msg)
 
