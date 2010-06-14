@@ -45,7 +45,7 @@
 
             <span tal:define="size python:here.getObjSize(here)"
                   tal:content="size">
-                File size
+                <tal:comment replace="nothing">File size</tal:comment>
             </span>
 
             <span tal:condition="python:test(size, 0, 1)"

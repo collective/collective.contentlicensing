@@ -36,7 +36,7 @@
            <div class="formHelp" id="license_name_help"
                 i18n:domain="ContentLicensing"
                 i18n:translate="">The title of the license that will appear on the licensed object.</div>	   
-           <div tal:content="error">Validation error output</div>           
+           <div tal:content="error"><tal:comment replace="nothing">Validation error output</tal:comment></div>           
             
             <div>
                 <input type="text"
@@ -61,7 +61,7 @@
            <div class="formHelp" id="license_url_help"
                 i18n:domain="ContentLicensing"
                 i18n:translate="">The external URL of the license, this usually contains the actual content of the license.</div>	   	   
-           <div tal:content="error">Validation error output</div>
+           <div tal:content="error"><tal:comment replace="nothing">Validation error output</tal:comment></div>
             
             <div>
                 <input type="text"
@@ -84,7 +84,7 @@
            <div class="formHelp" id="license_button_help"
                 i18n:domain="ContentLicensing"
                 i18n:translate="">The external URL to an image associated with the license.</div>	   	   
-           <div tal:content="error">Validation error output</div>
+           <div tal:content="error"><tal:comment replace="nothing">Validation error output</tal:comment></div>
             
             <div>
                 <input type="text"

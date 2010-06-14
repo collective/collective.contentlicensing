@@ -44,7 +44,7 @@
 
     <link tal:replace="structure provider:plone.htmlhead.links" />
 
-    <link rel="alternate" href="" title="RSS 1.0" type="application/rss+xml"
+    <link rel="alternate" href="" title="RSS 1.0" i18n:attributes="title" type="application/rss+xml"
           tal:condition="python: syntool.isSyndicationAllowed(here)"
           tal:attributes="href string:$here_url/RSS" />
 
@@ -123,10 +123,10 @@
                     <div id="content"
                          tal:omit-tag="not:context/@@plone_context_state/is_view_template">
                       <metal:header metal:define-slot="header" tal:content="nothing">
-                        Visual Header
+                        <tal:comment replace="nothing">Visual Header</tal:comment>
                       </metal:header>
                       <metal:bodytext metal:define-slot="main" tal:content="nothing">
-                        Page body text
+                        <tal:comment replace="nothing">Page body text</tal:comment>
                       </metal:bodytext>
                     </div>
                     </metal:slot>

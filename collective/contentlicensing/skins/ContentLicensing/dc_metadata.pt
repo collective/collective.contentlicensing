@@ -23,7 +23,7 @@
       over the resource.
     </div>   
          
-    <div tal:content="error">Validation error output</div>           
+    <div tal:content="error"><tal:comment replace="nothing">Validation error output</tal:comment></div>           
             
     <div>
       <input type="text"
@@ -83,7 +83,8 @@
                        text-decoration: underline;"
                 tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${fieldName}_${repeat/item/number}%26license_id=${itemId}', 
                                                            null, 
-                                                           'height=525, width=750, scrollbars=yes, resizeable=yes');">(Choose)</span>
+                                                           'height=525, width=750, scrollbars=yes, resizeable=yes');" 
+                i18n:domain="ContentLicensing" i18n:translate="">(Choose)</span>
           <div style="margin: 5px 0 0 25px;"
                tal:define="cc_license python:test(objLicenseId == 'Creative Commons License', objLicense, item);
                            license_name python:cc_license[1];
@@ -94,7 +95,7 @@
                target="_blank"
                href="http://creativecommons.org"
                tal:content="license_name"
-               tal:attributes="href license_url">Attribution 2.0</a>
+               tal:attributes="href license_url"><tal:comment replace="nothing">Attribution 2.0</tal:comment></a>
             <input type="hidden" id="license_name" name="license_cc_name" value=""
                    tal:attributes="value license_name" />
             <input type="hidden" id="license_url" name="license_cc_url"
@@ -113,7 +114,8 @@
                        text-decoration: underline;"
                 tal:attributes="onClick string:window.open('create_license?license_id=${itemId}&license_radio_id=${fieldName}_${repeat/item/number}', 
                                                            null, 
-                                                           'height=350, width=400, scrollbars=yes, resizeable=yes');">(Choose)</span>
+                                                           'height=350, width=400, scrollbars=yes, resizeable=yes');"
+                i18n:domain="ContentLicensing" i18n:translate="">(Choose)</span>
 
 
           <div style="margin: 5px 0 0 25px;"
@@ -127,7 +129,7 @@
                target="_blank"
                href=""
                tal:content="other_name"
-               tal:attributes="href other_url">License Title</a>
+               tal:attributes="href other_url"><tal:comment replace="nothing">License Title</tal:comment></a>
 
             <input type="hidden"
                    name="license_other_name"

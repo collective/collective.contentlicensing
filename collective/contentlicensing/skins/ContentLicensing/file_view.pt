@@ -60,7 +60,7 @@
             </span>
     
             <span tal:content="content_type">
-            Content type
+            <tal:comment replace="nothing">Content type</tal:comment>
             </span>
         </small>
     

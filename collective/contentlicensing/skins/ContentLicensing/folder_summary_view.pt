@@ -147,7 +147,7 @@
                             &nbsp;
                         </span>
                         <span class="description" tal:content="item_description">
-                            description
+                            <tal:comment replace="nothing">description</tal:comment>
                         </span>
                     </p>
 

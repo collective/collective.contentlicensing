@@ -112,7 +112,7 @@
                                                        class string:${item_wf_state_class};
                                                        title item_description;"
                                        tal:content="item_title_or_id">
-                                        Item Title
+                                        <tal:comment replace="nothing">Item Title</tal:comment>
                                     </a>
                                 </span>
 
@@ -132,7 +132,7 @@
                                        tal:attributes="href item/getRemoteUrl;
                                                        class string:${item_wf_state_class} link-plain;
                                                        title item_description;">
-                                        External Link
+                                        <tal:comment replace="nothing">External Link</tal:comment>
                                     </a>
                                 </span>
                             </td>
@@ -144,7 +144,7 @@
                                    tal:attributes="href string:${portal_url}/author/${item_creator}"
                                    tal:content="python:author and author['fullname'] or item_creator"
                                    tal:omit-tag="not:author">
-                                  Bob Dobalina
+                                  <tal:comment replace="nothing">Bob Dobalina</tal:comment>
                                 </a>
                                 </tal:name>
                             </td>
