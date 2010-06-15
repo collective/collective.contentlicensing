@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-07-21 18:18+0000\n"
+"POT-Creation-Date: 2010-06-14 19:07+0000\n"
 "PO-Revision-Date: 2009-08-02 09:16-0500\n"
 "Last-Translator: Jyoti Bawane <jyoti.bawane@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: ./profiles/default/propertiestool.xml
 msgid "All Rights Reserved"
 msgstr "sabhi adhikaar surakshit"
+
+#: ./profiles/default/actionicons.xml
+#: ./profiles/default/controlpanel.xml
+msgid "Content Licensing"
+msgstr ""
 
 #. Default: "Creative Commons License"
 #: ./profiles/default/propertiestool.xml
