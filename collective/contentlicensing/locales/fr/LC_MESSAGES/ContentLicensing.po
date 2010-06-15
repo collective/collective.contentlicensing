@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eduCommons\n"
-"POT-Creation-Date: 2009-12-01 12:17+0000\n"
+"POT-Creation-Date: 2010-06-14 19:07+0000\n"
 "PO-Revision-Date: 2009-12-01 13:17+0100\n"
 "Last-Translator: olivier Turlier <o.turlier@gmail.com>\n"
 "Language-Team: FRENCH <o.turlier@gmail.com>\n"
@@ -25,7 +25,9 @@ msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr "%s. (%s). Date de dernière consultation: %s, origine: %s Site Internet: %s."
 
 #. Default: "(Choose)"
+#: ./browser/ccwidget.pt:36
 #: ./browser/dc_metadata.pt:71
+#: ./skins/ContentLicensing/dc_metadata.pt:81
 msgid "(Choose)"
 msgstr "(Choisissez)"
 
@@ -40,7 +42,8 @@ msgid "(Required)"
 msgstr "(Requis)"
 
 #. Default: "Apply License To Contained Objects"
-#: ./skins/ContentLicensing/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:152
+#: ./skins/ContentLicensing/dc_metadata.pt:164
 msgid "Apply License To Contained Objects"
 msgstr "Appliquer la licence aux éléments contenus"
 
@@ -50,11 +53,13 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #: ./browser/contentlicensingprefs.py:281
+#: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
 msgid "Changes saved."
 msgstr "Changements enristrés."
 
 #. Default: "Check here to apply this license to all contained objects."
-#: ./skins/ContentLicensing/dc_metadata.pt:166
+#: ./browser/dc_metadata.pt:156
+#: ./skins/ContentLicensing/dc_metadata.pt:168
 msgid "Check here to apply this license to all contained objects."
 msgstr "Cochez pour appliquer cette licence à tous les éléments contenus"
 
@@ -81,22 +86,19 @@ msgstr "Configurez les spécifications globales du site quant à la politique de
 msgid "Content License Settings"
 msgstr "Préférences des licence de contenu"
 
-#. Default: "Content Licensing"
-#: ./profiles/default/actionicons.xml
-msgid "Content Licensing"
-msgstr "Licence de contenu"
-
 #. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
 msgstr "Spécifications des licences de contenu"
 
 #. Default: "Copyright Holder"
+#: ./browser/dc_metadata.pt:13
 #: ./skins/ContentLicensing/dc_metadata.pt:15
 msgid "Copyright Holder"
 msgstr "Détenteur de copyright"
 
 #. Default: "Copyright License"
+#: ./browser/dc_metadata.pt:39
 #: ./skins/ContentLicensing/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr "License"
@@ -147,6 +149,7 @@ msgid "License Location"
 msgstr "Document de la licence"
 
 #. Default: "License Name"
+#: ./browser/contentlicensingprefs.py:114
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr "Nom de la licence"
@@ -247,6 +250,7 @@ msgid "The institution or individual responsible for publishing content in this 
 msgstr "L'institution ou l'individu responsable de la publication de contenu dans ce portail."
 
 #. Default: "The license on this item."
+#: ./browser/dc_metadata.pt:43
 #: ./skins/ContentLicensing/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr "La licence de cet élément."
@@ -256,6 +260,7 @@ msgid "The name of the license."
 msgstr "Le nom de la licence."
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
+#: ./browser/dc_metadata.pt:17
 #: ./skins/ContentLicensing/dc_metadata.pt:19
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "Le nom de la personne ou de l'organisation propriétaire ou dirigeant les droits sur cette ressource."

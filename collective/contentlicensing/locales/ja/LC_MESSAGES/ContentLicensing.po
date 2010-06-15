@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing\n"
-"POT-Creation-Date: 2009-12-01 12:17+0000\n"
+"POT-Creation-Date: 2010-06-14 19:07+0000\n"
 "PO-Revision-Date: 2009-08-03 14:09+0900\n"
 "Last-Translator: Takeshi Yamamoto (Retsu) <tyam@mac.com>\n"
 "Language-Team: Takeshi Yamamoto <tyam@mac.com>\n"
@@ -23,7 +23,9 @@ msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr ""
 
 #. Default: "(Choose)"
+#: ./browser/ccwidget.pt:36
 #: ./browser/dc_metadata.pt:71
+#: ./skins/ContentLicensing/dc_metadata.pt:81
 msgid "(Choose)"
 msgstr "（選ぶ）"
 
@@ -38,7 +40,8 @@ msgid "(Required)"
 msgstr "（必須）"
 
 #. Default: "Apply License To Contained Objects"
-#: ./skins/ContentLicensing/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:152
+#: ./skins/ContentLicensing/dc_metadata.pt:164
 msgid "Apply License To Contained Objects"
 msgstr "含まれるオブジェクトにライセンスを適用"
 
@@ -48,11 +51,13 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #: ./browser/contentlicensingprefs.py:281
+#: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
 msgid "Changes saved."
 msgstr ""
 
 #. Default: "Check here to apply this license to all contained objects."
-#: ./skins/ContentLicensing/dc_metadata.pt:166
+#: ./browser/dc_metadata.pt:156
+#: ./skins/ContentLicensing/dc_metadata.pt:168
 msgid "Check here to apply this license to all contained objects."
 msgstr "含まれるオブジェクトすべてに対してこのライセンスを適用するにはここをチェックします"
 
@@ -79,22 +84,19 @@ msgstr "このポータル内のコンテンツの著作権許諾についての
 msgid "Content License Settings"
 msgstr "コンテンツライセンスの設定"
 
-#. Default: "Content Licensing"
-#: ./profiles/default/actionicons.xml
-msgid "Content Licensing"
-msgstr "コンテンツライセンシング"
-
 #. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
 msgstr "コンテンツライセンスの設定"
 
 #. Default: "Copyright Holder"
+#: ./browser/dc_metadata.pt:13
 #: ./skins/ContentLicensing/dc_metadata.pt:15
 msgid "Copyright Holder"
 msgstr "著作権保持者"
 
 #. Default: "Copyright License"
+#: ./browser/dc_metadata.pt:39
 #: ./skins/ContentLicensing/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr "著作権ライセンス"
@@ -145,6 +147,7 @@ msgid "License Location"
 msgstr "ライセンス場所"
 
 #. Default: "License Name"
+#: ./browser/contentlicensingprefs.py:114
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr "ライセンス名"
@@ -244,6 +247,7 @@ msgid "The institution or individual responsible for publishing content in this 
 msgstr "このポータルでコンテンツ公開の責任を負う機関または個人"
 
 #. Default: "The license on this item."
+#: ./browser/dc_metadata.pt:43
 #: ./skins/ContentLicensing/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr "このアイテムに関するライセンス"
@@ -253,6 +257,7 @@ msgid "The name of the license."
 msgstr "ライセンスの名前"
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
+#: ./browser/dc_metadata.pt:17
 #: ./skins/ContentLicensing/dc_metadata.pt:19
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "リソースに関する権利を所有しているか管理している個人または組織の名前"

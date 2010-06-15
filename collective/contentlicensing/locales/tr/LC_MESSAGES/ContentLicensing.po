@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-12-01 12:17+0000\n"
+"POT-Creation-Date: 2010-06-14 19:07+0000\n"
 "PO-Revision-Date: 2009-08-04 10:00+0200\n"
 "Last-Translator: Nergis <nergis@metu.edu.tr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,9 @@ msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr ""
 
 #. Default: "(Choose)"
+#: ./browser/ccwidget.pt:36
 #: ./browser/dc_metadata.pt:71
+#: ./skins/ContentLicensing/dc_metadata.pt:81
 msgid "(Choose)"
 msgstr "(Seç)"
 
@@ -38,7 +40,8 @@ msgid "(Required)"
 msgstr "(Gerekli)"
 
 #. Default: "Apply License To Contained Objects"
-#: ./skins/ContentLicensing/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:152
+#: ./skins/ContentLicensing/dc_metadata.pt:164
 msgid "Apply License To Contained Objects"
 msgstr "Kapsanan nesnelere lisans uygula."
 
@@ -48,11 +51,13 @@ msgid "Cancel"
 msgstr "İptal"
 
 #: ./browser/contentlicensingprefs.py:281
+#: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
 msgid "Changes saved."
 msgstr ""
 
 #. Default: "Check here to apply this license to all contained objects."
-#: ./skins/ContentLicensing/dc_metadata.pt:166
+#: ./browser/dc_metadata.pt:156
+#: ./skins/ContentLicensing/dc_metadata.pt:168
 msgid "Check here to apply this license to all contained objects."
 msgstr "Kapsanan bütün nesnelere bu lisansı uygulamak için burayı kontrol edin."
 
@@ -78,21 +83,18 @@ msgstr "Bu portaldaki içeriğin telif hakkı lisanslaması için kapsamlı site
 msgid "Content License Settings"
 msgstr "İçerik Lisansı Ayarları"
 
-#. Default: "Content Licensing"
-#: ./profiles/default/actionicons.xml
-msgid "Content Licensing"
-msgstr "İçerik Lisanslama"
-
 #: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
 msgstr "İçerik Lisanslama Ayarları"
 
 #. Default: "Copyright Holder"
+#: ./browser/dc_metadata.pt:13
 #: ./skins/ContentLicensing/dc_metadata.pt:15
 msgid "Copyright Holder"
 msgstr "Telif Hakkı Sahibi"
 
 #. Default: "Copyright License"
+#: ./browser/dc_metadata.pt:39
 #: ./skins/ContentLicensing/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr "Telif Hakkı"
@@ -141,6 +143,7 @@ msgid "License Location"
 msgstr "Lisans Konumu"
 
 #. Default: "License Name"
+#: ./browser/contentlicensingprefs.py:114
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr "Lisans Adı"
@@ -233,6 +236,7 @@ msgid "The institution or individual responsible for publishing content in this 
 msgstr "Bu portalda içerik yayınlanmasından sorumlu kurum veya kişi."
 
 #. Default: "The license on this item."
+#: ./browser/dc_metadata.pt:43
 #: ./skins/ContentLicensing/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr "Bu maddenin lisansı."
@@ -242,6 +246,7 @@ msgid "The name of the license."
 msgstr "Lisans adı."
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
+#: ./browser/dc_metadata.pt:17
 #: ./skins/ContentLicensing/dc_metadata.pt:19
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "Kaynaklara sahip olan veya kaynakları yönetme hakkına sahip olan kişi veya kuruluşun adı."

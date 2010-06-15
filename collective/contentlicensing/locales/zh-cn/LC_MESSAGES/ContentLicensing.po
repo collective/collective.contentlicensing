@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing\n"
-"POT-Creation-Date: 2009-12-01 12:17+0000\n"
+"POT-Creation-Date: 2010-06-14 19:07+0000\n"
 "PO-Revision-Date: 2009-07-29 15:29-0700\n"
 "Last-Translator: Jessie Zhu <jessie.zhu@usu.edu>\n"
 "Language-Team: PKUGSE <mark@163.net>\n"
@@ -23,7 +23,9 @@ msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr ""
 
 #. Default: "(Choose)"
+#: ./browser/ccwidget.pt:36
 #: ./browser/dc_metadata.pt:71
+#: ./skins/ContentLicensing/dc_metadata.pt:81
 msgid "(Choose)"
 msgstr "选项"
 
@@ -38,7 +40,8 @@ msgid "(Required)"
 msgstr "必须"
 
 #. Default: "Apply License To Contained Objects"
-#: ./skins/ContentLicensing/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:152
+#: ./skins/ContentLicensing/dc_metadata.pt:164
 msgid "Apply License To Contained Objects"
 msgstr "此许可应用于包含的对象"
 
@@ -48,11 +51,13 @@ msgid "Cancel"
 msgstr "取消"
 
 #: ./browser/contentlicensingprefs.py:281
+#: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
 msgid "Changes saved."
 msgstr ""
 
 #. Default: "Check here to apply this license to all contained objects."
-#: ./skins/ContentLicensing/dc_metadata.pt:166
+#: ./browser/dc_metadata.pt:156
+#: ./skins/ContentLicensing/dc_metadata.pt:168
 msgid "Check here to apply this license to all contained objects."
 msgstr "选此项将这个许可应用到所有包含的内容。"
 
@@ -79,22 +84,19 @@ msgstr "设置站点内容的版权协议 "
 msgid "Content License Settings"
 msgstr "内容许可设定"
 
-#. Default: "Content Licensing"
-#: ./profiles/default/actionicons.xml
-msgid "Content Licensing"
-msgstr "内容许可证"
-
 #. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
 msgstr "内容协议设置"
 
 #. Default: "Copyright Holder"
+#: ./browser/dc_metadata.pt:13
 #: ./skins/ContentLicensing/dc_metadata.pt:15
 msgid "Copyright Holder"
 msgstr "版权持有者"
 
 #. Default: "Copyright License"
+#: ./browser/dc_metadata.pt:39
 #: ./skins/ContentLicensing/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr "版权协议"
@@ -145,6 +147,7 @@ msgid "License Location"
 msgstr "许可证位置"
 
 #. Default: "License Name"
+#: ./browser/contentlicensingprefs.py:114
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr "协议标题"
@@ -244,6 +247,7 @@ msgid "The institution or individual responsible for publishing content in this 
 msgstr "在此入口中发布内容的机构或个人"
 
 #. Default: "The license on this item."
+#: ./browser/dc_metadata.pt:43
 #: ./skins/ContentLicensing/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr "此内容的协议"
@@ -253,6 +257,7 @@ msgid "The name of the license."
 msgstr "许可证名"
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
+#: ./browser/dc_metadata.pt:17
 #: ./skins/ContentLicensing/dc_metadata.pt:19
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "拥有或管理此资源的个人或机构名称"

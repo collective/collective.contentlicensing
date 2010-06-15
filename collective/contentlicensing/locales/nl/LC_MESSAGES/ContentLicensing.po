@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
-"POT-Creation-Date: 2009-12-01 12:17+0000\n"
+"POT-Creation-Date: 2010-06-14 19:07+0000\n"
 "PO-Revision-Date: 2007-04-06 18:50+0100\n"
 "Last-Translator: Robert Schuwer <robert.schuwer@ou.nl>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -26,7 +26,9 @@ msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr ""
 
 #. Default: "(Choose)"
+#: ./browser/ccwidget.pt:36
 #: ./browser/dc_metadata.pt:71
+#: ./skins/ContentLicensing/dc_metadata.pt:81
 msgid "(Choose)"
 msgstr ""
 
@@ -41,7 +43,8 @@ msgid "(Required)"
 msgstr ""
 
 #. Default: "Apply License To Contained Objects"
-#: ./skins/ContentLicensing/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:152
+#: ./skins/ContentLicensing/dc_metadata.pt:164
 msgid "Apply License To Contained Objects"
 msgstr ""
 
@@ -51,11 +54,13 @@ msgid "Cancel"
 msgstr ""
 
 #: ./browser/contentlicensingprefs.py:281
+#: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
 msgid "Changes saved."
 msgstr ""
 
 #. Default: "Check here to apply this license to all contained objects."
-#: ./skins/ContentLicensing/dc_metadata.pt:166
+#: ./browser/dc_metadata.pt:156
+#: ./skins/ContentLicensing/dc_metadata.pt:168
 msgid "Check here to apply this license to all contained objects."
 msgstr ""
 
@@ -82,22 +87,19 @@ msgstr "Site-brede instellingen voor copyright-licenties van content in deze por
 msgid "Content License Settings"
 msgstr ""
 
-#. Default: "Content Licensing"
-#: ./profiles/default/actionicons.xml
-msgid "Content Licensing"
-msgstr ""
-
 #. Default: "Content Licensing Settings"
 #: ./browser/contentlicensingprefs.py:254
 msgid "Content Licensing Settings"
 msgstr "Instellingen van inhoud licenties"
 
 #. Default: "Copyright Holder"
+#: ./browser/dc_metadata.pt:13
 #: ./skins/ContentLicensing/dc_metadata.pt:15
 msgid "Copyright Holder"
 msgstr "Copyright eigenaar"
 
 #. Default: "Copyright License"
+#: ./browser/dc_metadata.pt:39
 #: ./skins/ContentLicensing/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr "Copyright licentie"
@@ -148,6 +150,7 @@ msgid "License Location"
 msgstr ""
 
 #. Default: "License Name"
+#: ./browser/contentlicensingprefs.py:114
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr "Naam licentie"
@@ -248,6 +251,7 @@ msgid "The institution or individual responsible for publishing content in this 
 msgstr "Het instituut of individu verantwoordelijk voor publiceren van content op deze portal."
 
 #. Default: "The license on this item."
+#: ./browser/dc_metadata.pt:43
 #: ./skins/ContentLicensing/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr "De licentie op dit item"
@@ -257,6 +261,7 @@ msgid "The name of the license."
 msgstr ""
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
+#: ./browser/dc_metadata.pt:17
 #: ./skins/ContentLicensing/dc_metadata.pt:19
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "Naam van persoon of organisatie die eigenaar of beheerder is van de rechten op de bron"
