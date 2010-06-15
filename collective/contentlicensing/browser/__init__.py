@@ -134,6 +134,7 @@ class CopyrightBylineView(BrowserView):
         id = self.context.getId()
         portal_url = getToolByName(self.context, 'portal_url')
         portal_name = portal_url.getPortalObject().title
+	# TODO: Adds support at format date on every languages at this string
         create_date = self.context.creation_date.strftime('%Y, %B %d')
         url = self.context.absolute_url()
         date = datetime.date.today().strftime('%B %d, %Y')
