@@ -17,35 +17,35 @@ msgstr ""
 #. Default: "All Rights Reserved"
 #: ./profiles/default/propertiestool.xml
 msgid "All Rights Reserved"
-msgstr ""
+msgstr "Alle Rechte vorbehalten"
 
 #: ./profiles/default/actionicons.xml
 #: ./profiles/default/controlpanel.xml
 msgid "Content Licensing"
-msgstr ""
+msgstr "Lizensierung der Inhalte"
 
 #. Default: "Creative Commons License"
 #: ./profiles/default/propertiestool.xml
 msgid "Creative Commons License"
-msgstr ""
+msgstr "Creative Commons-Lizenz"
 
 #. Default: "GNU Free Documentation License"
 #: ./profiles/default/propertiestool.xml
 msgid "GNU Free Documentation License"
-msgstr ""
+msgstr "GNU-Lizenz für freie Dokumentation"
 
 #. Default: "Other"
 #: ./profiles/default/propertiestool.xml
 msgid "Other"
-msgstr ""
+msgstr "Andere"
 
 #. Default: "Site Default"
 #: ./profiles/default/propertiestool.xml
 msgid "Site Default"
-msgstr ""
+msgstr "Seiten-Voreinstellung"
 
 #. Default: "by the Contributing Authors"
 #: ./profiles/default/propertiestool.xml
 msgid "by the Contributing Authors"
-msgstr ""
+msgstr "von den beitragenden AutorInnen"
 
