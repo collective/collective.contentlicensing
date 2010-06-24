@@ -46,7 +46,7 @@
 
     <link rel="alternate" href="" title="RSS 1.0" type="application/rss+xml"
           tal:condition="python: syntool.isSyndicationAllowed(here)"
-          tal:attributes="href string:$here_url/RSS" />
+          tal:attributes="href string:${here/absolute_url}/RSS" />
 
     <!-- Disable IE6 image toolbar -->
     <meta http-equiv="imagetoolbar" content="no" />

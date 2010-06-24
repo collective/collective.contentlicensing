@@ -32,7 +32,7 @@
         <div class="newsImageContainer"
              tal:condition="here/image_mini|nothing">
             <a href="#"
-               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+               tal:attributes="href string:${here/absolute_url}/image/image_view_fullscreen"
                id="parent-fieldname-image">
                <img tal:replace="structure python: here.tag(scale='mini', css_class='newsImage')" src="" alt="" />
             </a>
