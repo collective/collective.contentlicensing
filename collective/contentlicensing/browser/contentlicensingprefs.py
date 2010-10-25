@@ -32,7 +32,10 @@ from Products.CMFPlone.utils import getToolByName
 from collective.contentlicensing import ContentLicensingMessageFactory as _
 from Products.CMFCore.interfaces import IPropertiesTool, IMetadataTool
 from plone.app.controlpanel.form import ControlPanelForm
-from plone.fieldsets import FormFieldsets
+try:
+    from plone.fieldsets import FormFieldsets
+except ImportError:
+    from plone.fieldsets.fieldsets import FormFieldsets
 from plone.app.form.validators import null_validator
 from widgets import LicenseWidget
 from plone.app.controlpanel.widgets import MultiCheckBoxVocabularyWidget 

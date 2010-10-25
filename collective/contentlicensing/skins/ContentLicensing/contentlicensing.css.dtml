@@ -3,17 +3,20 @@
 
 #copyrightDocumentByLine
 {
-text-align: right;
-margin-top: 2em;
-border-top: 1px solid #999;
-padding-bottom: 3px;
+    text-align: right;
+    margin-top: 2em;
+    padding-bottom: 3px;
 }
 
+#click-citation {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 #print_citation
 {
-  padding-bottom: 3px;
-  display:None;
+    padding-bottom: 3px;
+    display:None;
 }
 
 /* </dtml-with> */

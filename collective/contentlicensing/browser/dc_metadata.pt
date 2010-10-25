@@ -1,3 +1,6 @@
+<fieldset id="fieldset-contentlicensing">
+<legend id="fieldsetlegend-contentlicensing">License</legend>
+
 <div metal:define-macro="dc_metadata_fields" tal:omit-tag=""
      tal:condition="view/isLicensable">
 
@@ -165,3 +168,5 @@
 
 </div>
 </div>
+
+</fieldset>

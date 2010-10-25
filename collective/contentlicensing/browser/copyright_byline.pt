@@ -1,6 +1,5 @@
-
 <div class="documentByLine"
-     style="text-align: right; margin-top: 2em; border-top: 1px solid #999;"
+     id="copyrightDocumentByLine"
      tal:define="bylineInfo view/getLicenseByline;
                  copyright python:bylineInfo[0];
                  alert_msg view/getAlertMsg;
@@ -11,18 +10,26 @@
                  license_button python:bylineInfo[4];"
      i18n:domain="ContentLicensing">
 
+  <div tal:condition="copyright" 
+       tal:replace="python:here.translate(copyright) + ',' " />
 
-  <div tal:condition="copyright" tal:replace="python:here.translate(copyright) + ',' " />
-  <div tal:condition="holder" tal:replace="python:here.translate(holder) + '.' " />
+  <div tal:condition="holder" 
+       tal:replace="python:here.translate(holder) + '.' " />
+
   <div tal:condition="license_name" tal:omit-tag="">
     
-    <a style="cursor:pointer;text-decoration:underline" 
+    <a class="visualNoPrint"
+       id="click-citation"
        i18n:translate="" 
-       class="visualNoPrint"
-			 id="click_citation"
-       tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}')">Cite/attribute Resource</a>.     
-    <span id="print_citation" tal:content="citation_info"><tal:comment replace="nothing">Print Version Citation</tal:comment></span>
-    <div tal:condition="python:license_name != 'All Rights Reserved'" tal:omit-tag="" i18n:domain="ContentLicensing" i18n:translate="">
+       tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}');">Cite/attribute Resource</a>.     
+    
+    <span id="print_citation" tal:content="citation_info">
+      <tal:comment replace="nothing">Print Version Citation</tal:comment>
+    </span>
+    
+    <div tal:condition="python:license_name != 'All Rights Reserved'" 
+	 tal:omit-tag="" 
+	 i18n:domain="ContentLicensing" i18n:translate="">
       This work is licensed under a 
     </div>
 
@@ -52,8 +59,6 @@
          tal:attributes="src license_button;
                          alt python:here.translate(license_name);" />
 
-
   </div>
-
 
 </div>

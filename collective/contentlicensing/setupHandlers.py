@@ -22,7 +22,7 @@ __docformat__ = 'restructuredtext'
 __version__ = "$Revision: 1 $"[11:-2]
 
 from zope.app.component.interfaces import ISite
-from Products.Five.site.localsite import enableLocalSiteHook
+#from Products.Five.site.localsite import enableLocalSiteHook
 from zope.app.component.hooks import setSite
 from utilities.interfaces import IContentLicensingUtility
 from utilities.utils import ContentLicensingUtility
@@ -36,12 +36,18 @@ def importFinalSteps(context):
 def setupUtilities(site):
     """ Register a local utility """
 
-    if not ISite.providedBy(site):
-        enableLocalSiteHook(site)
-
-    setSite(site)
-
-    sm = getSiteManager()
+    sm = site.getSiteManager()
+    
     if not sm.queryUtility(IContentLicensingUtility):
         sm.registerUtility(ContentLicensingUtility('contentlicensing'),
-                        IContentLicensingUtility)
+                           IContentLicensingUtility)
+
+#    if not ISite.providedBy(site):
+#        enableLocalSiteHook(site)
+
+#    setSite(site)
+
+#    sm = getSiteManager()
+#    if not sm.queryUtility(IContentLicensingUtility):
+#        sm.registerUtility(ContentLicensingUtility('contentlicensing'),
+#                        IContentLicensingUtility)

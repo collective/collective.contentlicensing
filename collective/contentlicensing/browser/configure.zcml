@@ -76,11 +76,26 @@
      layer="..interfaces.IContentLicensingLayer"
      />
 
-
   <browser:viewlet
      name="plone.htmlhead.rdf"
      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
      template="RDFHeadViewlet.pt"
+     permission="zope2.View"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+  <browser:viewlet
+     name="contentlicensing.editfields"
+     manager="Products.Archetypes.interfaces.IEditAfterFieldsets"
+     template="helloworld.pt"
+     permission="zope2.View"
+     layer="..interfaces.IContentLicensingLayer"
+     />
+
+  <browser:viewlet
+     name="contentlicensing.copyrightbyline"
+     manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+     template="copyright_byline_viewlet.pt"
      permission="zope2.View"
      layer="..interfaces.IContentLicensingLayer"
      />

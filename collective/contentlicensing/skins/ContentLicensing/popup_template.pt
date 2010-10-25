@@ -1,69 +1,3 @@
-<metal:page define-macro="master"><metal:doctype define-slot="doctype"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></metal:doctype>
-<metal:block define-slot="top_slot" />
-<metal:block use-macro="here/global_defines/macros/defines" />
-
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xml:lang="en"
-      lang="en"
-      tal:define="lang language"
-      tal:attributes="lang lang;
-                      xml:lang lang">
-
-  <tal:cache tal:define="charset site_properties/default_charset|string:utf-8">
-    <metal:cache use-macro="here/global_cache_settings/macros/cacheheaders">
-      Get the global cache headers located in global_cache_settings.
-    </metal:cache>
-  </tal:cache>
-
-  <head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"
-          tal:define="charset site_properties/default_charset|string:utf-8"
-          tal:attributes="content string:text/html;;charset=${charset}" />
-
-    <metal:baseslot define-slot="base">
-      <base tal:attributes="href here/renderBase" /><!--[if lt IE 7]></base><![endif]-->
-    </metal:baseslot>
-
-    <meta name="generator" content="Plone - http://plone.org" />
-
-    <div tal:replace="structure provider:plone.htmlhead" />
-
-    <meta tal:define="metatags python:putils.listMetaTags(here).items()"
-          tal:condition="metatags"
-          tal:repeat="keyval metatags"
-          tal:attributes="name python:keyval[0];
-                          content python:keyval[1];" />
-
-    <!-- Internet Explorer CSS Fixes -->
-    <tal:iefixstart replace="structure string:&lt;!--[if IE]&gt;" />
-        <style type="text/css" media="all" tal:condition="exists: portal/IEFixes.css"
-               tal:content="string:@import url($portal_url/IEFixes.css);">
-        </style>
-    <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
-
-    <link tal:replace="structure provider:plone.htmlhead.links" />
-
-    <link rel="alternate" href="" title="RSS 1.0" i18n:attributes="title" type="application/rss+xml"
-          tal:condition="python: syntool.isSyndicationAllowed(here)"
-          tal:attributes="href string:$here_url/RSS" />
-
-    <!-- Disable IE6 image toolbar -->
-    <meta http-equiv="imagetoolbar" content="no" />
-    
-    <tal:comment replace="nothing"> A slot where you can insert elements in the header from a template </tal:comment>
-    <metal:headslot define-slot="head_slot" />
-
-    <tal:comment replace="nothing"> A slot where you can insert CSS in the header from a template </tal:comment>
-    <metal:styleslot define-slot="style_slot" />
-
-    <tal:comment replace="nothing"> This is deprecated, please use style_slot instead. </tal:comment>
-    <metal:cssslot define-slot="css_slot" />
-
-    <tal:comment replace="nothing"> A slot where you can insert javascript in the header from a template </tal:comment>
-    <metal:javascriptslot define-slot="javascript_head_slot" />
-
-  </head>
 
   <body tal:attributes="class string:${here/getSectionFromURL} template-${template/id};
                         dir python:test(isRTL, 'rtl', 'ltr')"
@@ -183,8 +117,6 @@
     </div>
 <div id="kss-spinner"><img tal:attributes="src string:${portal_url}/spinner.gif" alt="" /></div>
 </body>
-</html>
-</metal:page>
 
 
 
