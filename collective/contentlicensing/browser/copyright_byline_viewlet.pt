@@ -1,0 +1,3 @@
+  <div tal:replace="structure context/@@copyright_byline_view|nothing" />
+  <div tal:replace="structure context/@@citation_view|nothing" />
+

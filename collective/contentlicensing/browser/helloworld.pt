@@ -1,0 +1,1 @@
+  <div tal:replace="structure context/@@dc_metadata|nothing" />
