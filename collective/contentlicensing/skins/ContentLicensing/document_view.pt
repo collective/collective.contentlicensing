@@ -12,7 +12,8 @@
            tal:define="kssClassesView context/@@kss_field_decorator_view;
                        getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                        templateId template/getId;
-                       text here/getText;">
+                       text here/getText;
+                       is_editable context/@@plone_context_state/is_editable;">
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
