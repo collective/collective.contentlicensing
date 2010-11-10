@@ -144,16 +144,16 @@ class CopyrightBylineView(BrowserView):
                 _(u"%s (%s). %s. Retrieved %s, from %s Web site: %s.")
             ) % (
                 unicode_sanitize(creator),
-                create_date,unicode_sanitize(title),
-                date,unicode_sanitize(portal_name),url
+                unicode_sanitize(create_date),unicode_sanitize(title),
+                unicode_sanitize(date),unicode_sanitize(portal_name),unicode_sanitize(url)
             )
         else:
             prompt_text = ts.translate(
                 _(u"%s. (%s). Retrieved %s, from %s Web site: %s.")
             ) % (
                 unicode_sanitize(title),
-                create_date,date,unicode_sanitize(portal_name),
-                url
+                unicode_sanitize(create_date),unicode_sanitize(date),unicode_sanitize(portal_name),
+                unicode_sanitize(url)
             )
 
         return prompt_text.replace('\'','\\\'').replace('\"','\\\'')
