@@ -108,15 +108,6 @@
      layer="..interfaces.IContentLicensingLayer"
      />
 
-  <browser:page
-      name="testview"
-      for="*"
-      template="testtemplate.pt"
-      permission="zope2.View"
-      layer="..interfaces.IContentLicensingLayer"
-      />
-
-
   <utility
      provides="zope.schema.interfaces.IVocabularyFactory"
      component=".contentlicensingprefs.jurisdictionvocab"
