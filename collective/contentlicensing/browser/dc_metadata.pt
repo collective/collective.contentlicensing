@@ -101,12 +101,11 @@
 
 
         <tal:block tal:condition="python:'Other' == itemId">
-          <span class="link-external"
+          <span id="other_license_blah"
+	        class="standalone"
                 style="color: #436976;
                        text-decoration: underline;"
-                tal:attributes="onClick string:window.open('create_license?license_id=${itemId}&license_radio_id=${fieldName}_${repeat/item/number}', 
-                                                           null, 
-                                                           'height=350, width=400, scrollbars=yes, resizeable=yes');" i18n:domain="ContentLicensing" i18n:translate="">(Choose)</span>
+><a href="@@other_license">(Choose)</a></span>
 
 
           <div style="margin: 5px 0 0 25px;"

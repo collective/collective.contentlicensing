@@ -76,6 +76,14 @@
      layer="..interfaces.IContentLicensingLayer"
      />
 
+  <browser:page
+      name="other_license"
+      for="*"
+      class=".otherlicense.OtherLicenseForm"
+      permission="zope2.View"
+      layer="..interfaces.IContentLicensingLayer"
+      />
+
   <browser:viewlet
      name="plone.htmlhead.rdf"
      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
@@ -99,6 +107,15 @@
      permission="zope2.View"
      layer="..interfaces.IContentLicensingLayer"
      />
+
+  <browser:page
+      name="testview"
+      for="*"
+      template="testtemplate.pt"
+      permission="zope2.View"
+      layer="..interfaces.IContentLicensingLayer"
+      />
+
 
   <utility
      provides="zope.schema.interfaces.IVocabularyFactory"
