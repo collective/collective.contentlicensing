@@ -43,8 +43,7 @@
                          id="license_name"
                          name="license_name"
                          size="30"
-                         tal:attributes="tabindex tabindex/next;
-                                         value license_name;"
+                         tal:attributes="value license_name;"
                          />
                         </div>
           </div>
@@ -68,8 +67,7 @@
                          id="license_url"
                          name="license_url"
                          size="30"
-                         tal:attributes="tabindex tabindex/next;
-                                         value license_url;"
+                         tal:attributes="value license_url;"
                          />
                         </div>
           </div>	  
@@ -91,8 +89,7 @@
                          id="license_button"
                          name="license_button"
                          size="30"
-                         tal:attributes="tabindex tabindex/next;
-                                         value license_button;"
+                         tal:attributes="value license_button;"
                          />
                         </div>
           </div>	  
@@ -111,7 +108,6 @@
                    value="Submit"
                    i18n:attributes="value"
                    i18n:domain="ContentLicensing"
-                   tal:attributes="tabindex tabindex/next;" 
                    />
 
             <input class="standalone"
@@ -119,8 +115,7 @@
                    name="form.button.Cancel"
                    value="Cancel"
                    i18n:attributes="value"
-                   tal:attributes="tabindex tabindex/next;
-                                        onClick string:window.close();" 
+                   tal:attributes="onClick string:window.close();" 
                    />    
           </div>
         </fieldset>
