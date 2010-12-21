@@ -46,8 +46,11 @@
                             use_view_action site_properties/typesUseViewActionInListings|python:();
                             over_limit python: limit_display and len(folderContents) > limit_display;
                             folderContents python: (over_limit and folderContents[:limit_display]) or folderContents;
+                            mtool context/portal_membership;
+                            toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                             isAnon context/@@plone_portal_state/anonymous;
                             normalizeString nocall: context/plone_utils/normalizeString;
+
                             batch folderContents">
         <tal:listing condition="folderContents">
 
