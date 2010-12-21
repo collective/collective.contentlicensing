@@ -50,6 +50,7 @@
                             normalizeString nocall: context/plone_utils/normalizeString;
                             toLocalizedTime nocall: context/@@plone/toLocalizedTime;
                             mtool python:context.portal_membership;
+                            wtool context/portal_workflow;
                             show_about python:not isAnon or site_properties.allowAnonymousViewAbout">
         <tal:listing condition="folderContents">
 
