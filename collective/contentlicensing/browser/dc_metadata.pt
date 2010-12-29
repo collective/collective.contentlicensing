@@ -72,11 +72,13 @@
                    tal:define="jsd view/getJurisdictionCode;">
 
           <span class="link-external"
+		id="creative_commons_overlay"
                 style="color: #436976;
                        text-decoration: underline;"
-                tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${here/portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${fieldName}_${repeat/item/number}%26license_id=${itemId}', 
-                                                           null, 
-                                                           'height=525, width=750, scrollbars=yes, resizeable=yes');" i18n:domain="ContentLicensing" i18n:translate="">(Choose)</span>
+		tal:attributes="onClick
+		string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${here/portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${fieldName}_${repeat/item/number}%26license_id=${itemId}',null,'height=525,width=750,scrollbars=yes,resizeable=yes');"
+		i18n:domain="ContentLicensing" 
+		i18n:translate="">(Choose)</span>
           <div style="margin: 5px 0 0 25px;"
                tal:define="cc_license python:view.getDefaultCCLicense(item);
                            license_cc_name python:cc_license[1];
@@ -101,11 +103,12 @@
 
 
         <tal:block tal:condition="python:'Other' == itemId">
-          <span id="other_license_blah"
+          <span id="other_license_overlay"
 	        class="standalone"
                 style="color: #436976;
                        text-decoration: underline;"
-><a href="@@other_license">(Choose)</a></span>
+><a href=""
+    tal:attributes="href string:${here/absolute_url}/@@other_license;">(Choose)</a></span>
 
 
           <div style="margin: 5px 0 0 25px;"
@@ -144,8 +147,6 @@
       </div>
 
     </tal:radios>
-    
-         
     
     <tal:checkbox condition="python:here.isPrincipiaFolderish">
       <div id="fieldname-recurse-license">

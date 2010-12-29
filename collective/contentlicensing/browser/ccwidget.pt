@@ -9,28 +9,16 @@
 		       license_checked view/isChecked;
 		       license_id view/getFormId;">
 <label>
-  <input tal:condition="not: license_checked"
-	 class="radioType"
+  <input class="radioType"
 	 id=""
 	 name=""
 	 type="radio"
 	 value="Creative Commons License"
 	 i18n:attributes="value input_license_name;"
 	 tal:attributes="id license_id;
-			 name license_name;"
-	 />
-  <input tal:condition="license_checked"
-	 class="radioType"
-	 id=""
-	 name=""
-	 type="radio"
-	 value="Creative Commons License"
-	 i18n:attributes="value input_license_name;"
-	 checked="checked"
-	 tal:attributes="id license_id;
-			 name license_name;"
-	 />
-  <tal:comment replace="nothing">&nbsp;Creative Commons License</tal:comment>
+			 name license_name;
+                         checked license_checked;"
+	 />&nbsp;Creative Commons License
 </label>
 
 <span class="link-external"

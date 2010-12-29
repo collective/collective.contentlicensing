@@ -26,8 +26,8 @@
       for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       class=".CopyrightBylineView"
       template="copyright_byline.pt"
-      permission="zope2.View"
       layer="..interfaces.IContentLicensingLayer"
+      permission="zope2.View"
       />
 
   <browser:page
@@ -35,8 +35,8 @@
       for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       class=".RDFMetadataView"
       template="metadata_view.pt"
-      permission="zope2.View"
       layer="..interfaces.IContentLicensingLayer"
+      permission="zope2.View"
       />
   
   <browser:page
@@ -44,19 +44,26 @@
       for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
       class=".CopyrightBylineView"
       template="citation_view.pt"
-      permission="zope2.View"
       layer="..interfaces.IContentLicensingLayer"
+      permission="zope2.View"
       />
 
  <browser:page
     name="dc_metadata"
     for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-    class=".ExtendedCopyrightFieldForm"
+    class=".dcmetadata.DCMetadataEditFields"
     template="dc_metadata.pt"
-    permission="zope2.View"
     layer="..interfaces.IContentLicensingLayer"
+    permission="cmf.ManagePortal"
     />
 
+  <browser:page
+     name="insert_license"
+     for="*"
+     template="insert_license.pt"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="cmf.ManagePortal"
+     />
 
   <adapter factory=".contentlicensingprefs.ContentLicensingControlPanelAdapter" />
 
@@ -64,48 +71,62 @@
      name="prefs_content_licensing"
      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
      class=".contentlicensingprefs.ContentLicensingPrefsForm"
-     permission="cmf.ManagePortal"
      layer="..interfaces.IContentLicensingLayer"
+     permission="cmf.ManagePortal"
+     />
+
+  <browser:page
+     name="cc_license_widget"
+     for="*"
+     template="ccwidget.pt"
+     class=".ccwidget.CCWidgetView"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="cmf.ManagePortal"
      />
 
   <browser:page
      name="rdf"
      for="*"
      class=".RDFMetadataView"
-     permission="zope2.View"
      layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
+     />
+
+  <browser:resource
+     file="./licensing.js"
+     name="licensing.js"
      />
 
   <browser:page
-      name="other_license"
-      for="*"
-      class=".otherlicense.OtherLicenseForm"
-      permission="zope2.View"
-      layer="..interfaces.IContentLicensingLayer"
-      />
+     name="other_license"
+     for="*"
+     class=".otherlicense.OtherLicenseForm"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="cmf.ManagePortal"
+     />
 
   <browser:viewlet
      name="plone.htmlhead.rdf"
      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
      template="RDFHeadViewlet.pt"
-     permission="zope2.View"
      layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
      />
 
   <browser:viewlet
      name="contentlicensing.editfields"
      manager="Products.Archetypes.interfaces.IEditAfterFieldsets"
-     template="helloworld.pt"
-     permission="zope2.View"
+     template="edit_fields_viewlet.pt"
      layer="..interfaces.IContentLicensingLayer"
+     permission="cmf.ManagePortal"
      />
 
   <browser:viewlet
      name="contentlicensing.copyrightbyline"
      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
      template="copyright_byline_viewlet.pt"
-     permission="zope2.View"
      layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
      />
 
   <utility
@@ -124,15 +145,6 @@
      provides="zope.schema.interfaces.IVocabularyFactory"
      component=".contentlicensingprefs.defaultlicensevocab"
      name="contentlicensing.defaultlicensevocab"
-     />
-
-  <browser:page
-     name="cc_license_widget"
-     for="*"
-     template="ccwidget.pt"
-     class=".ccradio.CCWidgetView"
-     permission="cmf.ManagePortal"
-     layer="..interfaces.IContentLicensingLayer"
      />
 
 </configure>

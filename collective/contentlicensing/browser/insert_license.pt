@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" 
+    metal:use-macro="here/main_template/macros/master" i18n:domain="plone">
+  <body>
+    <div metal:fill-slot="main">
+    
+      <div tal:define="license_url request/license_url|nothing;
+                       license_name request/license_name|nothing;
+                       license_button request/license_button|nothing;
+                       license_radio_id request/license_radio_id|nothing;">    
+ 
+      <tal:block tal:replace='structure string:<script language="javascript">'></tal:block>
+          function InsertCCIntoParent() {
+              var license_url = '<span tal:replace="license_url"/>';
+              var license_name = '<span tal:replace="license_name"/>';
+              var license_button = '<span tal:replace="license_button"/>';
+              var license_radio_id = '<span tal:replace="license_radio_id"/>';
+              var license_name1_field = self.opener.document.getElementById('license_name1');
+              var license_button_field = self.opener.document.getElementById('license_button1');
+              var cc_name_field = self.opener.document.getElementById('license_cc_name');
+              var cc_url_field = self.opener.document.getElementById('license_cc_url');
+              var cc_button_field = self.opener.document.getElementById('license_cc_button');
+              var cc_radio_button = self.opener.document.getElementById(license_radio_id);
+              license_name1_field.innerHTML = license_name;
+              license_name1_field.setAttribute('href', license_url);
+              license_button_field.setAttribute('src', license_button);
+              cc_name_field.setAttribute('value', license_name);
+              cc_url_field.setAttribute('value', license_url);
+              cc_button_field.setAttribute('value', license_button);
+              cc_radio_button.checked = true;
+              window.close();
+          }
+          InsertCCIntoParent();
+      <tal:block tal:replace="structure string:</script>"></tal:block>
+      
+      </div>
+      
+    </div>
+  </body>
+</html>
