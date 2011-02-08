@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<componentregistry>
+ <adapters/>
+ <subscribers/>
+ <utilities>
+  <utility 
+     factory="collective.contentlicensing.utilities.utils.ContentLicensingUtility"
+     interface="collective.contentlicensing.utilities.interfaces.IContentLicensingUtility" />
+ </utilities>
+</componentregistry>

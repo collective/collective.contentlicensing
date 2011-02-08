@@ -139,8 +139,8 @@ class ContentLicensingUtility(SimpleItem):
     def getLicenseFromObject(self, obj):
         """ Get the copyright license for an object. """
         if ILicensable.providedBy(obj):
-            license = ILicense(obj)
-            return license.getRightsLicense()
+            lic = ILicense(obj)
+            return lic.license
         else:
             return None
 
@@ -148,42 +148,41 @@ class ContentLicensingUtility(SimpleItem):
     def getHolderFromObject(self, obj):
         """ Get the copyright holder for an object. """
         if ILicensable.providedBy(obj):
-            license = ILicense(obj)
-            return license.getRightsHolder()
+            lic = ILicense(obj)
+            return lic.holder
         else:
             return None
 
     def getLicenseAndHolderFromObject(self, obj):
         """ Get the copyright holder and license from an object. """
         if ILicensable.providedBy(obj):
-            license = ILicense(obj)
-            return license.getRightsHolder(), license.getRightsLicense()
+            lic = ILicense(obj)
+            return lic.holder, lic.license
         else:
             return None
 
 
-    def setLicense(self, obj, license):
+    def setLicense(self, obj, lic):
         """ Set a license using the Dublin Core Annotations interface. """
-        props = obj.portal_url.portal_properties.content_licensing_properties
         if getattr(obj.REQUEST, 'copyright_holder', None):
-            license.setRightsHolder(obj.REQUEST['copyright_holder'])
+            lic.holder = obj.REQUEST['copyright_holder']
         if getattr(obj.REQUEST, 'license', None):
             newLicense = obj.REQUEST['license']
             if 'Creative Commons License' == newLicense:
-                license.setRightsLicense(['Creative Commons License',
-                                          obj.REQUEST['license_cc_name'],
-                                          obj.REQUEST['license_cc_url'],
-                                          obj.REQUEST['license_cc_button']])
+                lic.license = (['Creative Commons License',
+                                obj.REQUEST['license_cc_name'],
+                                obj.REQUEST['license_cc_url'],
+                                obj.REQUEST['license_cc_button']])
             elif 'Other' == newLicense:
-                license.setRightsLicense(['Other',
-                                          obj.REQUEST['license_other_name'],
-                                          obj.REQUEST['license_other_url'],
-                                          'None'])
+                lic.license = (['Other',
+                                obj.REQUEST['license_other_name'],
+                                obj.REQUEST['license_other_url'],
+                                obj.REQUEST['license_other_button']])
             elif 'Site Default' == newLicense:
-                license.setRightsLicense(props.license_siteDefault)
+                lic.license = ('Site Default', None, None, None)
             else:
                 nl = self.getLicenseByTitle(obj, newLicense)
-                license.setRightsLicense(nl)
+                lic.license(nl)
 
 
     def getDefaultSiteLicense(self, request):
@@ -219,16 +218,16 @@ class ContentLicensingUtility(SimpleItem):
 
     def setRightsLicense(self, obj, newLicense):
         """ Set the Dublin Core Extension field. """
-        if self.isLicensable(obj):
-            license = ILicense(obj)
-            license.setRightsLicense(newLicense)
+        if ILicensable.providedBy(obj):
+            lic = ILicense(obj)
+            lic.license = newLicense
 
 
     def setRightsHolder(self, obj, holder):
         """ Set the Dublin Core Extension RightsHolder field. """
-        if self.isLicensable(obj):
-            license = ILicense(obj)
-            license.setRightsHolder(holder)
+        if ILicensable.providedBy(obj):
+            lic = ILicense(obj)
+            lic.holder = holder
 
 
     def listSupportedJurisdictions(self, request):

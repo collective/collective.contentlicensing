@@ -22,6 +22,13 @@
                       description gs_profiles_default_description;"
      />
 
+  <genericsetup:importStep
+     name="collective.contentlicensing"
+     title="Content Licensing import"
+     description="Import content licensing utility"
+     handler="collective.contentlicensing.setupHandlers.setupUtilities">
+  </genericsetup:importStep>
+
   <i18n:registerTranslations directory="locales" />
 
   <subscriber
@@ -36,6 +43,8 @@
       handler=".events.recursive_license"
     />
 
+  <adapter name="copyrightHolder" factory=".indexers.getCopyrightHolder" />
+  <adapter name="copyrightLicense" factory=".indexers.getCopyrightLicense" />
 
   <five:implements
       class="Products.CMFCore.PortalObject.PortalObjectBase"

@@ -51,26 +51,12 @@ class DCMetadataEditFields(BrowserView):
         else:
             return item
 
-    def getDefaultOtherLicenseName(self):
-        """ Get other license name """
+    def getCurrentOtherLicense(self):
+        """ Get other license """
         if self.license and 'Other' == self.license[0]:
-            return self.license[0]
+            return self.license
         else:
-            return ''
-
-    def getDefaultOtherLicenseUrl(self):
-        """ Get other license URL """
-        if self.license and 'Other' == self.license[0]:
-            return self.license[0]
-        else:
-            return ''
-
-    def getDefaultOtherLicenseButton(self):
-        """ Get other license URL """
-        if self.license and 'Other' == self.license[0]:
-            return self.license[0]
-        else:
-            return 'default_other.gif'
+            return ['Other', '', '', '']
 
     def getLicenseAndHolderFromObject(self, obj):
         """ Get the license and copyright holder from the object """

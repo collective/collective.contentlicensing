@@ -5,13 +5,6 @@
 
 jQuery(function($){
 
-	/*
-    $('#creative_commons_overlay a').prepOverlay(
-        {
-            subtype: 'ajax',
-        }
-    );
-	*/
     $('#other_license_overlay a').prepOverlay(
 	{
 	    subtype: 'ajax',
@@ -61,8 +54,4 @@ jQuery(function($){
 
    
 });
-
-function InsertCCIntoParent() {
-    window.close();
-}
 

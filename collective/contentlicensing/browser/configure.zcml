@@ -4,49 +4,27 @@
            xmlns:i18n="http://namespaces.zope.org/i18n"
            i18n_domain="ContentLicensing">
 
-  <browser:page
-      name="RSS"
-      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-      class=".RSSView"
-      template="rss.pt"
-      permission="zope2.View"
-      layer="..interfaces.IContentLicensingLayer"
-      />
+  <browser:resource
+    name="contentlicensing.gif"
+    image="contentlicensing.gif" />
 
   <browser:page
-     name="rss_template"
+     name="copyright_byline_view"
      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-     template="rss_template.pt"
-     permission="zope2.View"
+     class=".copyrightbyline.CopyrightBylineView"
+     template="copyright_byline.pt"
      layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
      />
 
   <browser:page
-      name="copyright_byline_view"
-      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-      class=".CopyrightBylineView"
-      template="copyright_byline.pt"
-      layer="..interfaces.IContentLicensingLayer"
-      permission="zope2.View"
-      />
-
-  <browser:page
-      name="metadata_view"
-      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-      class=".RDFMetadataView"
-      template="metadata_view.pt"
-      layer="..interfaces.IContentLicensingLayer"
-      permission="zope2.View"
-      />
-  
-  <browser:page
-      name="citation_view"
-      for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
-      class=".CopyrightBylineView"
-      template="citation_view.pt"
-      layer="..interfaces.IContentLicensingLayer"
-      permission="zope2.View"
-      />
+     name="citation_view"
+     for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+     class=".copyrightbyline.CopyrightBylineView"
+     template="citation_view.pt"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
+     />
 
  <browser:page
     name="dc_metadata"
@@ -57,12 +35,50 @@
     permission="cmf.ManagePortal"
     />
 
+  <browser:resource
+    file="./licensing.js"
+    name="licensing.js"
+    />
+
+  <browser:page
+    name="other_license"
+    for="*"
+    class=".otherlicense.OtherLicenseForm"
+    layer="..interfaces.IContentLicensingLayer"
+    permission="cmf.ManagePortal"
+    />
+
   <browser:page
      name="insert_license"
      for="*"
      template="insert_license.pt"
      layer="..interfaces.IContentLicensingLayer"
      permission="cmf.ManagePortal"
+     />
+
+  <browser:page
+     name="RSS"
+     for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+     class=".RSSView"
+     template="rss.pt"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
+     />
+
+  <browser:page
+     name="rss_template"
+     for="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable"
+     template="rss_template.pt"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
+     />
+
+  <browser:page
+     name="rdf"
+     for="*"
+     class=".rdfmetadata.RDFMetadataView"
+     layer="..interfaces.IContentLicensingLayer"
+     permission="zope2.View"
      />
 
   <adapter factory=".contentlicensingprefs.ContentLicensingControlPanelAdapter" />
@@ -80,27 +96,6 @@
      for="*"
      template="ccwidget.pt"
      class=".ccwidget.CCWidgetView"
-     layer="..interfaces.IContentLicensingLayer"
-     permission="cmf.ManagePortal"
-     />
-
-  <browser:page
-     name="rdf"
-     for="*"
-     class=".RDFMetadataView"
-     layer="..interfaces.IContentLicensingLayer"
-     permission="zope2.View"
-     />
-
-  <browser:resource
-     file="./licensing.js"
-     name="licensing.js"
-     />
-
-  <browser:page
-     name="other_license"
-     for="*"
-     class=".otherlicense.OtherLicenseForm"
      layer="..interfaces.IContentLicensingLayer"
      permission="cmf.ManagePortal"
      />

@@ -112,11 +112,12 @@
 
 
           <div style="margin: 5px 0 0 25px;"
-               tal:define="other_name python:view.getDefaultOtherLicenseName();
-                           other_url python:view.getDefaultOtherLicenseUrl();
-                           license_other_button python:view.getDefaultOtherLicenseButton();">
+               tal:define="other_license view/getCurrentOtherLicense;
+			   other_name python:other_license[1];
+			   other_url python:other_license[2];
+			   other_button python:other_license[3];">
 
-            <img id="license_other_button1" tal:attributes="src license_other_button" />
+            <img id="license_other_button1" tal:attributes="src other_button" />
 
             <a id="other_name1"
                target="_blank"
@@ -129,14 +130,16 @@
                    id="license_other_name"
                    tal:attributes="value other_name|nothing"
                    />
-   
             <input type="hidden"
                    name="license_other_url"
                    id="license_other_url"
                    tal:attributes="value other_url|nothing"
                    />
-            <input type="hidden" id="license_other_button" name="license_other_button" value=""
-                   tal:attributes="value license_other_button" />
+            <input type="hidden" 
+		   id="license_other_button" 
+		   name="license_other_button" 
+		   value=""
+                   tal:attributes="value other_button|nothing" />
 
           </div>
 

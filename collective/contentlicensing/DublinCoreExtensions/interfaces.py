@@ -25,21 +25,21 @@ from zope.interface import Interface
 from zope.annotation.interfaces import IAnnotatable
 
 class ILicensable(IAnnotatable):
-    """ Marker interface """
+    """ Marker interface for Licensable objects. """
 
 class ILicense(Interface):
     """ License interface """
 
-    def getRightsLicense():
-        """ Get the license """
+##    def getRightsLicense():
+##        """ Get the license """
         
-    def setRightsLicense(ldata):
-        """ Set the license """
+##    def setRightsLicense(ldata):
+##        """ Set the license """
 
-    def getRightsHolder():
-        """ Get the contents of the DC.rightsHolder field. """
+##    def getRightsHolder():
+##        """ Get the contents of the DC.rightsHolder field. """
 
-    def setRightsHolder(rhdata):
-        """ Set the DC.rightsHolder field. """
+##    def setRightsHolder(rhdata):
+##        """ Set the DC.rightsHolder field. """
 
         

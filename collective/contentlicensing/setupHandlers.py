@@ -21,33 +21,23 @@ __author__ = 'Brent Lambert, David Ray, Jon Thomas'
 __docformat__ = 'restructuredtext'
 __version__ = "$Revision: 1 $"[11:-2]
 
-from zope.app.component.interfaces import ISite
-#from Products.Five.site.localsite import enableLocalSiteHook
-from zope.app.component.hooks import setSite
 from utilities.interfaces import IContentLicensingUtility
 from utilities.utils import ContentLicensingUtility
-from zope.component import getSiteManager
 
+
+def setupUtilities(context):
+    site = context.getSite()
+    sm = site.getSiteManager()
+    if not sm.queryUtility(IContentLicensingUtility):
+        sm.registerUtility(ContentLicensingUtility('contentlicensing'), 
+                           IContentLicensingUtility)
 
 def importFinalSteps(context):
     site = context.getSite()
-    setupUtilities(site)
+    reindexIndexes(site)
 
-def setupUtilities(site):
-    """ Register a local utility """
 
-    sm = site.getSiteManager()
+
+def reindexIndexes(site):
+    """ Reindex dublin core copyright fields. """
     
-    if not sm.queryUtility(IContentLicensingUtility):
-        sm.registerUtility(ContentLicensingUtility('contentlicensing'),
-                           IContentLicensingUtility)
-
-#    if not ISite.providedBy(site):
-#        enableLocalSiteHook(site)
-
-#    setSite(site)
-
-#    sm = getSiteManager()
-#    if not sm.queryUtility(IContentLicensingUtility):
-#        sm.registerUtility(ContentLicensingUtility('contentlicensing'),
-#                        IContentLicensingUtility)

@@ -62,4 +62,5 @@ class License(object):
         """ Set the DC.rightsHolder field. """
         self.annotations[RIGHTSHOLDER_KEY] = rhdata
 
-    license = property(fget=getRightsLicense, fset=setRightsLicense)
+    license = property(getRightsLicense, setRightsLicense)
+    holder = property(getRightsHolder, setRightsHolder)

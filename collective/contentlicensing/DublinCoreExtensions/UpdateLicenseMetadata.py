@@ -23,18 +23,17 @@ __version__   = '$ Revision 0.0 $'[11:-2]
 
 from collective.contentlicensing.DublinCoreExtensions.interfaces import ILicensable, ILicense
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
-from Products.CMFCore.utils import getToolByName
 from zope.component import getUtility
 
+
 def UpdateLicenseMetadataHandler(obj, event):
-    """ Update License Metadata. """
+    """ Update License Metadata from request object. """
     if ILicensable.providedBy(event.object):
-        license = ILicense(event.object)
-        if hasattr(event.object.REQUEST, 'license') or hasattr(event.object.REQUEST, 'copyright_holder'):
+        try:
             clutil = getUtility(IContentLicensingUtility)
-            if clutil:
-                clutil.setLicense(event.object, license)
-            else:
-                license.setRightsLicense(event.object.REQUEST['license'])
+        except:
+            pass
+        else:
+            clutil.setObjLicense(event.object)
 
         

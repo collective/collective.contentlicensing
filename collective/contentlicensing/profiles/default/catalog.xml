@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+  <index name="copyrightHolder" meta_type="FieldIndex">
+    <indexed_attr value="copyrightHolder"/>
+  </index>
+  <index name="copyrightLicense" meta_type="FieldIndex">
+    <indexed_attr value="copyrightLicense"/>
+  </index>
+</object>

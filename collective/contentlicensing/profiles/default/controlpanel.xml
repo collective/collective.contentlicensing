@@ -5,6 +5,7 @@
              appId="ContentLicensing"
              category="Products"
              conditional_expression=""
+             icon_expr="string:${portal_url}/++resource++contentlicensing.gif"
              url_expr="string:${portal_url}/@@prefs_content_licensing"
              i18n:attributes="title"
              visible="True">

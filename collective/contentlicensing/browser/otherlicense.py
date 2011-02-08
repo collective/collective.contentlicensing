@@ -38,16 +38,6 @@ class OtherLicenseForm(AddForm):
     label = _(u'Create License')
     description = _(u'Create a new license for use with your content types.')
 
-#    render = ViewPageTemplateFile('minimalpageform.pt')
-#    results = ViewPageTemplateFile('insert_license.pt')
-    
-#    def __call__(self):
-#        self.update()
-#        if self.request.has_key('form.actions.Submit'):
-#            return self.results()
-#        else:
-#            return self.render()
-
     @action(_(u'Submit'), name=u'Submit') 
     def action_submit(self, action, data):
         """ Submit new fields for a license """
