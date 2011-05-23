@@ -2,7 +2,7 @@
 <object name="portal_properties" meta_type="Plone Properties Tool" xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="plone">
   <object name="content_licensing_properties" meta_type="Plone Property Sheet">
     <property name="title">Content Licensing properties</property>
-    <property name="DefaultSiteCopyright" type="string" translate="">Copyright 2009</property>
+    <property name="DefaultSiteCopyright" type="string" translate="">Copyright 2011</property>
     <property name="jurisdiction_options" type="lines">
       <element value="Unported,unported" />
       <element value="Argentina,ar" />
