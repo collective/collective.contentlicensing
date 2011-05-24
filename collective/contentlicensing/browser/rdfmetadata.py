@@ -95,7 +95,7 @@ class RDFMetadataView(BrowserView):
         self._createNode(node, 'dc:publisher', self.context.portal_url.getPortalObject().Publisher() )
         
         # Creators
-        self._renderList(node, 'dc:creator', [creat for creat in self.context.Creators() ] )
+        self._renderList(node, 'dc:creator', [creat for creat in self.context.Creators() ], True )
 
         # Contributors
         self._renderList(node, 'dc:contributor', [contrib for contrib in self.context.Contributors() ] )
@@ -126,13 +126,16 @@ class RDFMetadataView(BrowserView):
         self._createNode(node, 'dc:format', self.context.Format())
 
 
-    def _renderList(self, node, element, value):
+    def _renderList(self, node, element, value, instflagstrip=False):
         """ Render a list of items in RDF. """
         if value:
             if len(value) > 1:
                 value_node = self._createNode(node, element)
                 bag_node = self._createNode(value_node, 'rdf:Bag')
                 for x in value:
+                    # If creator is marked as an institution and not a person
+                    if instflagstrip and '@' == x[0]:
+                        x = x[1:]
                     self._createNode(bag_node, 'rdf:li', x )
             else:
                 self._createNode(node, element, value[0] )

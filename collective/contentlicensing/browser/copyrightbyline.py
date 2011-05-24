@@ -62,19 +62,19 @@ class CopyrightBylineView(BrowserView):
         names = [name.strip() for name in self.context.Creators()]
         
         for cr in names:
-            inits = ''
-            crs = []
-
-            crs = cr.split(' ')
-            
-            for part in crs[:-1]:
-                inits += ' ' + part[0] + '.'   
-                
-            creator += crs[-1]
-            if inits:
-                creator += "," + inits
-            creator += ', '
-            index += 1
+            if cr and '@' == cr[0]:
+                creator += '%s, ' %cr[1:]
+            else:
+                inits = ''
+                crs = []
+                crs = cr.split(' ')
+                for part in crs[:-1]:
+                    inits += ' ' + part[0] + '.'   
+                creator += crs[-1]
+                if inits:
+                    creator += "," + inits
+                creator += ', '
+                index += 1
             
         if creator:
             creator = creator[:-2]
