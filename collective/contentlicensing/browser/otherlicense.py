@@ -8,7 +8,12 @@ from Acquisition import aq_inner
 from Products.statusmessages.interfaces import IStatusMessage
 from collective.contentlicensing import ContentLicensingMessageFactory as _
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
-from Products.Five.formlib.formbase import PageForm, AddForm
+try:
+    # Zope2 < 2.13
+    from Products.Five.formlib.formbase import PageForm, AddForm
+except:
+    # Zope2 >= 2.13
+    from five.formlib.formbase import PageForm, AddForm
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
