@@ -1,0 +1,3 @@
+*.py?
+
+collective.contentlicensing.egg-info/
