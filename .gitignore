@@ -1,3 +1,4 @@
 *.py?
+*.mo
 
 collective.contentlicensing.egg-info/
