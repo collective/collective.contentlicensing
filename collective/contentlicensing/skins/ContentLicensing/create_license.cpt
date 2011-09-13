@@ -1,0 +1,134 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
+      lang="en" 
+      metal:use-macro="here/popup_template/macros/master" 
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="ContentLicensing">
+  <body>
+    <div metal:fill-slot="main" 
+         tal:define="errors options/state/getErrors|nothing;">
+
+      <h1 i18n:translate="">
+        Create License
+      </h1>
+
+      <form name="create_license_form"
+            action="."
+            method="post"
+            enctype="multipart/form-data"
+            tal:attributes="action string:${here/getId}/${template/getId}">
+
+        <fieldset>
+
+          <legend i18n:domain="ContentLicensing"
+                  i18n:translate="">Create License</legend>
+
+          <div class="field"
+               tal:define="error errors/license_name| nothing;
+                           license_name request/license_name | nothing;"
+               tal:attributes="class python:test(error, 'field error', 'field')">
+
+ 	   <label for="license_name"
+                  i18n:domain="ContentLicensing" 
+                  i18n:translate="">License Name</label>
+           <span class="fieldRequired" title="Required"
+                 i18n:attributes="title"
+                 i18n:translate="">(Required)</span>
+           <div class="formHelp" id="license_name_help"
+                i18n:domain="ContentLicensing"
+                i18n:translate="">The title of the license that will appear on the licensed object.</div>	   
+           <div tal:content="error">Validation error output</div>           
+            
+            <div>
+                <input type="text"
+                         id="license_name"
+                         name="license_name"
+                         size="30"
+                         tal:attributes="value license_name;"
+                         />
+                        </div>
+          </div>
+	  <div class="field"
+               tal:define="error errors/license_url| nothing;
+                           license_url request/license_url | nothing;"
+               tal:attributes="class python:test(error, 'field error', 'field')">
+ 	   <label for="license_url"
+                  i18n:domain="ContentLicensing" 
+                  i18n:translate="">License URL</label>
+           <span class="fieldRequired" title="Required"
+                 i18n:attributes="title"
+                 i18n:translate="">(Required)</span>
+           <div class="formHelp" id="license_url_help"
+                i18n:domain="ContentLicensing"
+                i18n:translate="">The external URL of the license, this usually contains the actual content of the license.</div>	   	   
+           <div tal:content="error">Validation error output</div>
+            
+            <div>
+                <input type="text"
+                         id="license_url"
+                         name="license_url"
+                         size="30"
+                         tal:attributes="value license_url;"
+                         />
+                        </div>
+          </div>	  
+	  
+          <div class="field"
+               tal:define="error errors/license_button| nothing;
+                           license_button request/license_button| nothing;"
+               tal:attributes="class python:test(error, 'field error', 'field')">
+ 	   <label for="license_button"
+                  i18n:domain="ContentLicensing" 
+                  i18n:translate="">License Image</label>
+           <div class="formHelp" id="license_button_help"
+                i18n:domain="ContentLicensing"
+                i18n:translate="">The external URL to an image associated with the license.</div>	   	   
+           <div tal:content="error">Validation error output</div>
+            
+            <div>
+                <input type="text"
+                         id="license_button"
+                         name="license_button"
+                         size="30"
+                         tal:attributes="value license_button;"
+                         />
+                        </div>
+          </div>	  
+	  
+	  <input type="hidden" id="license_radio_id" name="license_radio_id"
+	         tal:attributes="value request/license_radio_id" />
+	  <input type="hidden" id="license_id" name="license_id"
+	         tal:attributes="value request/license_id" />
+		 
+		 
+          <div class="formControls"
+               tal:define="process_creation request/process_creation|nothing;">
+            <input class="context"
+                   type="submit"
+                   name="form.button.Submit"
+                   value="Submit"
+                   i18n:attributes="value"
+                   i18n:domain="ContentLicensing"
+                   />
+
+            <input class="standalone"
+                   type="submit"
+                   name="form.button.Cancel"
+                   value="Cancel"
+                   i18n:attributes="value"
+                   tal:attributes="onClick string:window.close();" 
+                   />    
+          </div>
+        </fieldset>
+
+        <input type="hidden" name="form.submitted" value="1" />
+      </form>
+        
+
+
+
+      
+      
+    </div>
+  </body>
+</html>
+

@@ -11,6 +11,9 @@ Changelog
   * Added blob support [do3cc]
   * Remove five:traversable already deprecated with Zope2.10 [toutpt]
   * Move IObjectModifiedEvent from zope.app to zope.lifecycleevent [toutpt]
+  * Add metadata.xml to default profile [toutpt]
+  * Move import step to zcml [toutpt]
+  * Update testing buildout to support plone3.3 and plone4.0 as usual [toutpt]
 
 2.2.0 - Final
 -------------

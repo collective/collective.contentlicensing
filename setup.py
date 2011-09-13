@@ -28,8 +28,11 @@ setup(name='collective.contentlicensing',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
-      extras_require={'test' : tests_require},
+      extras_require={'tests' : tests_require},
       entry_points="""
       # -*- Entry points: -*-
+
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

@@ -37,7 +37,6 @@ def importFinalSteps(context):
     reindexIndexes(site)
 
 
-
 def reindexIndexes(site):
     """ Reindex dublin core copyright fields. """
     
