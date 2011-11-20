@@ -4,6 +4,8 @@
 
 
 jQuery(function($){
+    
+    try{common_content_filter} catch(err){common_content_filter = false}
 
     $('#other_license_overlay a').prepOverlay(
 	{
