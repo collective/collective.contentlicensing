@@ -38,7 +38,7 @@ class CopyrightBylineView(BrowserView):
         if not license_button or 'None' == license_button:
             license_button = ''
         ts = getToolByName(self.context, 'translation_service')
-        return copyright, ts.translate(holder), license_name, license_url, license_button
+        return copyright, ts.translate(holder.decode('utf-8','ignore')), license_name, license_url, license_button
 
     def getAlertMsg(self):
         """Use this domain for translation"""
