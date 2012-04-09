@@ -117,7 +117,7 @@
 			   other_url python:other_license[2];
 			   other_button python:other_license[3];">
 
-            <img id="license_other_button1" tal:attributes="src other_button" />
+            <img id="license_other_button1" tal:attributes="src other_button" tal:condition="other_button"/>
 
             <a id="other_name1"
                target="_blank"
