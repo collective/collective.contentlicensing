@@ -31,7 +31,7 @@
     class=".dcmetadata.DCMetadataEditFields"
     template="dc_metadata.pt"
     layer="..interfaces.IContentLicensingLayer"
-    permission="cmf.ManagePortal"
+    permission="cmf.ModifyPortalContent"
     />
 
   <browser:resource
@@ -44,7 +44,7 @@
     for="*"
     class=".otherlicense.OtherLicenseForm"
     layer="..interfaces.IContentLicensingLayer"
-    permission="cmf.ManagePortal"
+    permission="cmf.ModifyPortalContent"
     />
 
   <browser:page
@@ -52,7 +52,7 @@
      for="*"
      template="insert_license.pt"
      layer="..interfaces.IContentLicensingLayer"
-     permission="cmf.ManagePortal"
+     permission="zope2.View"
      />
 
   <browser:page
@@ -96,7 +96,7 @@
      template="ccwidget.pt"
      class=".ccwidget.CCWidgetView"
      layer="..interfaces.IContentLicensingLayer"
-     permission="cmf.ManagePortal"
+     permission="cmf.ModifyPortalContent"
      />
 
   <browser:viewlet
