@@ -178,11 +178,9 @@ class ContentLicensingUtility(SimpleItem):
                                 obj.REQUEST['license_other_name'],
                                 obj.REQUEST['license_other_url'],
                                 obj.REQUEST['license_other_button']])
-            elif 'Site Default' == newLicense:
-                lic.license = ('Site Default', None, None, None)
             else:
                 nl = self.getLicenseByTitle(obj, newLicense)
-                lic.license(nl)
+                lic.license = nl
 
 
     def getDefaultSiteLicense(self, request):
