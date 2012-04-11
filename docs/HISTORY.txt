@@ -1,6 +1,14 @@
 Changelog
 =========
 
+2.2.2 
+------------------
+
+  * Allow content editors to select license [dimo]
+  * Fix copyright and other licenses [dimo]
+  * Don't show license_other_button1 img if not necessary [dimo]
+  * Fix error when copyright holder had unicode chars [clopy]
+
 2.2.1 - Unreleased
 ------------------
 
