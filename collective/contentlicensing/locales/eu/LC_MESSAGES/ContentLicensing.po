@@ -1,0 +1,284 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: contentlicensing\n"
+"POT-Creation-Date: 2012-05-04 08:05+0000\n"
+"PO-Revision-Date: 2012-05-04 11:13+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
+"Language-Team: eu <eu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ContentLicensing\n"
+"X-Poedit-Language: Basque\n"
+
+#: ./browser/__init__.py:144
+#: ./browser/copyrightbyline.py:96
+msgid "%s (%s). %s. Retrieved %s, from %s Web site: %s."
+msgstr "%s (%s). %s. %s %s-tik ekarria. Webgunea: %s."
+
+#: ./browser/__init__.py:152
+#: ./browser/copyrightbyline.py:104
+msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
+msgstr "%s. (%s). %s %s-tik ekarria. Webgunea: %s."
+
+#. Default: "(Choose)"
+#: ./browser/ccwidget.pt:24
+#: ./browser/dc_metadata.pt:74
+msgid "(Choose)"
+msgstr "(Aukeratu)"
+
+#. Default: "(No file has been uploaded yet)"
+#: ./skins/ContentLicensing/file_view.pt:52
+msgid "(No file has been uploaded yet)"
+msgstr "(Ez duzu fitxategirik kargatu)"
+
+#. Default: "(Required)"
+#: ./skins/ContentLicensing/create_license.cpt:33
+msgid "(Required)"
+msgstr "(Beharrezkoa)"
+
+#: ./browser/otherlicense.py:35
+msgid "An external URL link to an image that represents the license."
+msgstr "Lizentzia errepresentatzeko irudi baten helbidea"
+
+#. Default: "Apply License To Contained Objects"
+#: ./browser/dc_metadata.pt:158
+msgid "Apply License To Contained Objects"
+msgstr "Lizentzia hau aplikatu hemengo elementu guztiei"
+
+#. Default: "Cancel"
+#: ./browser/otherlicense.py:57
+#: ./skins/ContentLicensing/create_license.cpt:113
+msgid "Cancel"
+msgstr "Utzi"
+
+#: ./browser/contentlicensingprefs.py:284
+#: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
+msgid "Changes saved."
+msgstr "Aldaketak ondo gorde dira."
+
+#. Default: "Check here to apply this license to all contained objects."
+#: ./browser/dc_metadata.pt:162
+msgid "Check here to apply this license to all contained objects."
+msgstr "Aukeratu hau lizentzia hau hemengo elementu guztiei aplikatzeko."
+
+#: ./browser/contentlicensingprefs.py:106
+msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
+msgstr "Elementu bakoitzean hautatu daitezkeen lizentziak ezarri. Creative Commons Lizentzia-Hautatzaileak Creative Commons lizentzia ezberdinen artetik aukeratzeko modua eskaintzen du."
+
+#. Default: "Cite/attribute Resource"
+#: ./browser/copyright_byline.pt:54
+msgid "Cite/attribute Resource"
+msgstr "Elementuaren zita"
+
+#. Default: "Click here to get the file"
+#: ./skins/ContentLicensing/file_view.pt:36
+msgid "Click here to get the file"
+msgstr "Egin klik hemen fitxategia lortzeko"
+
+#: ./browser/contentlicensingprefs.py:258
+msgid "Configure site wide settings for copyright licensing of content within this portal."
+msgstr "Atariko elementuen lizentzien ingurukoak konfiguratu"
+
+#: ./browser/contentlicensingprefs.py:242
+msgid "Content License Settings"
+msgstr "Edukiaren Lizentziaren Ezarpenak"
+
+#: ./profiles/default/actionicons.xml
+msgid "Content Licensing"
+msgstr "Edukiaren Lizentzia"
+
+#: ./browser/contentlicensingprefs.py:257
+msgid "Content Licensing Settings"
+msgstr "Edukiaren Lizentziaren Ezarpenak"
+
+#. Default: "Copyright Holder"
+#: ./browser/dc_metadata.pt:16
+msgid "Copyright Holder"
+msgstr "Copyrightaren Jabea"
+
+#. Default: "Copyright License"
+#: ./browser/dc_metadata.pt:42
+msgid "Copyright License"
+msgstr "Copyright Lizentzia"
+
+#. Default: "Create License"
+#: ./browser/otherlicense.py:43
+#: ./skins/ContentLicensing/create_license.cpt:10
+msgid "Create License"
+msgstr "Lizentzia Sortu"
+
+#: ./browser/otherlicense.py:44
+msgid "Create a new license for use with your content types."
+msgstr "Zure elementuekin erabiltzeko lizentzia berria sortu"
+
+#: ./browser/contentlicensingprefs.py:58
+msgid "Creative Commons License Picker"
+msgstr "Creative Commons Lizentzia-Hautatzailea"
+
+#: ./browser/contentlicensingprefs.py:90
+msgid "Default Copyright"
+msgstr "Lehenetsitako Copyrighta"
+
+#: ./browser/contentlicensingprefs.py:95
+msgid "Default Copyright Holder"
+msgstr "Lehenetsitako Copyrightaren Jabea"
+
+#: ./browser/contentlicensingprefs.py:100
+msgid "Default License"
+msgstr "Lehenetsitako lizentzia"
+
+#. Default: "File type"
+#: ./skins/ContentLicensing/file_view.pt:58
+msgid "File type"
+msgstr "Fitxategi-mota"
+
+#: ./browser/contentlicensingprefs.py:78
+msgid "Jurisdiction"
+msgstr "Lege-eremua"
+
+#: ./browser/contentlicensingprefs.py:125
+msgid "License Icon"
+msgstr "Lizentziaren ikonoa"
+
+#. Default: "License Image"
+#: ./browser/otherlicense.py:34
+#: ./skins/ContentLicensing/create_license.cpt:79
+msgid "License Image"
+msgstr "Lizentziaren irudia"
+
+#: ./browser/contentlicensingprefs.py:121
+msgid "License Location"
+msgstr "Lizentziaren kokalekua"
+
+#. Default: "License Name"
+#: ./browser/contentlicensingprefs.py:117
+#: ./browser/otherlicense.py:23
+#: ./skins/ContentLicensing/create_license.cpt:30
+msgid "License Name"
+msgstr "Lizentziaren izena"
+
+#. Default: "License URL"
+#: ./browser/otherlicense.py:28
+#: ./skins/ContentLicensing/create_license.cpt:54
+msgid "License URL"
+msgstr "Lizentziaren helbidea"
+
+#: ./browser/contentlicensingprefs.py:246
+msgid "New License"
+msgstr "Lizentzia berria"
+
+#: ./browser/contentlicensingprefs.py:288
+msgid "No changes made."
+msgstr "Ez duzu aldaketarik egin."
+
+#: ./browser/contentlicensingprefs.py:86
+msgid "Publisher"
+msgstr "Argitaratzailea"
+
+#. Default: "RSS Feed"
+#: ./profiles/default/actions.xml
+msgid "RSS Feed"
+msgstr "RSS Jarioa"
+
+#. Default: "Required"
+#: ./skins/ContentLicensing/create_license.cpt:33
+msgid "Required"
+msgstr "Beharrezkoa"
+
+#: ./browser/contentlicensingprefs.py:263
+msgid "Save"
+msgstr "Gorde"
+
+#. Default: "Size"
+#: ./skins/ContentLicensing/file_view.pt:43
+msgid "Size"
+msgstr "Tamaina"
+
+#: ./browser/contentlicensingprefs.py:79
+msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
+msgstr "Elementuaren lizentziak balioa duen lege-eremua aukeratu (lege-eremuaren aldaketa guztiak gorde egin behar dira Creative Commons lizentzia berri bat aukeratu aurretik)."
+
+#. Default: "Submit"
+#: ./browser/otherlicense.py:46
+#: ./skins/ContentLicensing/create_license.cpt:105
+msgid "Submit"
+msgstr "Bidali"
+
+#: ./browser/contentlicensingprefs.py:105
+msgid "Supported Licenses"
+msgstr "Aukeratu daitezkeen lizentziak"
+
+#: ./browser/contentlicensingprefs.py:126
+msgid "The URL pointer to an image associated with the license."
+msgstr "Lizentziari lotutako irudia duen kanpoko helbidea"
+
+#: ./browser/contentlicensingprefs.py:122
+msgid "The URL pointer to information about the license."
+msgstr "Lizentziari buruzko informazio gehiagarria duen helbidea."
+
+#: ./browser/__init__.py:95
+#: ./browser/copyrightbyline.py:46
+msgid "The citation for this resource is presented in APA format. Copy the citation to your clipboard for reuse."
+msgstr "Elementu honen zita APA formatuan erakusten da. Kopiatu zita beste nonbait itsasteko."
+
+#: ./browser/contentlicensingprefs.py:96
+msgid "The default copyright owner for content in this portal."
+msgstr "Atari honetako edukiaren copyright-aren defektuzko jabea."
+
+#. Default: "The external URL of the license, this usually contains the actual content of the license."
+#: ./browser/contentlicensingprefs.py:91
+msgid "The default copyright to be used with content in this portal."
+msgstr "Atari honetako edukiarentzat defektuz erabiliko den lizentzia."
+
+#. Default: "The external URL to an image associated with the license."
+#: ./browser/otherlicense.py:29
+#: ./skins/ContentLicensing/create_license.cpt:60
+msgid "The external URL of the license, this usually contains the actual content of the license."
+msgstr "Lizentziaren helbidea, normalean lizentziaren testu osoa duen helbidea."
+
+#: ./skins/ContentLicensing/create_license.cpt:82
+msgid "The external URL to an image associated with the license."
+msgstr "Lizentziari lotutako irudia duen kanpoko helbidea"
+
+#: ./browser/contentlicensingprefs.py:87
+msgid "The institution or individual responsible for publishing content in this portal."
+msgstr "Atari honetan edukia argitaratzen duen pertsona edo erakudea."
+
+#. Default: "The license on this item."
+#: ./browser/dc_metadata.pt:46
+msgid "The license on this item."
+msgstr "Elementu honen lizentzia."
+
+#: ./browser/contentlicensingprefs.py:118
+msgid "The name of the license."
+msgstr "Lizentziaren izena."
+
+#. Default: "The name of the person or organization owning or managing rights over the resource."
+#: ./browser/dc_metadata.pt:20
+msgid "The name of the person or organization owning or managing rights over the resource."
+msgstr "Elementuaren gaineko eskubideak dituen pertsona edo erakundea."
+
+#. Default: "The title of the license that will appear on the licensed object."
+#: ./browser/otherlicense.py:24
+#: ./skins/ContentLicensing/create_license.cpt:36
+msgid "The title of the license that will appear on the licensed object."
+msgstr "Lizentziatutako elementuak agertuko den lizentziaren izena"
+
+#. Default: "This work is licensed under a"
+#: ./browser/copyright_byline.pt:35
+msgid "This work is licensed under a"
+msgstr "Elementu hau lizentzia honekin banatzen da"
+
+#. Default: "File contents"
+#: ./skins/ContentLicensing/file_view.pt:70
+msgid "heading_file_contents"
+msgstr "Fitxategiaren edukia"
+
