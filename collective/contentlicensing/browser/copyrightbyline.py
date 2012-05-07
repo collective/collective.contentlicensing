@@ -1,11 +1,11 @@
 from zope.publisher.browser import BrowserView
 from zope.component import getUtility
+from zope.i18n import translate
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
 from Products.CMFPlone.utils import getToolByName
 from collective.contentlicensing.browser import unicode_sanitize
 from collective.contentlicensing import ContentLicensingMessageFactory as _
 import datetime
-
 
 class CopyrightBylineView(BrowserView):
     """ Render the copyright byline """
@@ -37,17 +37,16 @@ class CopyrightBylineView(BrowserView):
         license_button = license[3]
         if not license_button or 'None' == license_button:
             license_button = ''
-        ts = getToolByName(self.context, 'translation_service')
-        return copyright, ts.translate(holder.decode('utf-8','ignore')), license_name, license_url, license_button
+
+        return copyright, translate(holder.decode('utf-8','ignore'), domain="ContentLicensing", target_language=self.request.LANGUAGE), license_name, license_url, license_button
 
     def getAlertMsg(self):
         """Use this domain for translation"""
-        ts = getToolByName(self.context, 'translation_service') 
         msg = _(
             _(u'The citation for this resource is presented in APA format. '
             'Copy the citation to your clipboard for reuse.')
         )
-        return ts.translate(msg)
+        return translate(msg, domain="ContentLicensing", target_language=self.request.LANGUAGE)
 
     def getCitationInfo(self):
         """ Gets the citation information """
@@ -90,18 +89,21 @@ class CopyrightBylineView(BrowserView):
         url = self.context.absolute_url()
         date = datetime.date.today().strftime('%B %d, %Y')
         
-        ts = getToolByName(self.context, 'translation_service') 
         if creator:
-            prompt_text = ts.translate(
-                _(u"%s (%s). %s. Retrieved %s, from %s Web site: %s.")
+            prompt_text = translate(
+                _(u"%s (%s). %s. Retrieved %s, from %s Web site: %s."),
+                domain="ContentLicensing",
+                target_language=self.request.LANGUAGE,
             ) % (
                 unicode_sanitize(creator),
                 create_date,unicode_sanitize(title),
                 date,unicode_sanitize(portal_name),url
             )
         else:
-            prompt_text = ts.translate(
-                _(u"%s. (%s). Retrieved %s, from %s Web site: %s.")
+            prompt_text = translate(
+                _(u"%s. (%s). Retrieved %s, from %s Web site: %s."),
+                domain="ContentLicensing",
+                target_language=self.request.LANGUAGE,
             ) % (
                 unicode_sanitize(title),
                 create_date,date,unicode_sanitize(portal_name),
