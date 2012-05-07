@@ -43,7 +43,7 @@
       />
   </class>
 
-  <class class="Products.ATContentTypes.content.newsitem.ATNewsItems">
+  <class class="Products.ATContentTypes.content.newsitem.ATNewsItem">
     <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
                            zope.annotation.interfaces.IAttributeAnnotatable"
       />
