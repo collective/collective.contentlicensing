@@ -54,7 +54,7 @@
     <a class="visualNoPrint"
        id="click-citation"
        i18n:translate="" 
-       tal:attributes="onClick string:prompt('${alert_msg}', '${citation_info}');">Cite/attribute Resource</a>.     
+       tal:attributes="onclick string:prompt('${alert_msg}', '${citation_info}');">Cite/attribute Resource</a>.     
     <span id="print_citation" tal:content="citation_info">
       <tal:comment replace="nothing">Print Version Citation</tal:comment>
     </span>
