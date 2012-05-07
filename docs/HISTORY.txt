@@ -1,8 +1,14 @@
 Changelog
 =========
 
+2.2.3
+-----
+
+  * Removed legacy templates that included copyright byline, which
+    results in duplicate bylines appearing [blambert]
+
 2.2.2 
-------------------
+-----
 
   * Allow content editors to select license [dimo]
   * Fix copyright and other licenses [dimo]
