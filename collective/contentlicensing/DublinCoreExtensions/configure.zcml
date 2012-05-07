@@ -43,6 +43,13 @@
       />
   </class>
 
+  <class class="Products.ATContentTypes.content.newsitem.ATNewsItems">
+    <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
+                           zope.annotation.interfaces.IAttributeAnnotatable"
+      />
+  </class>
+
+
   <class zcml:condition="installed plone.app.blob" 
          class="plone.app.blob.content.ATBlob">
     <implements interface="collective.contentlicensing.DublinCoreExtensions.interfaces.ILicensable
