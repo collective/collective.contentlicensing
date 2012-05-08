@@ -52,9 +52,9 @@
   <adapter name="copyrightHolder" factory=".indexers.getCopyrightHolder" />
   <adapter name="copyrightLicense" factory=".indexers.getCopyrightLicense" />
 
-  <five:implements
-      class="Products.CMFCore.PortalObject.PortalObjectBase"
-      interface="collective.contentlicensing.interfaces.IPortalObject"
-      />
+  <class class="Products.CMFCore.PortalObject.PortalObjectBase">
+    <implements interface="collective.contentlicensing.interfaces.IPortalObject" />
+  </class> 
+
 
 </configure>
