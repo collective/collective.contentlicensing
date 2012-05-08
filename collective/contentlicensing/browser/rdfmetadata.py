@@ -3,7 +3,7 @@ from zope.component import getUtility
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
 from urlparse import urlsplit
 from xml.dom import minidom
-from collective.contentlicensing.browser import unicode_sanitize
+from Products.CMFPlone.utils import safe_unicode
 
 
 class RDFMetadataView(BrowserView):
@@ -146,7 +146,7 @@ class RDFMetadataView(BrowserView):
         newNode = self.document.createElement(ename)
         parent.appendChild(newNode)
         if value:
-            newNode.appendChild(self.document.createTextNode(unicode_sanitize(value)))
+            newNode.appendChild(self.document.createTextNode(safe_unicode(value)))
         if attrs:
             for x in attrs:
                 newNode.setAttribute(x[0], x[1] )

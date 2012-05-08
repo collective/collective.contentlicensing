@@ -2,8 +2,7 @@ from zope.publisher.browser import BrowserView
 from zope.component import getUtility
 from zope.i18n import translate
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
-from Products.CMFPlone.utils import getToolByName
-from collective.contentlicensing.browser import unicode_sanitize
+from Products.CMFPlone.utils import getToolByName, safe_unicode
 from collective.contentlicensing import ContentLicensingMessageFactory as _
 import datetime
 
@@ -81,10 +80,9 @@ class CopyrightBylineView(BrowserView):
                 if creator[-1] != '.':
                     creator += '.'
          
-        id = self.context.getId()
         portal_url = getToolByName(self.context, 'portal_url')
         portal_name = portal_url.getPortalObject().title
-	# TODO: Adds support at format date on every languages at this string
+        # TODO: Adds support at format date on every languages at this string
         create_date = self.context.creation_date.strftime('%Y, %B %d')
         url = self.context.absolute_url()
         date = datetime.date.today().strftime('%B %d, %Y')
@@ -95,9 +93,12 @@ class CopyrightBylineView(BrowserView):
                 domain="ContentLicensing",
                 target_language=self.request.LANGUAGE,
             ) % (
-                unicode_sanitize(creator),
-                create_date,unicode_sanitize(title),
-                date,unicode_sanitize(portal_name),url
+                safe_unicode(creator),
+                create_date,
+                safe_unicode(title),
+                date,
+                safe_unicode(portal_name),
+                url
             )
         else:
             prompt_text = translate(
@@ -105,8 +106,10 @@ class CopyrightBylineView(BrowserView):
                 domain="ContentLicensing",
                 target_language=self.request.LANGUAGE,
             ) % (
-                unicode_sanitize(title),
-                create_date,date,unicode_sanitize(portal_name),
+                safe_unicode(title),
+                create_date,
+                date,
+                safe_unicode(portal_name),
                 url
             )
 

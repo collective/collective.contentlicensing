@@ -26,7 +26,7 @@ from zope.component import getUtility
 from zope.interface import implements
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
 from collective.contentlicensing.browser.contentlicensingprefs import IContentLicensingPrefsForm
-from Products.CMFPlone.utils import getToolByName
+from Products.CMFPlone.utils import getToolByName, safe_unicode
 from urlparse import urlsplit
 from xml.dom import minidom
 from string import split, find
@@ -34,25 +34,6 @@ import urllib
 import datetime
 
 from collective.contentlicensing import ContentLicensingMessageFactory as _
-
-def unicode_sanitize(text):
-    """
-    Intended to be used to correct the inconsistency of plone when you call
-    methods such as Title or Publisher which should ALLWAYS return a unicode
-    object if the output is text.
-    """
-    if isinstance(text,list):
-        sanit_list = []
-        for item in text:
-            if isinstance(item, str):
-                sanit_list += item.decode('utf-8')
-            else:
-                sanit_list += item
-        text = sanit_list          
-    elif isinstance(text, str):
-        text = text.decode('utf-8')
-    return text
-
 
 class ExtendedCopyrightFieldForm(BrowserView):
     """ Render the additional copyright fields in the metadata form. """
@@ -304,7 +285,7 @@ class RDFMetadataView(BrowserView):
         newNode = self.document.createElement(ename)
         parent.appendChild(newNode)
         if value:
-            newNode.appendChild(self.document.createTextNode(unicode_sanitize(value) ) )
+            newNode.appendChild(self.document.createTextNode(safe_unicode(value) ) )
         if attrs:
             for x in attrs:
                 newNode.setAttribute(x[0], x[1] )
