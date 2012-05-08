@@ -1,14 +1,15 @@
 Changelog
 =========
 
-2.2.3 - Unreleased
--------------------
+2.2.3
+-----
 
+  * Removed legacy templates that included copyright byline, which
+    results in duplicate bylines appearing [blambert]
   * Added Basque (eu) translation [erral]
 
-
 2.2.2 
-------------------
+-----
 
   * Allow content editors to select license [dimo]
   * Fix copyright and other licenses [dimo]
