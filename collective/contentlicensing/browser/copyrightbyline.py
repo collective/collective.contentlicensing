@@ -1,10 +1,10 @@
 from zope.publisher.browser import BrowserView
-from zope.component import getUtility
+from zope.component import getUtility, getMultiAdapter
 from zope.i18n import translate
 from collective.contentlicensing.utilities.interfaces import IContentLicensingUtility
 from Products.CMFPlone.utils import getToolByName, safe_unicode
 from collective.contentlicensing import ContentLicensingMessageFactory as _
-import datetime
+from DateTime import DateTime
 
 class CopyrightBylineView(BrowserView):
     """ Render the copyright byline """
@@ -82,10 +82,10 @@ class CopyrightBylineView(BrowserView):
          
         portal_url = getToolByName(self.context, 'portal_url')
         portal_name = portal_url.getPortalObject().title
-        # TODO: Adds support at format date on every languages at this string
-        create_date = self.context.creation_date.strftime('%Y, %B %d')
+        plone_view = getMultiAdapter((self.context, self.request), name='plone')
+        create_date = plone_view.toLocalizedTime(self.context.creation_date)
         url = self.context.absolute_url()
-        date = datetime.date.today().strftime('%B %d, %Y')
+        date = plone_view.toLocalizedTime(DateTime())
         
         if creator:
             prompt_text = translate(
@@ -94,11 +94,11 @@ class CopyrightBylineView(BrowserView):
                 target_language=self.request.LANGUAGE,
             ) % (
                 safe_unicode(creator),
-                create_date,
+                safe_unicode(create_date),
                 safe_unicode(title),
-                date,
+                safe_unicode(date),
                 safe_unicode(portal_name),
-                url
+                safe_unicode(url)
             )
         else:
             prompt_text = translate(
@@ -107,10 +107,10 @@ class CopyrightBylineView(BrowserView):
                 target_language=self.request.LANGUAGE,
             ) % (
                 safe_unicode(title),
-                create_date,
-                date,
+                safe_unicode(create_date),
+                safe_unicode(date),
                 safe_unicode(portal_name),
-                url
+                safe_unicode(url)
             )
 
         return prompt_text.replace('\'','\\\'').replace('\"','\\\'')
