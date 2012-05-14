@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.2.4
+-----
+
+  * Add missing docs folder to the tar.gz released on pypi [dimo]
+
 2.2.3
 -----
 
