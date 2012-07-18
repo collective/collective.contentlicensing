@@ -24,7 +24,7 @@
 <span class="link-external"
       style="color: #436976;
              text-decoration: underline;"
-      tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&jurisdiction=${jsd}&exit_url=${here/portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${license_id}%26license_id=Creative Commons License',
+      tal:attributes="onClick string:window.open('http://creativecommons.org/license/?partner=Plone&partner_icon_url=${here/portal_url}/logo.gif&jurisdiction=${jsd}&exit_url=${here/portal_url}/insert_license?license_url=[license_url]%26license_name=[license_name]%26license_button=[license_button]%26license_radio_id=${license_id}%26license_id=Creative Commons License',
                       null, 
                       'height=525, width=750, scrollbars=yes, resizeable=yes');"
       i18n:domain="ContentLicensing" i18n:translate="">(Choose)</span>
