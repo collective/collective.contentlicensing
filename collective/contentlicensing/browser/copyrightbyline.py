@@ -57,8 +57,11 @@ class CopyrightBylineView(BrowserView):
         creator = ''
         index = 1
         
-        names = [name.strip() for name in self.context.Creators()]
-        
+        try:
+            names = [name.strip() for name in self.context.Creators()]
+        except AttributeError:
+            names = []
+
         for cr in names:
             if cr and '@' == cr[0]:
                 creator += '%s, ' %cr[1:]
