@@ -7,6 +7,8 @@ Changelog
   * Remove unused and duplicated code [erral]
   * Use toLocalizedTime to get localized dates in cite pop-up [erral]
   * Use Plone's safe_unicode instead of custom-made method [erral]
+  * Updated .pot file [blambert555]
+  * Included updated Spanish translation files [blambert]
   
 2.2.3
 -----

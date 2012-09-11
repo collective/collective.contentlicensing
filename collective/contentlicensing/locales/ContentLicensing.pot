@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-06-14 19:07+0000\n"
+"POT-Creation-Date: 2012-09-11 22:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,259 +17,214 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ContentLicensing\n"
 
-#: ./browser/__init__.py:144
+#: ./browser/copyrightbyline.py:92
 msgid "%s (%s). %s. Retrieved %s, from %s Web site: %s."
 msgstr ""
 
-#: ./browser/__init__.py:152
+#: ./browser/copyrightbyline.py:105
 msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr ""
 
-#. Default: "(Choose)"
-#: ./browser/ccwidget.pt:36
-#: ./browser/dc_metadata.pt:71
-#: ./skins/ContentLicensing/dc_metadata.pt:81
+#: ./browser/ccwidget.pt:24
+#: ./browser/dc_metadata.pt:74
 msgid "(Choose)"
 msgstr ""
 
-#. Default: "(No file has been uploaded yet)"
-#: ./skins/ContentLicensing/file_view.pt:52
-msgid "(No file has been uploaded yet)"
-msgstr ""
-
-#. Default: "(Required)"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "(Required)"
 msgstr ""
 
-#. Default: "Apply License To Contained Objects"
-#: ./browser/dc_metadata.pt:152
-#: ./skins/ContentLicensing/dc_metadata.pt:164
+#: ./browser/otherlicense.py:35
+msgid "An external URL link to an image that represents the license."
+msgstr ""
+
+#: ./browser/dc_metadata.pt:158
 msgid "Apply License To Contained Objects"
 msgstr ""
 
-#. Default: "Cancel"
-#: ./skins/ContentLicensing/create_license.cpt:117
+#: ./browser/otherlicense.py:57
+#: ./skins/ContentLicensing/create_license.cpt:113
 msgid "Cancel"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:281
+#: ./browser/contentlicensingprefs.py:284
 #: ./skins/ContentLicensing/prefs_content_licensing_set.cpy:55
 msgid "Changes saved."
 msgstr ""
 
-#. Default: "Check here to apply this license to all contained objects."
-#: ./browser/dc_metadata.pt:156
-#: ./skins/ContentLicensing/dc_metadata.pt:168
+#: ./browser/dc_metadata.pt:162
 msgid "Check here to apply this license to all contained objects."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:103
+#: ./browser/contentlicensingprefs.py:106
 msgid "Choose the licenses which can be selected for individual objects. The Creative Commons License Picker provides an interactive form to choose an appropriate Creative Commons license."
 msgstr ""
 
-#. Default: "Cite/attribute Resource"
-#: ./browser/copyright_byline.pt:19
+#: ./browser/copyright_byline.pt:54
 msgid "Cite/attribute Resource"
 msgstr ""
 
-#. Default: "Click here to get the file"
-#: ./skins/ContentLicensing/file_view.pt:36
-msgid "Click here to get the file"
-msgstr ""
-
-#: ./browser/contentlicensingprefs.py:255
+#: ./browser/contentlicensingprefs.py:258
 msgid "Configure site wide settings for copyright licensing of content within this portal."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:239
+#: ./browser/contentlicensingprefs.py:242
 msgid "Content License Settings"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:254
+#: ./profiles/default/actionicons.xml
+msgid "Content Licensing"
+msgstr ""
+
+#: ./browser/contentlicensingprefs.py:257
 msgid "Content Licensing Settings"
 msgstr ""
 
-#. Default: "Copyright Holder"
-#: ./browser/dc_metadata.pt:13
-#: ./skins/ContentLicensing/dc_metadata.pt:15
+#: ./browser/dc_metadata.pt:16
 msgid "Copyright Holder"
 msgstr ""
 
-#. Default: "Copyright License"
-#: ./browser/dc_metadata.pt:39
-#: ./skins/ContentLicensing/dc_metadata.pt:44
+#: ./browser/dc_metadata.pt:42
 msgid "Copyright License"
 msgstr ""
 
-#. Default: "Create License"
+#: ./browser/otherlicense.py:43
 #: ./skins/ContentLicensing/create_license.cpt:10
 msgid "Create License"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:55
+#: ./browser/otherlicense.py:44
+msgid "Create a new license for use with your content types."
+msgstr ""
+
+#: ./browser/contentlicensingprefs.py:58
 msgid "Creative Commons License Picker"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:87
+#: ./browser/contentlicensingprefs.py:90
 msgid "Default Copyright"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:92
+#: ./browser/contentlicensingprefs.py:95
 msgid "Default Copyright Holder"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:97
+#: ./browser/contentlicensingprefs.py:100
 msgid "Default License"
 msgstr ""
 
-#. Default: "File type"
-#: ./skins/ContentLicensing/file_view.pt:58
-msgid "File type"
-msgstr ""
-
-#: ./browser/contentlicensingprefs.py:75
+#: ./browser/contentlicensingprefs.py:78
 msgid "Jurisdiction"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:122
+#: ./browser/contentlicensingprefs.py:125
 msgid "License Icon"
 msgstr ""
 
-#. Default: "License Image"
-#: ./skins/ContentLicensing/create_license.cpt:81
+#: ./browser/otherlicense.py:34
+#: ./skins/ContentLicensing/create_license.cpt:79
 msgid "License Image"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:118
+#: ./browser/contentlicensingprefs.py:121
 msgid "License Location"
 msgstr ""
 
-#. Default: "License Name"
-#: ./browser/contentlicensingprefs.py:114
+#: ./browser/contentlicensingprefs.py:117
+#: ./browser/otherlicense.py:23
 #: ./skins/ContentLicensing/create_license.cpt:30
 msgid "License Name"
 msgstr ""
 
-#. Default: "License URL"
-#: ./skins/ContentLicensing/create_license.cpt:55
+#: ./browser/otherlicense.py:28
+#: ./skins/ContentLicensing/create_license.cpt:54
 msgid "License URL"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:243
+#: ./browser/contentlicensingprefs.py:246
 msgid "New License"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:285
+#: ./browser/contentlicensingprefs.py:288
 msgid "No changes made."
 msgstr ""
 
-#: ./skins/ContentLicensing/validate_license.vpy:22
-msgid "Please correct the indicated errors."
-msgstr ""
-
-#: ./browser/contentlicensingprefs.py:83
+#: ./browser/contentlicensingprefs.py:86
 msgid "Publisher"
 msgstr ""
 
-#. Default: "RSS Feed"
-#: ./profiles/default/actions.xml
-msgid "RSS Feed"
-msgstr ""
-
-#. Default: "Required"
 #: ./skins/ContentLicensing/create_license.cpt:33
 msgid "Required"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:260
+#: ./browser/contentlicensingprefs.py:263
 msgid "Save"
 msgstr ""
 
-#. Default: "Size"
-#: ./skins/ContentLicensing/file_view.pt:43
-msgid "Size"
-msgstr ""
-
-#: ./browser/contentlicensingprefs.py:76
+#: ./browser/contentlicensingprefs.py:79
 msgid "Specify the jurisdiction in which the content license is valid. (Any Jurisdiction changes must be saved before choosing a new Creative Commons license.)"
 msgstr ""
 
-#. Default: "Submit"
-#: ./skins/ContentLicensing/create_license.cpt:108
+#: ./browser/otherlicense.py:46
+#: ./skins/ContentLicensing/create_license.cpt:105
 msgid "Submit"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:102
+#: ./browser/contentlicensingprefs.py:105
 msgid "Supported Licenses"
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:123
+#: ./browser/contentlicensingprefs.py:126
 msgid "The URL pointer to an image associated with the license."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:119
+#: ./browser/contentlicensingprefs.py:122
 msgid "The URL pointer to information about the license."
 msgstr ""
 
-#: ./browser/__init__.py:95
+#: ./browser/copyrightbyline.py:44
 msgid "The citation for this resource is presented in APA format. Copy the citation to your clipboard for reuse."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:93
+#: ./browser/contentlicensingprefs.py:96
 msgid "The default copyright owner for content in this portal."
 msgstr ""
 
-#. Default: "The external URL of the license, this usually contains the actual content of the license."
-#: ./browser/contentlicensingprefs.py:88
+#: ./browser/contentlicensingprefs.py:91
 msgid "The default copyright to be used with content in this portal."
 msgstr ""
 
-#. Default: "The external URL to an image associated with the license."
-#: ./skins/ContentLicensing/create_license.cpt:61
+#: ./browser/otherlicense.py:29
+#: ./skins/ContentLicensing/create_license.cpt:60
 msgid "The external URL of the license, this usually contains the actual content of the license."
 msgstr ""
 
-#: ./skins/ContentLicensing/create_license.cpt:84
+#: ./skins/ContentLicensing/create_license.cpt:82
 msgid "The external URL to an image associated with the license."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:84
+#: ./browser/contentlicensingprefs.py:87
 msgid "The institution or individual responsible for publishing content in this portal."
 msgstr ""
 
-#. Default: "The license on this item."
-#: ./browser/dc_metadata.pt:43
-#: ./skins/ContentLicensing/dc_metadata.pt:48
+#: ./browser/dc_metadata.pt:46
 msgid "The license on this item."
 msgstr ""
 
-#: ./browser/contentlicensingprefs.py:115
+#: ./browser/contentlicensingprefs.py:118
 msgid "The name of the license."
 msgstr ""
 
-#. Default: "The name of the person or organization owning or managing rights over the resource."
-#: ./browser/dc_metadata.pt:17
-#: ./skins/ContentLicensing/dc_metadata.pt:19
+#: ./browser/dc_metadata.pt:20
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr ""
 
-#. Default: "The title of the license that will appear on the licensed object."
+#: ./browser/otherlicense.py:24
 #: ./skins/ContentLicensing/create_license.cpt:36
 msgid "The title of the license that will appear on the licensed object."
 msgstr ""
 
-#: ./skins/ContentLicensing/validate_license.vpy:14
-msgid "This field is required, please provide some information."
-msgstr ""
-
-#. Default: "This work is licensed under a"
-#: ./browser/copyright_byline.pt:25
+#: ./browser/copyright_byline.pt:35
 msgid "This work is licensed under a"
-msgstr ""
-
-#. Default: "File contents"
-#: ./skins/ContentLicensing/file_view.pt:70
-msgid "heading_file_contents"
 msgstr ""
 
