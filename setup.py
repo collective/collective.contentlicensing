@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.2.6'
+version = '2.2.5'
 tests_require = ['plone.app.blob [test]']
 
 setup(name='collective.contentlicensing',
