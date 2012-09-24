@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ContentLicensing 1.0\n"
-"POT-Creation-Date: 2012-09-11 22:06+0000\n"
-"PO-Revision-Date: 2012-08-03 10:22+0100\n"
-"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"POT-Creation-Date: 2012-09-24 21:38+0000\n"
+"PO-Revision-Date: 2012-09-24 15:38-0700\n"
+"Last-Translator: \n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -25,7 +25,7 @@ msgstr "%s. (%s). Obtenido el %s, desde el sitio Web de %s: %s."
 
 #. Default: "(Choose)"
 #: ./browser/ccwidget.pt:24
-#: ./browser/dc_metadata.pt:74
+#: ./browser/dc_metadata.pt:76
 msgid "(Choose)"
 msgstr "(Seleccione)"
 
@@ -39,7 +39,7 @@ msgid "An external URL link to an image that represents the license."
 msgstr "Enlace externo a una imagen que representa la licencia."
 
 #. Default: "Apply License To Contained Objects"
-#: ./browser/dc_metadata.pt:158
+#: ./browser/dc_metadata.pt:160
 msgid "Apply License To Contained Objects"
 msgstr "Aplicar licencia a los objetos que contenga"
 
@@ -55,7 +55,7 @@ msgid "Changes saved."
 msgstr "Cambios guardados."
 
 #. Default: "Check here to apply this license to all contained objects."
-#: ./browser/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:164
 msgid "Check here to apply this license to all contained objects."
 msgstr "Seleccione para aplicar esta licencia a todos los objetos que contenga."
 
@@ -87,12 +87,12 @@ msgid "Content Licensing Settings"
 msgstr "Ajustes sobre las licencias"
 
 #. Default: "Copyright Holder"
-#: ./browser/dc_metadata.pt:16
+#: ./browser/dc_metadata.pt:18
 msgid "Copyright Holder"
 msgstr "Titular del Copyright"
 
 #. Default: "Copyright License"
-#: ./browser/dc_metadata.pt:42
+#: ./browser/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr "Copyright"
 
@@ -127,6 +127,10 @@ msgstr "Licencia por defecto"
 #: ./browser/contentlicensingprefs.py:78
 msgid "Jurisdiction"
 msgstr "Jurisdicción"
+
+#: ./browser/dc_metadata.pt:2
+msgid "License"
+msgstr "Licencia"
 
 #: ./browser/contentlicensingprefs.py:125
 msgid "License Icon"
@@ -236,7 +240,7 @@ msgid "The institution or individual responsible for publishing content in this 
 msgstr "La institución o la persona responsable de la publicación del contenido en el portal."
 
 #. Default: "The license on this item."
-#: ./browser/dc_metadata.pt:46
+#: ./browser/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr "La licencia de este elemento."
 
@@ -245,7 +249,7 @@ msgid "The name of the license."
 msgstr "La denominación de la licencia."
 
 #. Default: "The name of the person or organization owning or managing rights over the resource."
-#: ./browser/dc_metadata.pt:20
+#: ./browser/dc_metadata.pt:22
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr "El nombre de la persona u organización poseedora o gestora de los derechos del recurso."
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-09-11 22:06+0000\n"
+"POT-Creation-Date: 2012-09-24 21:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "%s. (%s). Retrieved %s, from %s Web site: %s."
 msgstr ""
 
 #: ./browser/ccwidget.pt:24
-#: ./browser/dc_metadata.pt:74
+#: ./browser/dc_metadata.pt:76
 msgid "(Choose)"
 msgstr ""
 
@@ -38,7 +38,7 @@ msgstr ""
 msgid "An external URL link to an image that represents the license."
 msgstr ""
 
-#: ./browser/dc_metadata.pt:158
+#: ./browser/dc_metadata.pt:160
 msgid "Apply License To Contained Objects"
 msgstr ""
 
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Changes saved."
 msgstr ""
 
-#: ./browser/dc_metadata.pt:162
+#: ./browser/dc_metadata.pt:164
 msgid "Check here to apply this license to all contained objects."
 msgstr ""
 
@@ -80,11 +80,11 @@ msgstr ""
 msgid "Content Licensing Settings"
 msgstr ""
 
-#: ./browser/dc_metadata.pt:16
+#: ./browser/dc_metadata.pt:18
 msgid "Copyright Holder"
 msgstr ""
 
-#: ./browser/dc_metadata.pt:42
+#: ./browser/dc_metadata.pt:44
 msgid "Copyright License"
 msgstr ""
 
@@ -115,6 +115,10 @@ msgstr ""
 
 #: ./browser/contentlicensingprefs.py:78
 msgid "Jurisdiction"
+msgstr ""
+
+#: ./browser/dc_metadata.pt:2
+msgid "License"
 msgstr ""
 
 #: ./browser/contentlicensingprefs.py:125
@@ -207,7 +211,7 @@ msgstr ""
 msgid "The institution or individual responsible for publishing content in this portal."
 msgstr ""
 
-#: ./browser/dc_metadata.pt:46
+#: ./browser/dc_metadata.pt:48
 msgid "The license on this item."
 msgstr ""
 
@@ -215,7 +219,7 @@ msgstr ""
 msgid "The name of the license."
 msgstr ""
 
-#: ./browser/dc_metadata.pt:20
+#: ./browser/dc_metadata.pt:22
 msgid "The name of the person or organization owning or managing rights over the resource."
 msgstr ""
 

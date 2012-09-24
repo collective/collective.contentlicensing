@@ -1,15 +1,27 @@
 Changelog
 =========
 
-2.2.4 - UNRELEASED
---------------------
+2.2.6
+-----
 
+  * Fixed multiple translation errors [blambert555]
+  * Updated .pot file [blambert555]
+  * Included updated Spanish translation files [blambert555]
+  * Included updated Brazilian Porteguese translations [blambert555]
+
+2.2.5
+-----
+
+  * Modified MANIFEST.in to include docs when creating egg [blambert555]
   * Remove unused and duplicated code [erral]
   * Use toLocalizedTime to get localized dates in cite pop-up [erral]
   * Use Plone's safe_unicode instead of custom-made method [erral]
-  * Updated .pot file [blambert555]
-  * Included updated Spanish translation files [blambert]
   
+2.2.4
+-----
+
+ * Add missing docs folder to the tar.gz released on pypi [dimo]
+
 2.2.3
 -----
 
