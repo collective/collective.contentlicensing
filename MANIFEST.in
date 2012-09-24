@@ -1,2 +1,3 @@
 recursive-include collective *.css *.js *.pdf *.png *.po *.pot *.pt *.txt *.xml *.zcml
+recursive-include dosc *
 global-exclude *.pyc *~ *.mo
