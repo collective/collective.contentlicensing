@@ -54,7 +54,7 @@
     <rdf:Seq>
         <tal:block repeat="obj_item python: objects">
             <rdf:li resource=""
-                tal:attributes="resource obj_item/getURL|obj_item/absolute_url" />
+                tal:attributes="rdf:resource obj_item/getURL|obj_item/absolute_url" />
         </tal:block>
     </rdf:Seq>
   </items>
