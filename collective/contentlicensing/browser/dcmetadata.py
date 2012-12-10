@@ -24,7 +24,7 @@ class DCMetadataEditFields(BrowserView):
 
     def getLicenses(self):
         """ Get list of supported licenses. """
-        return self.clutil.getLicenses(self.context)
+        return self.clutil.getSupportedLicenses(self.context)
 
     def getLicense(self):
         """ Get the copyright license from the object. """
