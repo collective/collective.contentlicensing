@@ -107,12 +107,14 @@ class ContentLicensingUtility(SimpleItem):
         licenses.append(props.license_other)
         return licenses
 
-
     def getSupportedLicenses(self, request):
         """ Return titles and ids fo the supported licenses for the configlet. """
         props = request.portal_url.portal_properties.content_licensing_properties
-        return [[x, getattr(props, x)[0], getattr(props, x)[1]] for x in props.SupportedLicenses]
-            
+        licenses = [props.license_siteDefault]
+        for x in props.SupportedLicenses:
+            licenses.append(getattr(props, x))
+        licenses.append(props.license_other)
+        return licenses            
 
     def getAvailableLicenses(self, request):
         """ return titles and ids for the supported licenses """
