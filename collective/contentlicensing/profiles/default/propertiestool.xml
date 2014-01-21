@@ -15,24 +15,42 @@
       <element value="Chile,cl" />
       <element value="China,cn" />
       <element value="Colombia,co" />
+      <element value="Costa Rica,cr" />
       <element value="Croatia,hr" />
+      <element value="Czech Republic,cz" />
       <element value="Denmark,dk" />
+      <element value="Ecuador,ec" />
+      <element value="Egypt,eg" />
+      <element value="Estonia,ee" />
       <element value="Finland,fi" />
       <element value="France,fr" />
       <element value="Germany,de" />
+      <element value="Greece,gr" />
+      <element value="Guatemala,gt" />
+      <element value="New Zealand,nz" />
+      <element value="Puerto Rico,pr" />
+      <element value="Hong Kong,hk" />
       <element value="Hungary,hu" />
+      <element value="IGO,igo" />
       <element value="India,in" />
+      <element value="Ireland,ie" />
       <element value="Israel,il" />
       <element value="Italy,it" />
       <element value="Japan,jp" />
+      <element value="Luxembourg,lu" />
       <element value="Macedonia,mk" />
       <element value="Malaysia,my" />
       <element value="Malta,mt" />
       <element value="Mexico,mx" />
       <element value="Netherlands,nl" />
+      <element value="Norway,no" />
       <element value="Peru,pe" />
+      <element value="Philippines,ph" />
       <element value="Poland,pl" />
       <element value="Portugal,pt" />
+      <element value="Romania,ro" />
+      <element value="Serbia,rs" />
+      <element value="Singapore,sg" />
       <element value="Slovenia,si" />
       <element value="South Africa,za" />
       <element value="South Korea,kr" />
@@ -40,9 +58,13 @@
       <element value="Sweden,se" />
       <element value="Switzerland,ch" />
       <element value="Taiwan,tw" />
+      <element value="Thailand,th" />
+      <element value="Uganda,ug" />
       <element value="UK: Englands and Wales,uk" />
       <element value="UK: Scotland,scotland" />
       <element value="United States,us" />
+      <element value="Venezuela,ve" />
+      <element value="Vietnam,vn" />
     </property>
     <property name="Jurisdiction" type="selection" select_variable="jurisdiction_options">Unported,unported</property>
     <property name="DefaultSiteCopyrightHolder" type="string" i18n:translate="">by the Contributing Authors</property>
