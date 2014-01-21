@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.2.7 - unreleased
+------------------
+
+  * Added more Creative Commons jurisdictions options [macagua]
+  * Updated setuptools metadata options for this package [macagua]
+
 2.2.6
 -----
 
