@@ -93,25 +93,25 @@
     <property name="license_gnuFree" type="lines">
       <element value="GNU Free Documentation License" i18n:attributes="value" />
       <element value="GNU Free Documentation License" />
-      <element value="http://www.gnu.org/licenses/fdl.txt" />
-      <element value="http://www.gnu.org/graphics/gnubanner-2.png" />
+      <element value="https://www.gnu.org/licenses/fdl.txt" />
+      <element value="https://www.gnu.org/graphics/gnubanner-2.png" />
     </property>
     <property name="license_cc" type="lines">
       <element value="Creative Commons License" i18n:attributes="value" />
       <element value="Attribution-Noncommercial-Share Alike 3.0" />
-      <element value="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
-      <element value="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+      <element value="https://creativecommons.org/licenses/by-nc-sa/3.0/" />
+      <element value="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
     </property>
     <property name="license_siteDefault" type="lines">
       <element value="Site Default" i18n:attributes="value" />
-      <element value="None" />      
-      <element value="None" />      
+      <element value="None" />
+      <element value="None" />
       <element value="None" />
     </property>
     <property name="license_other" type="lines">
       <element value="Other" i18n:attributes="value" />
-      <element value="None" />      
-      <element value="None" />      
+      <element value="None" />
+      <element value="None" />
       <element value="None" />
     </property>
   </object>
